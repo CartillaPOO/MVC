@@ -1,6 +1,9 @@
 package vista;
 
+import java.awt.Color;
+
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class VentanaPrincipal extends JFrame
 {
@@ -11,6 +14,8 @@ public class VentanaPrincipal extends JFrame
     public PanelEntradaDatos miPanelEntradaDatos;
     public PanelOperaciones miPanelOperaciones;
     public PanelResultados miPanelResultados;
+
+    private JPanel colorFondo;
     
     //
     // Métodos
@@ -36,6 +41,11 @@ public class VentanaPrincipal extends JFrame
         miPanelResultados = new PanelResultados();
         miPanelResultados.setBounds(390,10,180,230);
         this.add(miPanelResultados);
+
+        colorFondo = new JPanel();
+        colorFondo.setBackground(new Color(24, 24, 24));
+        colorFondo.setBounds(0,0,600,400);
+        this.add(colorFondo);
         
         // Características de la ventana
         this.setTitle("Area y perimetro del circulo");
