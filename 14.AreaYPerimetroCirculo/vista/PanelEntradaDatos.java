@@ -21,7 +21,7 @@ public class PanelEntradaDatos extends JPanel
     private JLabel lbRadio;
     private JTextField tfRadio;
 
-    private Font fontLabel = new Font("Arial", Font.BOLD, 25);
+    private Font fontLabel = new Font("Arial", Font.BOLD, 20);
     private Font fontField = new Font("Arial", Font.BOLD, 15);
 
     //
@@ -33,27 +33,26 @@ public class PanelEntradaDatos extends JPanel
     public PanelEntradaDatos()
     {
         this.setLayout(null);
-        this.setBackground(Color.GRAY);
+        this.setBackground(new Color(235, 219, 178));
 
         // Creación y adición de la imagen al panel
         iImagen = new ImageIcon(getClass().getResource("/vista/circulo.png"));
         lbImagen = new JLabel(iImagen);
-        lbImagen.setBounds(20,15,200,200);
+        lbImagen.setBounds(15,15,200,200);
         this.add(lbImagen);
 
         // Creación y adición de etiqueta lbRadio
         lbRadio = new JLabel("Radio:");
         lbRadio.setFont(fontLabel);
-        lbRadio.setForeground(new Color(216, 56, 249));
-        lbRadio.setBounds(260, 115, 100, 20);
+        lbRadio.setForeground(Color.GRAY);
+        lbRadio.setBounds(220, 115, 70, 20);
         this.add(lbRadio);
 
         // Creación y adición de caja de texto para el radio
         tfRadio = new JTextField();
-        tfRadio.setBackground(Color.GRAY);
         tfRadio.setForeground(Color.BLACK);
         tfRadio.setFont(fontField);
-        tfRadio.setBounds(340, 115, 100, 20);
+        tfRadio.setBounds(290, 115, 60, 20);
         this.add(tfRadio);
 
         // Borde del panel

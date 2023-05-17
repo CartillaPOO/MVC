@@ -25,7 +25,7 @@ public class PanelOperaciones extends JPanel
     public PanelOperaciones()
     {
         this.setLayout(null);
-        this.setBackground(Color.DARK_GRAY);
+        this.setBackground(new Color(235, 219, 178));
 
         // Creación y adición del botón calcular
         btCalcular = new JButton("Calcular");
