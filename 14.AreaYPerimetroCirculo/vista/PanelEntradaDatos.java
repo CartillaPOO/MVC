@@ -40,14 +40,14 @@ public class PanelEntradaDatos extends JPanel
 
         // Creación y adición de etiqueta lbRadio
         lbRadio = new JLabel("Radio:");
-        lbRadio.setBounds(190, 115, 70, 20);
+        lbRadio.setBounds(190, 105, 70, 20);
         lbRadio.setFont(fontLabel); // Tipo de letra
         lbRadio.setForeground(Color.WHITE); // Color de la letra
         this.add(lbRadio);
 
         // Creación y adición de caja de texto para el radio
         tfRadio = new JTextField();
-        tfRadio.setBounds(260, 115, 60, 20);
+        tfRadio.setBounds(260, 105, 60, 20);
         tfRadio.setFont(fontField);
         tfRadio.setBorder(null); // Eliminar el borde
         tfRadio.setForeground(Color.WHITE);
@@ -65,6 +65,6 @@ public class PanelEntradaDatos extends JPanel
     // Borrar el contenido de la caja de texto
     public void borrar()
     {
-        tfRadio.setText("");
+        this.tfRadio.setText("");
     }
 }

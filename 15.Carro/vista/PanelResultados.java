@@ -1,58 +1,50 @@
 package vista;
 
 import java.awt.Color;
-import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.border.TitledBorder;
 
-/**
- *
- * @author matias
- */
 public class PanelResultados extends JPanel
 {
-    //----------------------
-    //Atributos
-    //----------------------
+    //
+    // Atributos
+    //
+
     private JTextArea taResultado;
     private JScrollPane spResultado;
-
     
-    //----------------------
-    //Metodos
-    //----------------------
+    //
+    // Métodos
+    //
     
-    //Constructor
+    // Constructor
     public PanelResultados()
     {
-        //Definicion del contendor del panel
-        setLayout(null);
-        setBackground(Color.WHITE);
+        // Definición del contendor del panel
+        this.setLayout(null);
+        this.setBackground(new Color(31,31,31));
         
-        //Creación y adicion del area de texto
+        // Creación y adición del area de texto
         taResultado = new JTextArea();
+        taResultado.setForeground(Color.WHITE);
+        taResultado.setEditable(false);
+        taResultado.setBackground(new Color(59,59,59));
+        taResultado.setCaretColor(taResultado.getBackground());
         spResultado = new JScrollPane(taResultado);
-        spResultado.setBounds(10,20, 360, 210);
-        add(spResultado);
-       
-        
-        //Borde y titulo del panel
-        TitledBorder borde = BorderFactory.createTitledBorder("Resultados");
-        borde.setTitleColor(Color.BLUE);
-        setBorder(borde);
+        spResultado.setBounds(10,10,190,210);
+        spResultado.setBorder(null);
+        this.add(spResultado); 
     }
-    
-    //Borar los resultados
+
+    public void mostrarResultado(String msj)
+    {
+        taResultado.append(msj + "\n"); // Agrega el mensaje al area de texto
+    }
+
     public void borrar()
     {
         taResultado.setText("");
     }
     
-    //Mostrar resultado
-    public void mostrarResultado(String msj)
-    {
-        taResultado.append(msj+"\n");
-    }
 }

@@ -30,7 +30,7 @@ public class PanelOperaciones extends JPanel
         btCalcular.setBounds(56, 40, 120, 25); // Posición y tamaño
         btCalcular.setForeground(Color.WHITE); // Color de la letra
         btCalcular.setBackground(new Color(59,59,59));
-        add(btCalcular);
+        this.add(btCalcular);
         btCalcular.setActionCommand("calcular");
 
         // Creación y adición del botón borrar
@@ -39,7 +39,7 @@ public class PanelOperaciones extends JPanel
         btBorrar.setForeground(Color.WHITE);
         btBorrar.setBackground(new Color(59,59,59));
         this.add(btBorrar);
-        btBorrar.setActionCommand("corrar");
+        btBorrar.setActionCommand("borrar");
 
         // Creación y adición del botón salir
         btSalir = new JButton("Salir");

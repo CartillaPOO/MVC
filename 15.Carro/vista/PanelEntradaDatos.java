@@ -1,18 +1,19 @@
 package vista;
 
 import java.awt.Color;
-import javax.swing.BorderFactory;
+import java.awt.Font;
+
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.border.TitledBorder;
 
 public class PanelEntradaDatos extends JPanel
 {
-    //------------------------
-    //Atributos
-    //------------------------
+    //
+    // Atributos
+    //
+
     private JLabel lbImagen;
     private ImageIcon iImagen;
     private JLabel lbColor;
@@ -21,58 +22,77 @@ public class PanelEntradaDatos extends JPanel
     private JTextField tfColor;
     private JTextField tfPosX;
     private JTextField tfPosY;
+
+    private Font fontLabel = new Font("Arial", Font.BOLD, 20);
+    private Font fontField = new Font("Arial", Font.BOLD, 15);
     
-    //------------------------
-    //Metodos
-    //------------------------
+    //
+    // Metodos
+    //
     
     //Constructor
     public PanelEntradaDatos()
     {
-        //Definicion del contendor del panel
-        setLayout(null);
-        setBackground(Color.WHITE);
+        // Definición del contendor del panel
+        this.setLayout(null);
+        this.setBackground(new Color(31,31,31));
         
-        //Creación y adicion de la imagen
+        // Creación y adición de la imagen
         iImagen = new ImageIcon(getClass().getResource("/vista/carro.png"));
         lbImagen = new JLabel(iImagen);
-        lbImagen.setBounds(10,10,220,176);
-        add(lbImagen);
+        lbImagen.setBounds(10,25,160,160);
+        this.add(lbImagen);
         
-        //Creación y adición de etiquetas Color, PosX y PosY
-        lbColor = new JLabel("Color = ");
-        lbColor.setBounds(230,10,60,20);
-        add(lbColor);
+        // Creación y adición de etiquetas Color, PosX y PosY
+        lbColor = new JLabel("Color:");
+        lbColor.setBounds(190,65,60,20);
+        lbColor.setFont(fontLabel);
+        lbColor.setForeground(Color.WHITE);
+        this.add(lbColor);
         
-        lbPosX = new JLabel("PosX = ");
-        lbPosX.setBounds(230,40,60,20);
-        add(lbPosX);
+        lbPosX = new JLabel("PosX:");
+        lbPosX.setBounds(190,105,60,20);
+        lbPosX.setFont(fontLabel);
+        lbPosX.setForeground(Color.WHITE);
+        this.add(lbPosX);
         
-        lbPosY = new JLabel("PosY = ");
-        lbPosY.setBounds(230,70,60,20);
-        add(lbPosY);
+        lbPosY = new JLabel("PosY:");
+        lbPosY.setBounds(190,145,60,20);
+        lbPosY.setFont(fontLabel);
+        lbPosY.setForeground(Color.WHITE);
+        this.add(lbPosY);
         
         
-        //Creación y adición de campos de texto
-        tfColor = new JTextField("Azul");
-        tfColor.setBounds(300, 10, 60, 20);
-        add(tfColor);
+        // Creación y adición de campos de texto
+        tfColor = new JTextField("Rojo");
+        tfColor.setBounds(260, 65, 60, 20);
+        tfColor.setFont(fontField);
+        tfColor.setBorder(null);
+        tfColor.setForeground(Color.WHITE);
+        tfColor.setCaretColor(Color.WHITE);
+        tfColor.setBackground(new Color(59,59,59));
+        this.add(tfColor);
         
         tfPosX = new JTextField("10");
-        tfPosX.setBounds(300, 40, 60, 20);
-        add(tfPosX);
+        tfPosX.setBounds(260, 105, 60, 20);
+        tfPosX.setFont(fontField);
+        tfPosX.setBorder(null);
+        tfPosX.setForeground(Color.WHITE);
+        tfPosX.setCaretColor(Color.WHITE);
+        tfPosX.setBackground(new Color(59,59,59));
+        this.add(tfPosX);
         
         tfPosY = new JTextField("10");
-        tfPosY.setBounds(300, 70, 60, 20);
-        add(tfPosY);
-        
-        //Borde y titulo del panel
-        TitledBorder borde = BorderFactory.createTitledBorder("Datos de Entrada");
-        borde.setTitleColor(Color.BLUE);
-        setBorder(borde);
+        tfPosY.setBounds(260, 145, 60, 20);
+        tfPosY.setFont(fontField);
+        tfPosY.setBorder(null);
+        tfPosY.setForeground(Color.WHITE);
+        tfPosY.setCaretColor(Color.WHITE);
+        tfPosY.setBackground(new Color(59,59,59));
+        this.add(tfPosY);
     }
     
-    //Metodos de acceso a la información de las cajas de texto
+    // Métodos de acceso a la información de las cajas de texto
     public String getColor()
     {
         return tfColor.getText();

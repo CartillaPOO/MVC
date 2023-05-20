@@ -1,82 +1,108 @@
 package vista;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class DialogoMoverCarro extends JDialog
 {
-    //----------------------
-    //Atributos
-    //----------------------
+    //
+    // Atributos
+    //
+
+    private JPanel colorFondo;
     private JLabel lbTitulo;
     private JLabel lbPosX;
     private JLabel lbPosY;
-    private JTextField txPosX;
-    private JTextField txPosY;
+    private JTextField tfPosX;
+    private JTextField tfPosY;
     private JButton btAceptar;
 
-    //-------------------------
-    //Métodos
-    //-------------------------
+    private Font fontLabel = new Font("Arial", Font.BOLD, 20);
+    private Font fontField = new Font("Arial", Font.BOLD, 15);
+
+    //
+    // Métodos
+    //
     
-    //Metodo constructor
+    // Método constructor
     public DialogoMoverCarro()
     {
-        //Definición del contenedor de la ventana
-        setLayout(null);
+        // Definición del contenedor de la ventana
+        this.setLayout(null);
         
-        //Creación y adición del elementos
-        lbTitulo = new JLabel("Mover Carro",JLabel.CENTER);
-        lbTitulo.setFont(new Font("Arial", Font.BOLD, 25));
-        lbTitulo.setBounds(10,10,280,20);
-        add(lbTitulo);
+        // Creación y adición del elementos
+        lbTitulo = new JLabel("Mover Carro", JLabel.CENTER); // JLabel.CENTER: Centra el texto
+        lbTitulo.setBounds(0,10,340,20);
+        lbTitulo.setFont(fontLabel);
+        lbTitulo.setForeground(Color.WHITE);
+        this.add(lbTitulo);
+
         
-        lbPosX= new JLabel("X = ",JLabel.RIGHT);
-        lbPosX.setFont(new Font("Arial", Font.BOLD, 25));
-        lbPosX.setBounds(10,50,140,20);
-        add(lbPosX);
+        lbPosX= new JLabel("X =", JLabel.RIGHT); // JLabel.RIGHT: Alinea el texto a la derecha
+        lbPosX.setBounds(0,50,150,20);
+        lbPosX.setFont(fontLabel);
+        lbPosX.setForeground(Color.WHITE);
+        this.add(lbPosX);
         
-        lbPosY= new JLabel("Y = ",JLabel.RIGHT);
-        lbPosY.setFont(new Font("Arial", Font.BOLD, 25));
-        lbPosY.setBounds(10,90,140,20);
-        add(lbPosY);
+        lbPosY= new JLabel("Y =", JLabel.RIGHT);
+        lbPosY.setBounds(0,90,150,20);
+        lbPosY.setFont(fontLabel);
+        lbPosY.setForeground(Color.WHITE);
+        this.add(lbPosY);
         
-        txPosX= new JTextField();
-        txPosX.setFont(new Font("Arial", Font.BOLD, 25));
-        txPosX.setBounds(150,50,100,25);
-        add(txPosX);
+        tfPosX= new JTextField();
+        tfPosX.setBounds(160,50,60,25);
+        tfPosX.setFont(fontField);
+        tfPosX.setBorder(null);
+        tfPosX.setForeground(Color.WHITE);
+        tfPosX.setCaretColor(Color.WHITE);
+        tfPosX.setBackground(new Color(59,59,59));
+        this.add(tfPosX);
         
-        txPosY= new JTextField();
-        txPosY.setFont(new Font("Arial", Font.BOLD, 25));
-        txPosY.setBounds(150,90,100,25);
-        add(txPosY);
+        tfPosY= new JTextField();
+        tfPosY.setBounds(160,90,60,25);
+        tfPosY.setFont(fontField);
+        tfPosY.setBorder(null);
+        tfPosY.setForeground(Color.WHITE);
+        tfPosY.setCaretColor(Color.WHITE);
+        tfPosY.setBackground(new Color(59,59,59));
+        this.add(tfPosY);
         
         btAceptar = new JButton("Aceptar");
-        btAceptar.setFont(new Font("Arial", Font.BOLD, 25));
-        btAceptar.setBounds(20,140,260,25);
+        btAceptar.setBounds(40,140,260,25);
+        btAceptar.setFont(fontField);
         btAceptar.setActionCommand("aceptar");
-        add(btAceptar);
+        btAceptar.setForeground(Color.WHITE);
+        btAceptar.setBackground(new Color(59,59,59));
+        this.add(btAceptar);
                
-        //Caracteristicas de la ventana
-        setTitle("Carro");
-        setSize(300,300);
-        setLocationRelativeTo(null);
-        setResizable(false);
-        setVisible(true);
+        // Características de la ventana
+        this.setTitle("Carro");
+        this.setSize(340,230);
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+        this.setVisible(true);
+
+        colorFondo = new JPanel();
+        colorFondo.setBackground(new Color(31,31,31));
+        colorFondo.setBounds(0,0,600,400);
+        this.add(colorFondo);
     }
     
     public String getPosX()
     {
-        return txPosX.getText();
+        return tfPosX.getText();
     }
     
     public String getPosY()
     {
-        return txPosY.getText();
+        return tfPosY.getText();
     }
     
     public void agregarOyentesBotones(ActionListener pAL)

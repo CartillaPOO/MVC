@@ -48,7 +48,7 @@ public class Controlador implements ActionListener
                 venPrin.miPanelResultado.mostrarResultado("Se ha creado un objeto Carro");
                 venPrin.miPanelResultado.mostrarResultado("Su número de ruedas son " + model.getNumRuedas());
                 venPrin.miPanelResultado.mostrarResultado("Su color actual es " + model.getColor());
-                venPrin.miPanelResultado.mostrarResultado("Su posición actual es (" + model.getPosX()+"," + model.getPosY()+")" );
+                venPrin.miPanelResultado.mostrarResultado("Su posición actual es (" + model.getPosX()+", " + model.getPosY()+")" );
                 venPrin.miPanelResultado.mostrarResultado("Su velocidad actual es " + model.getVelocidad());
                 
                 // Desactivar boton crear
@@ -66,7 +66,7 @@ public class Controlador implements ActionListener
         if(comando.equals("mover"))
         {   
             venPrin.crearDialogoMover();
-            this.venPrin.miDialogoMoverCarro.agregarOyentesBotones(this);
+            venPrin.miDialogoMoverCarro.agregarOyentesBotones(this);
         }
         
         if(comando.equals("aceptar"))
@@ -74,7 +74,7 @@ public class Controlador implements ActionListener
             int x = Integer.parseInt(venPrin.miDialogoMoverCarro.getPosX());
             int y = Integer.parseInt(venPrin.miDialogoMoverCarro.getPosY());
             model.mover(x, y);
-            venPrin.miPanelResultado.mostrarResultado("\nTras mover el carro, su posición actual es (" + model.getPosX()+"," + model.getPosY()+")");
+            venPrin.miPanelResultado.mostrarResultado("\nSe ha movido el carro\nSu posición actual es (" + model.getPosX()+", " + model.getPosY()+")"); // Se le pasa el mensaje al panel de resultados
             venPrin.miDialogoMoverCarro.cerrarDialogo();
         }
         

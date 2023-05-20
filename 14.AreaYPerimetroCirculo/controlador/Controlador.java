@@ -44,7 +44,7 @@ public class Controlador implements ActionListener
             double area = model.getArea(); // Guarda el valor del área de model en la variable area
             model.calcularPerimetro();
             double perimetro = model.getperimetro();
-            venPrin.miPanelResultados.mostrarResultado(area, perimetro); // Se llama al método mostrarResultado de miPanelResultados de venPrin
+            venPrin.miPanelResultados.mostrarResultado(area, perimetro); // Se le pasa el área y el perímetro al panel de resultados
         }
         
         if(comando.equals("salir"))
@@ -54,8 +54,8 @@ public class Controlador implements ActionListener
 
         if(comando.equals("borrar"))
         {
-            this.venPrin.miPanelEntradaDatos.borrar(); // Limpiar los campos de texto
-            this.venPrin.miPanelResultados.borrar();
+            venPrin.miPanelEntradaDatos.borrar(); // Limpiar los campos de texto
+            venPrin.miPanelResultados.borrar();
         }
     }
 }

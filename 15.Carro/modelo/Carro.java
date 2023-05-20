@@ -6,15 +6,15 @@ public class Carro
     // Atributos
     //
 
-    private static int numRuedas = 4; // Es static porque es un atributo de clase
+    private static int numRuedas = 4; // Es static porque todos los objetos de la clase Carro comparten el mismo valor
     private String color;
     private int posX;
     private int posY;
     private int velocidad;
     
-    //--------------------------
-    //Métodos
-    //--------------------------
+    //
+    // Métodos
+    //
     
     //Constructor
     public Carro(String pColor, int pPosx, int pPosy)
@@ -25,7 +25,7 @@ public class Carro
         this.velocidad = 0;
     }
     
-    public static int getNumRuedas() // Es static porque es un atributo de clase
+    public int getNumRuedas()
     {
         return numRuedas;
     }
