@@ -23,26 +23,26 @@ public class PanelResultados extends JPanel
     //Constructor   
     public PanelResultados()
     {
-        this.setLayout(null);
-        this.setBackground(new Color(31,31,31));
+        this.setLayout(null); // Desactivar el diseño por defecto
+        this.setBackground(new Color(31,31,31)); // Color de fondo
 
         // Creación y adición del area de texto
         taResultado = new JTextArea();
         spResultado = new JScrollPane(taResultado);
-        spResultado.setBounds(10,20,160,195);
-        spResultado.setBorder(null);
+        spResultado.setBounds(10,20,190,190); // Posición y tamaño
+        spResultado.setBorder(null); // Eliminar el borde
 
-        taResultado.setForeground(Color.WHITE);
+        taResultado.setForeground(Color.WHITE); // Color de la letra
         taResultado.setEditable(false); // No se puede editar el area de texto
         taResultado.setBackground(new Color(59,59,59));
-        taResultado.setCaretColor(taResultado.getBackground());
+        taResultado.setCaretColor(taResultado.getBackground()); // Color del cursor (Se pone el mismo color que el fondo para que no se vea)
         this.add(spResultado);
     }
 
     // Método de acceso a la información
     public void mostrarResultado(double area, double perimetro)
     {
-        taResultado.append("Area: " + area + "\nPerimetro: " + perimetro + "\n"); //
+        taResultado.append("Área: " + area + "\nPerímetro: " + perimetro + "\n"); //
     }
 
     // Método para borrar el área de texto

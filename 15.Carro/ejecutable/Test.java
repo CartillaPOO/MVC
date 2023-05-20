@@ -4,8 +4,9 @@ import controlador.Controlador;
 import modelo.Carro;
 import vista.VentanaPrincipal;
 
-public class CreacionCarros 
+public class Test 
 {
+    
     public static void main(String[] args)
     {
         VentanaPrincipal miVentana = new VentanaPrincipal();

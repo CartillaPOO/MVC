@@ -29,7 +29,7 @@ public class Circulo
         perimetro = 2*Math.PI*radio;
     }
 
-    public double getArea()
+    public double getArea() // Sirve para obtener el valor del atributo area
     {
         return area;
     }

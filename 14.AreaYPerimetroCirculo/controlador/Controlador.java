@@ -3,8 +3,6 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JOptionPane;
-
 import modelo.Circulo;
 import vista.VentanaPrincipal;
 
@@ -17,6 +15,10 @@ public class Controlador implements ActionListener
     private VentanaPrincipal venPrin; // Se crea un objeto de la clase VentanaPrincipal
     private Circulo model;
 
+    //
+    // Métodos
+    //
+
     // Método constructor
     public Controlador(VentanaPrincipal pVenPrin, Circulo pModel) // Se pasan los objetos como parámetros
     {
@@ -27,12 +29,12 @@ public class Controlador implements ActionListener
         this.venPrin.miPanelOperaciones.btSalir.addActionListener(this);
     }
 
-    // Método de atencion de eventos
+    // Método de atencion a eventos
     @Override // Sobreescribir el método actionPerformed de la interfaz ActionListener
-    public void actionPerformed(ActionEvent e) // Se crea un objeto de la clase ActionEvent
+    public void actionPerformed(ActionEvent ae) // Se crea un objeto de la clase ActionEvent
     {
         // Identificar el comando generado
-        String comando = e.getActionCommand();
+        String comando = ae.getActionCommand();
 
         if(comando.equals("Calcular")) // Si el comando es igual a Calcular, entonces...
         {
@@ -47,7 +49,6 @@ public class Controlador implements ActionListener
         
         if(comando.equals("Salir"))
         {
-            JOptionPane.showMessageDialog(venPrin, "Saliendo");
             System.exit(0);
         }
 

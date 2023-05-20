@@ -2,10 +2,11 @@ package modelo;
 
 public class Carro 
 {
-    //--------------------------
-    //Atributos
-    //--------------------------
-    private static int numRuedas = 4;
+    //
+    // Atributos
+    //
+
+    private static int numRuedas = 4; // Es static porque es un atributo de clase
     private String color;
     private int posX;
     private int posY;
@@ -24,7 +25,7 @@ public class Carro
         this.velocidad = 0;
     }
     
-    public static int getNumRuedas()
+    public static int getNumRuedas() // Es static porque es un atributo de clase
     {
         return numRuedas;
     }

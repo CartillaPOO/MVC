@@ -8,42 +8,42 @@ import vista.VentanaPrincipal;
 
 public class Controlador implements ActionListener
 {
-    //----------------------------
-    //Atributos
-    //----------------------------
+    //
+    // Atributos
+    //
     private VentanaPrincipal venPrin;
     private Carro model;
     
-    //----------------------------
-    //Metodos
-    //----------------------------
-    
-    //Constructor
+    //
+    // Métodos
+    //
+
+    // Método constructor
     public Controlador(VentanaPrincipal pVenPrin, Carro pModel)
     {
         this.venPrin = pVenPrin;
         this.model = pModel;
-        this.venPrin.miPanelOperaciones.agregarOyentesBotones(this);
-        
+        this.venPrin.miPanelOperaciones.agregarOyentesBotones(this); // Los eventos se escuchan desde aquí
     }
     
+    // Método de atención a eventos
     @Override
     public void actionPerformed(ActionEvent ae) 
     {
-        //Identificar el comendo generado (calcular, borrar, salir)
+        // Identificar el comando generado (calcular, borrar, salir)
         String comando = ae.getActionCommand();
         
         if(comando.equals("crear"))
         {   
-            //Validar datos entrada
+            // Validar datos entrada
             try
             {
                 String color = venPrin.miPanelEntradaDatos.getColor();
                 int posX = Integer.parseInt(venPrin.miPanelEntradaDatos.getPosX());
                 int poxY = Integer.parseInt(venPrin.miPanelEntradaDatos.getPosY());
             
-                //Creación del objeto tipo Carro
-                model = new Carro(color, posX, poxY);
+                // Creación del objeto tipo Carro
+                model = new Carro(color, posX, poxY); 
                 
                 venPrin.miPanelResultado.mostrarResultado("Se ha creado un objeto Carro");
                 venPrin.miPanelResultado.mostrarResultado("Su número de ruedas son " + model.getNumRuedas());
@@ -51,12 +51,13 @@ public class Controlador implements ActionListener
                 venPrin.miPanelResultado.mostrarResultado("Su posición actual es (" + model.getPosX()+"," + model.getPosY()+")" );
                 venPrin.miPanelResultado.mostrarResultado("Su velocidad actual es " + model.getVelocidad());
                 
-                //Desactivar boton crear
+                // Desactivar boton crear
                 venPrin.miPanelOperaciones.desactivarBotonCrear();
-                //Activar botones
+                // Activar botones
                 venPrin.miPanelOperaciones.activarBotones();
             }
-            catch(Exception e)
+            catch(Exception e) // Error en datos de entrada
+            
             {
                 JOptionPane.showMessageDialog(null, "Error en datos de entrada", "Error", JOptionPane.ERROR_MESSAGE);
             }   
@@ -65,7 +66,7 @@ public class Controlador implements ActionListener
         if(comando.equals("mover"))
         {   
             venPrin.crearDialogoMover();
-            this.venPrin.miDialogoMoverCarro.agregarOyentesBotones(this);  
+            this.venPrin.miDialogoMoverCarro.agregarOyentesBotones(this);
         }
         
         if(comando.equals("aceptar"))

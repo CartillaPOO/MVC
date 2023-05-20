@@ -3,7 +3,6 @@ package vista;
 import java.awt.Color;
 import java.awt.Font;
 import static java.awt.Font.BOLD;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -12,17 +11,17 @@ import javax.swing.border.TitledBorder;
 
 public class PanelOperaciones extends JPanel
 {
-    //----------------------
-    //Atributos
-    //----------------------
+    //
+    // Atributos
+    //
     public JButton bCrear;
     public JButton bMover;
     public JButton bAcelerar;
     public JButton bFrenar;
     
-    //----------------------
-    //Metodos
-    //----------------------
+    //
+    // Metodos
+    //
     
     //Constructor
     public PanelOperaciones()

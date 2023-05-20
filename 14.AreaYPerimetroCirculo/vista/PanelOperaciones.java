@@ -22,13 +22,13 @@ public class PanelOperaciones extends JPanel
     // Constructor   
     public PanelOperaciones()
     {
-        this.setLayout(null);
-        this.setBackground(new Color(31,31,31));
+        this.setLayout(null); // Desactivar el diseño por defecto
+        this.setBackground(new Color(31,31,31)); // Color de fondo
 
         // Creación y adición del botón calcular
         btCalcular = new JButton("Calcular");
-        btCalcular.setBounds(56, 40, 120, 25);
-        btCalcular.setForeground(Color.WHITE);
+        btCalcular.setBounds(56, 40, 120, 25); // Posición y tamaño
+        btCalcular.setForeground(Color.WHITE); // Color de la letra
         btCalcular.setBackground(new Color(59,59,59));
         this.add(btCalcular);
         btCalcular.setActionCommand("Calcular");
