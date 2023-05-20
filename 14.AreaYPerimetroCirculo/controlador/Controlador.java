@@ -36,7 +36,7 @@ public class Controlador implements ActionListener
         // Identificar el comando generado
         String comando = ae.getActionCommand();
 
-        if(comando.equals("Calcular")) // Si el comando es igual a Calcular, entonces...
+        if(comando.equals("calcular")) // Si el comando es igual a Calcular, entonces...
         {
             double radio = Double.parseDouble(venPrin.miPanelEntradaDatos.getRadio()); // Se obtiene el radio del panel de entrada de datos
             model.setRadio(radio); // Le asigna el radio a model
@@ -47,12 +47,12 @@ public class Controlador implements ActionListener
             venPrin.miPanelResultados.mostrarResultado(area, perimetro); // Se llama al método mostrarResultado de miPanelResultados de venPrin
         }
         
-        if(comando.equals("Salir"))
+        if(comando.equals("salir"))
         {
             System.exit(0);
         }
 
-        if(comando.equals("Borrar"))
+        if(comando.equals("borrar"))
         {
             this.venPrin.miPanelEntradaDatos.borrar(); // Limpiar los campos de texto
             this.venPrin.miPanelResultados.borrar();

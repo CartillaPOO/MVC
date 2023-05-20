@@ -27,7 +27,6 @@ public class PanelEntradaDatos extends JPanel
     //
     
     // Constructor
-
     public PanelEntradaDatos()
     {
         this.setLayout(null); // Desactivar el diseño por defecto
@@ -50,8 +49,8 @@ public class PanelEntradaDatos extends JPanel
         tfRadio = new JTextField();
         tfRadio.setBounds(260, 115, 60, 20);
         tfRadio.setFont(fontField);
-        tfRadio.setForeground(Color.WHITE);
         tfRadio.setBorder(null); // Eliminar el borde
+        tfRadio.setForeground(Color.WHITE);
         tfRadio.setCaretColor(Color.WHITE); // Color del cursor
         tfRadio.setBackground(new Color(59,59,59));
         this.add(tfRadio);
