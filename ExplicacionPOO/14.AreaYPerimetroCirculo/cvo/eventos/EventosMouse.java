@@ -5,12 +5,17 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import controlador.Controlador;
 import cvo.clases.Colores;
 import cvo.clases.SFX;
+import cvo.vista.DialogoExplicacion;
 import cvo.vista.FrameTest;
+import modelo.Circulo;
+import vista.VentanaPrincipal;
 
 public class EventosMouse implements MouseListener{
 
@@ -38,18 +43,31 @@ public class EventosMouse implements MouseListener{
         String clase = event.getSource().getClass().getSimpleName();
         //Eventos primera linea
         if(Evento.equals("VentanaPrincipal ")){
+        
+            DialogoExplicacion miDialogoVentanaPrincipal = new DialogoExplicacion("ventanaPrincipal-Circulo.png");
+            setWindowPosition(miDialogoVentanaPrincipal);
+
         }
 
         if(Evento.equals("miVentana = ")){
             System.out.println("miVentana");
+            DialogoExplicacion miDialogoExplicacion = new DialogoExplicacion("miVentana(2).gif", true);
+            setWindowPosition(miDialogoExplicacion);
         }
 
         if(Evento.equals("new VentanaPrincipal();")){
             //Aqui se colocan las instancias del sistema MVC
+            VentanaPrincipal miVentana = new VentanaPrincipal();
+            Circulo miCirculo = new Circulo();
+            Controlador miControlador = new Controlador(miVentana, miCirculo);
+            setWindowPosition(miVentana);
         }
 
         //Eventos segunda linea
         if(Evento.equals(nombreModelo + " ")){
+
+            DialogoExplicacion miDialogoModelo = new DialogoExplicacion("modelo-Circulo.png");
+            setWindowPosition(miDialogoModelo);
         }
 
         if(Evento.equals("mi" + nombreModelo + " = ")){
@@ -61,6 +79,9 @@ public class EventosMouse implements MouseListener{
 
         //Eventos tercera linea
         if(Evento.equals("Controlador ")){
+
+            DialogoExplicacion miDialogoControlador = new DialogoExplicacion("controlador-Circulo.png");
+            setWindowPosition(miDialogoControlador);
         }
 
         if(Evento.equals("miControlador = ")){
@@ -80,6 +101,10 @@ public class EventosMouse implements MouseListener{
 
     public void setWindowPosition(JFrame ventanaPrincipal){
         ventanaPrincipal.setLocation(miFrameTest.getWidthPOSX(), miFrameTest.getScreenPOSY());
+    }
+
+    public void setWindowPosition(JDialog dialogo){
+        dialogo.setLocation(0, miFrameTest.getHeightPOSX());
     }
 
     @Override

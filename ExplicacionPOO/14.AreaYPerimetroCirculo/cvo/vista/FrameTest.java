@@ -41,6 +41,7 @@ public class FrameTest extends JFrame {
         this.setLocation(POSX, POSY);
         this.setResizable(false);
         this.setBackground(new Color(29, 32, 33));
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
     }
 
