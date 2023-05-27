@@ -25,7 +25,7 @@ public class PanelOperaciones extends JPanel
     // Metodos
     //----------------------
 
-    //Constructor
+    // Constructor
     public PanelOperaciones()
     {
         //Definición del contenedor del panel

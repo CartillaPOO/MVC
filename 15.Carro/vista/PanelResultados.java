@@ -18,7 +18,7 @@ public class PanelResultados extends JPanel
     // Métodos
     //
     
-    // Constructor
+    // Método constructor
     public PanelResultados()
     {
         // Definición del contendor del panel
@@ -37,7 +37,7 @@ public class PanelResultados extends JPanel
         this.add(spResultado); 
     }
 
-    public void mostrarResultado(String msj)
+    public void mostrarResultado(String msj) 
     {
         taResultado.append(msj + "\n"); // Agrega el mensaje al area de texto
     }
@@ -46,5 +46,4 @@ public class PanelResultados extends JPanel
     {
         taResultado.setText("");
     }
-    
 }

@@ -11,6 +11,7 @@ public class Controlador implements ActionListener
     //
     // Atributos
     //
+    
     private VentanaPrincipal venPrin;
     private Carro model;
     
@@ -81,13 +82,13 @@ public class Controlador implements ActionListener
         if(comando.equals("acelerar"))
         {
             model.acelerar();
-            venPrin.miPanelResultado.mostrarResultado("\nTras acelerar, su velocidad actual es " + model.getVelocidad());
+            venPrin.miPanelResultado.mostrarResultado("\nEl carro ha acelerado\nSu velocidad actual es " + model.getVelocidad());
         }
         
         if(comando.equals("frenar"))
         {
             model.frenar();
-            venPrin.miPanelResultado.mostrarResultado("\nTras frenar, su velocidad actual es " + model.getVelocidad());
+            venPrin.miPanelResultado.mostrarResultado("\nEl carro ha frenado\nSu velocidad actual es " + model.getVelocidad());
         }
     }    
 }

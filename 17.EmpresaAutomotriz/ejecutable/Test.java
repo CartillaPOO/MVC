@@ -1,8 +1,6 @@
 package ejecutable;
 
 import controlador.Controlador;
-import modelo.Carro;
-import modelo.Empleado;
 import modelo.EmpresaAutomotriz;
 import vista.VentanaPrincipal;
 

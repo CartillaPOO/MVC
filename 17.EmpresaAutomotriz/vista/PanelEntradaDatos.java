@@ -20,30 +20,30 @@ public class PanelEntradaDatos extends JPanel
     //----------------------
     public PanelEntradaDatos()
     {
-        //Definición del contenedor del panel
+        // Definición del contenedor del panel
         this.setLayout(null);
         this.setBackground(Color.WHITE);
 
-        //Crear y agregar etiqueta empleados
+        // Crear y agregar etiqueta empleados
         lbEmpleados = new JLabel("Empleados: ", JLabel.RIGHT);
         lbEmpleados.setBounds(0,90,100,20);
         this.add(lbEmpleados);
 
-        //Crear y agregar combo lista Empleados
+        // Crear y agregar combo lista Empleados
         cbEmpleados = new JComboBox();
         cbEmpleados.setBounds(100,90,260,20);
         this.add(cbEmpleados);
 
-        //Borde y titulo del panel
+        // Borde y titulo del panel
         TitledBorder borde = BorderFactory.createTitledBorder("Datos de Entrada");
         borde.setTitleColor(Color.BLUE);
         this.setBorder(borde);
     }
 
-    //Metodos de acceso
+    // Métodos de acceso
     public String getEmpleado()
     {
-        return (String) cbEmpleados.getSelectedItem();
+        return (String)cbEmpleados.getSelectedItem();
     }
 
     public int getIndexEmpleado()

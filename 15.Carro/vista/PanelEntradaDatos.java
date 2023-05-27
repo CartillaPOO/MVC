@@ -30,7 +30,7 @@ public class PanelEntradaDatos extends JPanel
     // Metodos
     //
     
-    //Constructor
+    // Método constructor
     public PanelEntradaDatos()
     {
         // Definición del contendor del panel
@@ -108,7 +108,7 @@ public class PanelEntradaDatos extends JPanel
         return tfPosY.getText();
     }
     
-    //Metodo para borrar cajas de texto
+    // Metodo para borrar cajas de texto
     public void borrar()
     {
         tfColor.setText("");

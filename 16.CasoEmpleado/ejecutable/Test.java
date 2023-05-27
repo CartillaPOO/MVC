@@ -1,7 +1,6 @@
 package ejecutable;
 
-import java.io.Console;
-
+import javax.swing.JOptionPane;
 import modelo.Empleado;
 import modelo.Empresa;
 
@@ -9,33 +8,35 @@ public class Test
 {
     public static void main(String[] args)
     {   
-        Console input = System.console();
         String opcion;
         String nombre;
         int horasTrabajadas;
         int añoNacimiento;
         int añoIngreso;
-        System.out.println("-----------------");
-        System.out.println("-SUELDO EMPLEADO-");
-        System.out.println("-----------------");
-        System.out.println("Digite la info del empleado");
-        do{
+        Empresa miEmpresa = new Empresa();
+        
+        JOptionPane.showMessageDialog(null, "Bienvenido al sistema de registro de empleados");
 
-        nombre = input.readLine("Nombre completo: ");
-        horasTrabajadas = Integer.parseInt(input.readLine("No horas trabajadas: "));
-        añoNacimiento = Integer.parseInt(input.readLine("Año nacimiento: "));
-        añoIngreso = Integer.parseInt(input.readLine("Año de ingreso: "));
+        do
+        {
+        nombre = JOptionPane.showInputDialog("Nombre: ");
+        horasTrabajadas = Integer.parseInt(JOptionPane.showInputDialog("Horas trabajadas: "));
+        añoNacimiento = Integer.parseInt(JOptionPane.showInputDialog("Año de nacimiento: "));
+        añoIngreso = Integer.parseInt(JOptionPane.showInputDialog("Año de ingreso: "));
         
-        Empresa.addEmpleados(new Empleado(nombre, horasTrabajadas, añoNacimiento, añoIngreso));
+        miEmpresa.addEmpleados(new Empleado(nombre, horasTrabajadas, añoNacimiento, añoIngreso));
         
-        opcion = input.readLine("Quieres ingresar otro empleado (si) ó (no): "); 
-        System.out.println(opcion.equals("si"));
-        }while(opcion.equals("si"));
-        System.out.println("-------------------");
-        System.out.println("Empleados registrados");
-        for (Empleado empleado : Empresa.getEmpleados()) {
-            System.out.println(empleado);
+        opcion = JOptionPane.showInputDialog("¿Desea agregar otro empleado? (si/no)");
+
+        
+        while (!opcion.equals("si") && !opcion.equals("no")) // Si la opción ingresada no es válida, se vuelve a preguntar
+        {
+            JOptionPane.showMessageDialog(null, "Debe ingresar una opción válida");
+            opcion = JOptionPane.showInputDialog("¿Desea agregar otro empleado? (si/no)");
         }
-        
-    }
+        }
+        while(opcion.equals("si"));
+
+        JOptionPane.showMessageDialog(null, miEmpresa.getEmpleados());
+    } 
 }

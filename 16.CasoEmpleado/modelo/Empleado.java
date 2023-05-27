@@ -2,9 +2,10 @@ package modelo;
 
 public class Empleado
 {
-    //---------------
-    //Atributos
-    //---------------
+    //
+    // Atributos
+    //
+
     private String nombre;
     private int fechaNacimiento;
     private int edad;
@@ -12,8 +13,11 @@ public class Empleado
     private int horasTrabajo;
     private double sueldoMensual;
     private int antiguedad;
-    private int id;
     private String auxilio;
+
+    //
+    // Métodos
+    //
 
     // Método constructor
     public Empleado(String nombre, int horasTrabajo, int fechaNacimiento, int fechaIngreso)
@@ -27,10 +31,8 @@ public class Empleado
         
     }
     
-    //---------------
-    //Métodos
-    //---------------
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre)
+    {
         this.nombre = nombre;
     }
 
@@ -39,11 +41,13 @@ public class Empleado
         return this.nombre;
     }
 
-    public int getEdad(){
+    public int getEdad()
+    {
         return edad;
     }
 
-    public int getAntiguedad(){
+    public int getAntiguedad()
+    {
         return antiguedad;
     }
 
@@ -52,36 +56,34 @@ public class Empleado
         return this.horasTrabajo;
     }
 
-    public int getFechaIngreso() {
+    public int getFechaIngreso()
+    {
         return this.fechaIngreso;
     }
 
-    public int getFechaNacimiento() {
+    public int getFechaNacimiento()
+    {
         return this.fechaNacimiento;
     }
 
-    public void setSueldoMensual(double sueldoMensual) {
+    public void setSueldoMensual(double sueldoMensual)
+    {
         this.sueldoMensual = sueldoMensual;
     }
 
-    public double getSueldoMensual() {
+    public double getSueldoMensual()
+    {
         return this.sueldoMensual;
     }
 
-    public void setAuxilio(String respuesta) {
+    public void setAuxilio(String respuesta)
+    {
         this.auxilio = respuesta;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String toString(){
-        return "\nID: " + id + "\nNombre: " + nombre + "\nEdad: " + edad + "\nAntiguedad: " + antiguedad + "\nSalario: " + sueldoMensual + "\nAuxilio: " + auxilio;
+    public String toString()
+    {
+        return "Nombre: " + nombre + "\nEdad: " + edad + "\nAntiguedad: " + antiguedad + "\nSalario: " + sueldoMensual + "\nAuxilio: " + auxilio + "\n";
     }
 
 }

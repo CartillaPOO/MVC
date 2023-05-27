@@ -42,22 +42,21 @@ public class DialogoMoverCarro extends JDialog
         lbTitulo.setFont(fontLabel);
         lbTitulo.setForeground(Color.WHITE);
         this.add(lbTitulo);
-
         
-        lbPosX= new JLabel("X =", JLabel.RIGHT); // JLabel.RIGHT: Alinea el texto a la derecha
+        lbPosX = new JLabel("X =", JLabel.RIGHT); // JLabel.RIGHT: Alinea el texto a la derecha
         lbPosX.setBounds(0,50,150,20);
         lbPosX.setFont(fontLabel);
         lbPosX.setForeground(Color.WHITE);
         this.add(lbPosX);
         
-        lbPosY= new JLabel("Y =", JLabel.RIGHT);
+        lbPosY = new JLabel("Y =", JLabel.RIGHT);
         lbPosY.setBounds(0,90,150,20);
         lbPosY.setFont(fontLabel);
         lbPosY.setForeground(Color.WHITE);
         this.add(lbPosY);
         
-        tfPosX= new JTextField();
-        tfPosX.setBounds(160,50,60,25);
+        tfPosX = new JTextField();
+        tfPosX.setBounds(160,50,60,20);
         tfPosX.setFont(fontField);
         tfPosX.setBorder(null);
         tfPosX.setForeground(Color.WHITE);
@@ -65,8 +64,8 @@ public class DialogoMoverCarro extends JDialog
         tfPosX.setBackground(new Color(59,59,59));
         this.add(tfPosX);
         
-        tfPosY= new JTextField();
-        tfPosY.setBounds(160,90,60,25);
+        tfPosY = new JTextField();
+        tfPosY.setBounds(160,90,60,20);
         tfPosY.setFont(fontField);
         tfPosY.setBorder(null);
         tfPosY.setForeground(Color.WHITE);
@@ -75,7 +74,7 @@ public class DialogoMoverCarro extends JDialog
         this.add(tfPosY);
         
         btAceptar = new JButton("Aceptar");
-        btAceptar.setBounds(40,140,260,25);
+        btAceptar.setBounds(40,140,260,20);
         btAceptar.setFont(fontField);
         btAceptar.setActionCommand("aceptar");
         btAceptar.setForeground(Color.WHITE);
@@ -89,9 +88,10 @@ public class DialogoMoverCarro extends JDialog
         this.setResizable(false);
         this.setVisible(true);
 
+        // Color de fondo
         colorFondo = new JPanel();
         colorFondo.setBackground(new Color(31,31,31));
-        colorFondo.setBounds(0,0,600,400);
+        colorFondo.setBounds(0,0,340,230);
         this.add(colorFondo);
     }
     

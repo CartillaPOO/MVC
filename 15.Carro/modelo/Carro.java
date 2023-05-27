@@ -16,7 +16,7 @@ public class Carro
     // Métodos
     //
     
-    //Constructor
+    // Método constructor
     public Carro(String pColor, int pPosx, int pPosy)
     {
         this.color = pColor;

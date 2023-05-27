@@ -7,21 +7,20 @@ import vista.VentanaPrincipal;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class Controlador implements ActionListener
 {
     //------------------
-    //Atributos
+    // Atributos
     //------------------
     private VentanaPrincipal venPrin;
     private EmpresaAutomotriz empresa;
 
     //------------------
-    //Metodos
+    // Metodos
     //------------------
 
-    //Constructor
+    // Constructor
     public Controlador(VentanaPrincipal pVenPrin, EmpresaAutomotriz pEmpresa)
     {
         this.venPrin = pVenPrin;

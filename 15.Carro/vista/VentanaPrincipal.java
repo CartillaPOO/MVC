@@ -20,7 +20,7 @@ public class VentanaPrincipal extends JFrame
     // Métodos
     //
     
-    //Metodo constructor
+    // Método constructor
     public VentanaPrincipal()
     {
         // Definición del contenedor de la ventana
