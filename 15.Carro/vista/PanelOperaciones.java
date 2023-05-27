@@ -35,7 +35,6 @@ public class PanelOperaciones extends JPanel
         this.add(btCrear);
         btCrear.setActionCommand("crear");
         
-        
         btMover = new JButton("Mover");
         btMover.setBounds(179,40,90,20);
         btMover.setForeground(Color.WHITE);
