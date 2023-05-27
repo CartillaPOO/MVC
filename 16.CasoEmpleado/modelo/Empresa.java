@@ -28,7 +28,6 @@ public class Empresa
         {
             return "No aplica";
         }
-    
     }
 
     private void setSueldoEmpleado(Empleado empleado)

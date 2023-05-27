@@ -31,11 +31,6 @@ public class Empleado
         
     }
     
-    public void setNombre(String nombre)
-    {
-        this.nombre = nombre;
-    }
-
     public String getNombre()
     {
         return this.nombre;
@@ -45,12 +40,12 @@ public class Empleado
     {
         return edad;
     }
-
+    
     public int getAntiguedad()
     {
         return antiguedad;
     }
-
+    
     public int getHorasTrabajo()
     {
         return this.horasTrabajo;
@@ -60,10 +55,15 @@ public class Empleado
     {
         return this.fechaIngreso;
     }
-
+    
     public int getFechaNacimiento()
     {
         return this.fechaNacimiento;
+    }
+    
+    public void setNombre(String nombre)
+    {
+        this.nombre = nombre;
     }
 
     public void setSueldoMensual(double sueldoMensual)
@@ -85,5 +85,4 @@ public class Empleado
     {
         return "Nombre: " + nombre + "\nEdad: " + edad + "\nAntiguedad: " + antiguedad + "\nSalario: " + sueldoMensual + "\nAuxilio: " + auxilio + "\n";
     }
-
 }
