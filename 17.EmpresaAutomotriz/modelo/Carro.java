@@ -2,18 +2,19 @@ package modelo;
 
 public class Carro 
 {
-    //----------------------
+    //
     // Atributos
-    //----------------------
-    private double precio;
+    //
 
+    private double precio;
     private String marca;
     private int modelo;
 
-    //----------------------
-    // Metodos
-    //----------------------
+    //
+    // Métodos
+    //
 
+    // Método constructor
     public Carro(double pPrecio, String pMarca, int pmodelo)
     {
         this.precio = pPrecio;

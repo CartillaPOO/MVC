@@ -1,34 +1,42 @@
 package vista;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
-import java.awt.event.ActionListener;
 
 
 public class DialogoAgregarVendedor extends JDialog
 {
-    //----------------------
+    //
     // Atributos
-    //----------------------
+    //
+
+    private JPanel colorFondo;
     private JLabel lbNombreVendedor;
     private JTextField tfNombreVendedor;
-    private JLabel lbEdadVendedor;
-    private JTextField tfEdadVendedor;
     private JLabel lbCedulaVendedor;
     private JTextField tfCedulaVendedor;
-    private JButton btAgregarVendedor;
+    private JButton btAgregar;
 
-    //----------------------
+    private Font fontLabel = new Font("Arial", Font.BOLD, 20);
+    private Font fontField = new Font("Arial", Font.BOLD, 15);
+
+    //
     // Metodos
-    //----------------------
+    //
+
+    // Método constructor
     public DialogoAgregarVendedor()
     {
-        //Definición del layout del Dialogo
+        // Definición del contenedor de la ventana
         this.setLayout(null);
 
-        //Crear y agregar elementos
+        // Creación y adición de elementos
         lbNombreVendedor = new JLabel("Vendedor: ");
         lbNombreVendedor.setBounds(10,50,140,20);
         this.add(lbNombreVendedor);
@@ -36,16 +44,6 @@ public class DialogoAgregarVendedor extends JDialog
         tfNombreVendedor = new JTextField();
         tfNombreVendedor.setBounds(150,50,100, 25);
         this.add(tfNombreVendedor);
-
-        
-        lbEdadVendedor = new JLabel("Edad: ");
-        lbEdadVendedor.setBounds(10,70,140,20);
-        this.add(lbEdadVendedor);
-
-        tfEdadVendedor = new JTextField();
-        tfEdadVendedor.setBounds(150,70,100, 25);
-        this.add(tfEdadVendedor);
-
 
         lbCedulaVendedor = new JLabel("Cédula: ");
         lbCedulaVendedor.setBounds(10,90,140,20);
@@ -57,12 +55,12 @@ public class DialogoAgregarVendedor extends JDialog
 
 
 
-        btAgregarVendedor = new JButton("Agregar");
-        btAgregarVendedor.setBounds(20,140,260,25);
-        btAgregarVendedor.setActionCommand("agregar");
-        this.add(btAgregarVendedor);
+        btAgregar = new JButton("Agregar");
+        btAgregar.setBounds(20,140,260,25);
+        btAgregar.setActionCommand("agregar");
+        this.add(btAgregar);
 
-        //Caracteristicas de la ventana
+        // Características de la ventana
         this.setTitle("Agregar Vendedor");
         this.setSize(300,300);
         this.setLocationRelativeTo(null);
@@ -76,19 +74,14 @@ public class DialogoAgregarVendedor extends JDialog
         return tfNombreVendedor.getText();
     }
 
-    public int getEdadVendedor()
+    public String getCedulaVendedor()
     {
-        return Integer.parseInt(tfEdadVendedor.getText());
-    }
-
-    public int getCedulaVendedor()
-    {
-        return Integer.parseInt(tfCedulaVendedor.getText());
+        return tfCedulaVendedor.getText();
     }
 
     public void agregarOyenteBoton(ActionListener pAL)
     {
-        btAgregarVendedor.addActionListener(pAL);
+        btAgregar.addActionListener(pAL);
     }
 
     public void cerrarDialogoAgregarVendedor()

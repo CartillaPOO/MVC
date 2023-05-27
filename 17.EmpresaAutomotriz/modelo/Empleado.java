@@ -1,31 +1,27 @@
 package modelo;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Empleado
 {
-    //----------------------
-    // Constantes
-    //----------------------
-    public final static double SALARIO_MINIMO = 1000000;
-
-    //----------------------
+    //
     // Atributos
-    //----------------------
+    //
+
+    public final static double SALARIO_MINIMO = 1000000;
     private String nombre;
+    private String cedula;
     private ArrayList<Carro> ventas;
     private double sueldo;
-    private int edad;
-    private int cedula;
 
-    //----------------------
-    // Metodos
-    //----------------------
-    public Empleado(String pNombre, int pEdad, int pCedula)
+    //
+    // Métodos
+    //
+
+    // Método constructor
+    public Empleado(String pNombre, String pCedula)
     {
         this.nombre = pNombre;
-        this.edad = pEdad;
         this.cedula = pCedula;
         this.ventas = new ArrayList<>();
     }
@@ -34,7 +30,9 @@ public class Empleado
     {
         int i, j;
         Carro aux;
-        for (i = 0; i < ventas.size() - 1; i++) 
+
+        // Ordenar por precio de mayor a menor
+        for (i = 0; i < ventas.size() - 1; i++)
         {
             for (j = 0; j < ventas.size() - i - 1; j++) 
             {                                                              
@@ -55,25 +53,24 @@ public class Empleado
 
     public void calcularSueldo()
     {
-        if(ventas.isEmpty())
+        if(ventas.isEmpty()) // Si no ha vendido ningún carro
         {
             sueldo = SALARIO_MINIMO;
         }
         else
         {
-            //Numero carros vendidos
-            int numCarrosVendidos = ventas.size();
+            int numCarrosVendidos = ventas.size(); // Número de carros vendidos
+            double totalVentas = 0;
 
             sueldo = SALARIO_MINIMO + 100000*numCarrosVendidos;
 
-            double totalVentas = 0;
-            for(int i=0; i<numCarrosVendidos;i++)
+            for(int i = 0; i < numCarrosVendidos; i++) 
             {
-                Carro carro = (Carro)ventas.get(i);
-                totalVentas = totalVentas + carro.getPrecio();
+                Carro carro = (Carro)ventas.get(i); // Obtener el carro vendido
+                totalVentas = totalVentas + carro.getPrecio(); // Sumar el precio del carro vendido
             }
 
-            sueldo = sueldo + 0.02*totalVentas;
+            sueldo = sueldo + 0.02*totalVentas; // Sumar el 2% de las ventas
         }
     }
 
@@ -92,12 +89,7 @@ public class Empleado
         return sueldo;
     }
 
-    public int getEdad()
-    {
-        return edad;
-    }
-
-    public int getCedula()
+    public String getCedula()
     {
         return cedula;
     }
@@ -106,15 +98,11 @@ public class Empleado
     {
         String listaCarros = "";
 
-        for (int i = 0; i < getVentas(); i++)
+        for (int i = 0; i < getVentas(); i++) // Recorrer la lista de carros vendidos
         {
             listaCarros = listaCarros + "Precio: " + ventas.get(i).getPrecio() + "\nMarca: " + ventas.get(i).getMarca() + "\nModelo: " + ventas.get(i).getmodelo() + "\n";
         }
-        return listaCarros;
-    }
 
-    public int verNumeroDeVentas()
-    {
-        return ventas.size();
+        return listaCarros;
     }
 }

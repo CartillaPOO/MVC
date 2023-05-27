@@ -9,35 +9,33 @@ import javax.swing.border.TitledBorder;
 
 public class PanelEntradaDatos extends JPanel
 {
-    //----------------------
+    //
     // Atributos
-    //----------------------
+    //
+
     private JLabel lbEmpleados;
     private JComboBox cbEmpleados;
 
-    //----------------------
+    //
     // Metodos
-    //----------------------
+    //
+
+    // Método constructor
     public PanelEntradaDatos()
     {
         // Definición del contenedor del panel
         this.setLayout(null);
         this.setBackground(Color.WHITE);
 
-        // Crear y agregar etiqueta empleados
+        // Creación y adición de etiqueta
         lbEmpleados = new JLabel("Empleados: ", JLabel.RIGHT);
         lbEmpleados.setBounds(0,90,100,20);
         this.add(lbEmpleados);
 
-        // Crear y agregar combo lista Empleados
+        // Crear y agregar combo box de empleados
         cbEmpleados = new JComboBox();
         cbEmpleados.setBounds(100,90,260,20);
         this.add(cbEmpleados);
-
-        // Borde y titulo del panel
-        TitledBorder borde = BorderFactory.createTitledBorder("Datos de Entrada");
-        borde.setTitleColor(Color.BLUE);
-        this.setBorder(borde);
     }
 
     // Métodos de acceso
@@ -53,6 +51,6 @@ public class PanelEntradaDatos extends JPanel
 
     public void setEmpleado(String emp)
     {
-        cbEmpleados.addItem(emp);
+        cbEmpleados.addItem(emp); // Agregar empleado al combo box
     }
 }
