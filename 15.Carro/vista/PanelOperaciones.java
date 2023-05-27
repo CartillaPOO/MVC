@@ -29,35 +29,35 @@ public class PanelOperaciones extends JPanel
         
         // Creación y adición de los botones
         btCrear = new JButton("Crear");
-        btCrear.setBounds(67,40,90,20);
-        btCrear.setForeground(Color.WHITE);
         btCrear.setBackground(new Color(59,59,59));
-        this.add(btCrear);
+        btCrear.setForeground(Color.WHITE);
         btCrear.setActionCommand("crear");
+        btCrear.setBounds(67,40,90,20);
+        this.add(btCrear);
         
         btMover = new JButton("Mover");
-        btMover.setBounds(179,40,90,20);
-        btMover.setForeground(Color.WHITE);
         btMover.setBackground(new Color(59,59,59));
-        this.add(btMover);
+        btMover.setForeground(Color.WHITE);
         btMover.setActionCommand("mover");
+        btMover.setBounds(179,40,90,20);
         btMover.setEnabled(false); // Permanece desactivado hasta que se cree un carro
+        this.add(btMover);
         
         btAcelerar = new JButton("Acelerar");
-        btAcelerar.setBounds(291,40,90,20);
-        btAcelerar.setForeground(Color.WHITE);
         btAcelerar.setBackground(new Color(59,59,59));
-        this.add(btAcelerar);
+        btAcelerar.setForeground(Color.WHITE);
         btAcelerar.setActionCommand("acelerar");
+        btAcelerar.setBounds(291,40,90,20);
         btAcelerar.setEnabled(false);
+        this.add(btAcelerar);
         
         btFrenar = new JButton("Frenar");
-        btFrenar.setBounds(403,40,80,20);
-        btFrenar.setForeground(Color.WHITE);
         btFrenar.setBackground(new Color(59,59,59));
-        this.add(btFrenar);
+        btFrenar.setForeground(Color.WHITE);
         btFrenar.setActionCommand("frenar");
+        btFrenar.setBounds(403,40,80,20);
         btFrenar.setEnabled(false);
+        this.add(btFrenar);
     }
 
     public void agregarOyentesBotones(ActionListener pAL) // Los eventos de los botones se manejan en la clase Controlador
