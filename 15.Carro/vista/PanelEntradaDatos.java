@@ -44,50 +44,50 @@ public class PanelEntradaDatos extends JPanel
         
         // Creación y adición de etiquetas Color, PosX y PosY
         lbColor = new JLabel("Color:");
-        lbColor.setBounds(190,65,60,20);
         lbColor.setFont(fontLabel);
         lbColor.setForeground(Color.WHITE);
+        lbColor.setBounds(190,65,60,20);
         this.add(lbColor);
         
         lbPosX = new JLabel("PosX:");
-        lbPosX.setBounds(190,105,60,20);
         lbPosX.setFont(fontLabel);
         lbPosX.setForeground(Color.WHITE);
+        lbPosX.setBounds(190,105,60,20);
         this.add(lbPosX);
         
         lbPosY = new JLabel("PosY:");
-        lbPosY.setBounds(190,145,60,20);
         lbPosY.setFont(fontLabel);
         lbPosY.setForeground(Color.WHITE);
+        lbPosY.setBounds(190,145,60,20);
         this.add(lbPosY);
         
         
         // Creación y adición de campos de texto
         tfColor = new JTextField("Rojo");
-        tfColor.setBounds(260, 65, 60, 20);
-        tfColor.setFont(fontField);
+        tfColor.setBackground(new Color(59,59,59));
         tfColor.setBorder(null);
+        tfColor.setFont(fontField);
         tfColor.setForeground(Color.WHITE);
         tfColor.setCaretColor(Color.WHITE);
-        tfColor.setBackground(new Color(59,59,59));
+        tfColor.setBounds(260, 65, 60, 20);
         this.add(tfColor);
         
         tfPosX = new JTextField("10");
-        tfPosX.setBounds(260, 105, 60, 20);
-        tfPosX.setFont(fontField);
+        tfPosX.setBackground(new Color(59,59,59));
         tfPosX.setBorder(null);
+        tfPosX.setFont(fontField);
         tfPosX.setForeground(Color.WHITE);
         tfPosX.setCaretColor(Color.WHITE);
-        tfPosX.setBackground(new Color(59,59,59));
+        tfPosX.setBounds(260, 105, 60, 20);
         this.add(tfPosX);
         
         tfPosY = new JTextField("10");
-        tfPosY.setBounds(260, 145, 60, 20);
-        tfPosY.setFont(fontField);
+        tfPosY.setBackground(new Color(59,59,59));
         tfPosY.setBorder(null);
+        tfPosY.setFont(fontField);
         tfPosY.setForeground(Color.WHITE);
         tfPosY.setCaretColor(Color.WHITE);
-        tfPosY.setBackground(new Color(59,59,59));
+        tfPosY.setBounds(260, 145, 60, 20);
         this.add(tfPosY);
     }
     

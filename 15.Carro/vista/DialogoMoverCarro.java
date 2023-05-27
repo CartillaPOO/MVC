@@ -38,47 +38,47 @@ public class DialogoMoverCarro extends JDialog
         
         // Creación y adición de elementos
         lbTitulo = new JLabel("Mover Carro", JLabel.CENTER); // JLabel.CENTER: Centra el texto
-        lbTitulo.setBounds(0,10,340,20);
         lbTitulo.setFont(fontLabel);
         lbTitulo.setForeground(Color.WHITE);
+        lbTitulo.setBounds(0,10,340,20);
         this.add(lbTitulo);
         
         lbPosX = new JLabel("X =", JLabel.RIGHT); // JLabel.RIGHT: Alinea el texto a la derecha
-        lbPosX.setBounds(0,50,150,20);
         lbPosX.setFont(fontLabel);
         lbPosX.setForeground(Color.WHITE);
+        lbPosX.setBounds(0,50,150,20);
         this.add(lbPosX);
         
         lbPosY = new JLabel("Y =", JLabel.RIGHT);
-        lbPosY.setBounds(0,90,150,20);
         lbPosY.setFont(fontLabel);
         lbPosY.setForeground(Color.WHITE);
+        lbPosY.setBounds(0,90,150,20);
         this.add(lbPosY);
         
         tfPosX = new JTextField();
-        tfPosX.setBounds(160,50,60,20);
-        tfPosX.setFont(fontField);
+        tfPosX.setBackground(new Color(59,59,59));
         tfPosX.setBorder(null);
+        tfPosX.setFont(fontField);
         tfPosX.setForeground(Color.WHITE);
         tfPosX.setCaretColor(Color.WHITE);
-        tfPosX.setBackground(new Color(59,59,59));
+        tfPosX.setBounds(160,50,60,20);
         this.add(tfPosX);
         
         tfPosY = new JTextField();
-        tfPosY.setBounds(160,90,60,20);
-        tfPosY.setFont(fontField);
+        tfPosY.setBackground(new Color(59,59,59));
         tfPosY.setBorder(null);
+        tfPosY.setFont(fontField);
         tfPosY.setForeground(Color.WHITE);
         tfPosY.setCaretColor(Color.WHITE);
-        tfPosY.setBackground(new Color(59,59,59));
+        tfPosY.setBounds(160,90,60,20);
         this.add(tfPosY);
         
         btAceptar = new JButton("Aceptar");
-        btAceptar.setBounds(40,140,260,20);
-        btAceptar.setFont(fontField);
-        btAceptar.setActionCommand("aceptar");
-        btAceptar.setForeground(Color.WHITE);
         btAceptar.setBackground(new Color(59,59,59));
+        btAceptar.setFont(fontField);
+        btAceptar.setForeground(Color.WHITE);
+        btAceptar.setActionCommand("aceptar");
+        btAceptar.setBounds(40,140,260,20);
         this.add(btAceptar);
                
         // Características de la ventana

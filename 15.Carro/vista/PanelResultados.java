@@ -27,13 +27,13 @@ public class PanelResultados extends JPanel
         
         // Creación y adición del area de texto
         taResultado = new JTextArea();
-        taResultado.setForeground(Color.WHITE);
-        taResultado.setEditable(false);
         taResultado.setBackground(new Color(59,59,59));
+        taResultado.setForeground(Color.WHITE);
         taResultado.setCaretColor(taResultado.getBackground());
+        taResultado.setEditable(false);
         spResultado = new JScrollPane(taResultado);
-        spResultado.setBounds(10,10,190,210);
         spResultado.setBorder(null);
+        spResultado.setBounds(10,10,190,210);
         this.add(spResultado); 
     }
 
