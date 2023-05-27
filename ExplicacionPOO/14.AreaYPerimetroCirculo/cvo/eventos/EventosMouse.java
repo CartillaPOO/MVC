@@ -50,8 +50,7 @@ public class EventosMouse implements MouseListener{
         }
 
         if(Evento.equals("miVentana = ")){
-            System.out.println("miVentana");
-            DialogoExplicacion miDialogoExplicacion = new DialogoExplicacion("miVentana(2).gif", true);
+            DialogoExplicacion miDialogoExplicacion = new DialogoExplicacion("miVentana", true);
             setWindowPosition(miDialogoExplicacion);
         }
 

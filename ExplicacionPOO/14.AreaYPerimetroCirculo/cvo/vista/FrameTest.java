@@ -35,6 +35,8 @@ public class FrameTest extends JFrame {
         ANCHO = panelTest.getAnchoTotalPanel();
         ALTO = panelTest.getAltoTotalPanel();
 
+        System.out.println("Ancho: " + ANCHO + " Alto: " + ALTO);
+
         //Caracteristicas del dialogo        
         this.setTitle("Test.java");
         this.setSize(ANCHO, ALTO);

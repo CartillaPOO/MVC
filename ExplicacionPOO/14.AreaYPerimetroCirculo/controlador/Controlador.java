@@ -36,15 +36,15 @@ public class Controlador implements ActionListener
         // Identificar el comando generado
         String comando = ae.getActionCommand();
 
-        if(comando.equals("calcular")) // Si el comando es igual a Calcular, entonces...
+        if(comando.equals("calcular"))
         {
-            double radio = Double.parseDouble(venPrin.miPanelEntradaDatos.getRadio()); // Se obtiene el radio del panel de entrada de datos
-            model.setRadio(radio); // Le asigna el radio a model
+            double radio = Double.parseDouble(venPrin.miPanelEntradaDatos.getRadio());
+            model.setRadio(radio);
             model.calcularArea();
-            double area = model.getArea(); // Guarda el valor del área de model en la variable area
+            double area = model.getArea();
             model.calcularPerimetro();
             double perimetro = model.getperimetro();
-            venPrin.miPanelResultados.mostrarResultado(area, perimetro); // Se llama al método mostrarResultado de miPanelResultados de venPrin
+            venPrin.miPanelResultados.mostrarResultado(area, perimetro);
         }
         
         if(comando.equals("salir"))

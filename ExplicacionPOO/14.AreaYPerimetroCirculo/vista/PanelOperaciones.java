@@ -27,6 +27,7 @@ public class PanelOperaciones extends JPanel
 
         // Creación y adición del botón calcular
         btCalcular = new JButton("Calcular");
+        btCalcular.setToolTipText("btCalcular : JButton");
         btCalcular.setBounds(56, 40, 120, 25); // Posición y tamaño
         btCalcular.setForeground(Color.WHITE); // Color de la letra
         btCalcular.setBackground(new Color(59,59,59));
@@ -35,6 +36,7 @@ public class PanelOperaciones extends JPanel
 
         // Creación y adición del botón borrar
         btBorrar = new JButton("Borrar");
+        btBorrar.setToolTipText("btBorrar : JButton");
         btBorrar.setBounds(224, 40, 120, 25);
         btBorrar.setForeground(Color.WHITE);
         btBorrar.setBackground(new Color(59,59,59));
@@ -43,6 +45,7 @@ public class PanelOperaciones extends JPanel
 
         // Creación y adición del botón salir
         btSalir = new JButton("Salir");
+        btSalir.setToolTipText("btSalir : JButton");
         btSalir.setBounds(392, 40, 120, 25);
         btSalir.setForeground(Color.WHITE);
         btSalir.setBackground(new Color(59,59,59));
