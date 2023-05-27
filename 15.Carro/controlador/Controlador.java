@@ -46,11 +46,11 @@ public class Controlador implements ActionListener
                 // Creación del objeto tipo Carro
                 model = new Carro(color, posX, poxY); 
                 
-                venPrin.miPanelResultado.mostrarResultado("Se ha creado un objeto Carro");
-                venPrin.miPanelResultado.mostrarResultado("Su número de ruedas son " + model.getNumRuedas());
-                venPrin.miPanelResultado.mostrarResultado("Su color actual es " + model.getColor());
-                venPrin.miPanelResultado.mostrarResultado("Su posición actual es (" + model.getPosX()+", " + model.getPosY()+")" );
-                venPrin.miPanelResultado.mostrarResultado("Su velocidad actual es " + model.getVelocidad());
+                venPrin.miPanelResultados.mostrarResultado("Se ha creado un objeto Carro");
+                venPrin.miPanelResultados.mostrarResultado("Su número de ruedas son " + model.getNumRuedas());
+                venPrin.miPanelResultados.mostrarResultado("Su color actual es " + model.getColor());
+                venPrin.miPanelResultados.mostrarResultado("Su posición actual es (" + model.getPosX()+", " + model.getPosY()+")" );
+                venPrin.miPanelResultados.mostrarResultado("Su velocidad actual es " + model.getVelocidad());
                 
                 // Desactivar boton crear
                 venPrin.miPanelOperaciones.desactivarBotonCrear();
@@ -75,20 +75,20 @@ public class Controlador implements ActionListener
             int x = Integer.parseInt(venPrin.miDialogoMoverCarro.getPosX());
             int y = Integer.parseInt(venPrin.miDialogoMoverCarro.getPosY());
             model.mover(x, y);
-            venPrin.miPanelResultado.mostrarResultado("\nSe ha movido el carro\nSu posición actual es (" + model.getPosX()+", " + model.getPosY()+")"); // Se le pasa el mensaje al panel de resultados
+            venPrin.miPanelResultados.mostrarResultado("\nSe ha movido el carro\nSu posición actual es (" + model.getPosX()+", " + model.getPosY()+")"); // Se le pasa el mensaje al panel de resultados
             venPrin.miDialogoMoverCarro.cerrarDialogo();
         }
         
         if(comando.equals("acelerar"))
         {
             model.acelerar();
-            venPrin.miPanelResultado.mostrarResultado("\nEl carro ha acelerado\nSu velocidad actual es " + model.getVelocidad());
+            venPrin.miPanelResultados.mostrarResultado("\nEl carro ha acelerado\nSu velocidad actual es " + model.getVelocidad());
         }
         
         if(comando.equals("frenar"))
         {
             model.frenar();
-            venPrin.miPanelResultado.mostrarResultado("\nEl carro ha frenado\nSu velocidad actual es " + model.getVelocidad());
+            venPrin.miPanelResultados.mostrarResultado("\nEl carro ha frenado\nSu velocidad actual es " + model.getVelocidad());
         }
     }    
 }

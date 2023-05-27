@@ -36,7 +36,7 @@ public class DialogoMoverCarro extends JDialog
         // Definición del contenedor de la ventana
         this.setLayout(null);
         
-        // Creación y adición del elementos
+        // Creación y adición de elementos
         lbTitulo = new JLabel("Mover Carro", JLabel.CENTER); // JLabel.CENTER: Centra el texto
         lbTitulo.setBounds(0,10,340,20);
         lbTitulo.setFont(fontLabel);

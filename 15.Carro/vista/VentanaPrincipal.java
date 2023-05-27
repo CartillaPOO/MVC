@@ -13,7 +13,7 @@ public class VentanaPrincipal extends JFrame
     private JPanel colorFondo;
     public PanelEntradaDatos miPanelEntradaDatos;
     public PanelOperaciones miPanelOperaciones;
-    public PanelResultados miPanelResultado;
+    public PanelResultados miPanelResultados;
     public DialogoMoverCarro miDialogoMoverCarro;
 
     //
@@ -37,9 +37,9 @@ public class VentanaPrincipal extends JFrame
         this.add(miPanelOperaciones);
         
         // Creación y adición del PanelResultados
-        miPanelResultado = new PanelResultados();
-        miPanelResultado.setBounds(360,10,210,230);
-        this.add(miPanelResultado);
+        miPanelResultados = new PanelResultados();
+        miPanelResultados.setBounds(360,10,210,230);
+        this.add(miPanelResultados);
         miDialogoMoverCarro = null; // Se crea cuando se presiona el botón mover
         
         // Características de la ventana
