@@ -26,7 +26,7 @@ public class PanelEntradaDatos extends JPanel
     // Métodos
     //
     
-    // Constructor
+    // Método constructor
     public PanelEntradaDatos()
     {
         this.setLayout(null); // Desactivar el diseño por defecto
@@ -40,19 +40,19 @@ public class PanelEntradaDatos extends JPanel
 
         // Creación y adición de etiqueta lbRadio
         lbRadio = new JLabel("Radio:");
-        lbRadio.setBounds(190, 105, 70, 20);
         lbRadio.setFont(fontLabel); // Tipo de letra
         lbRadio.setForeground(Color.WHITE); // Color de la letra
+        lbRadio.setBounds(190, 105, 70, 20);
         this.add(lbRadio);
 
         // Creación y adición de caja de texto para el radio
         tfRadio = new JTextField();
-        tfRadio.setBounds(260, 105, 60, 20);
-        tfRadio.setFont(fontField);
+        tfRadio.setBackground(new Color(59,59,59));
         tfRadio.setBorder(null); // Eliminar el borde
+        tfRadio.setFont(fontField);
         tfRadio.setForeground(Color.WHITE);
         tfRadio.setCaretColor(Color.WHITE); // Color del cursor
-        tfRadio.setBackground(new Color(59,59,59));
+        tfRadio.setBounds(260, 105, 60, 20);
         this.add(tfRadio);
     }
 

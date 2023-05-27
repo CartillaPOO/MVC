@@ -19,7 +19,7 @@ public class PanelOperaciones extends JPanel
     // Métodos
     //
     
-    // Constructor   
+    // Método constructor   
     public PanelOperaciones()
     {
         this.setLayout(null); // Desactivar el diseño por defecto
@@ -27,26 +27,26 @@ public class PanelOperaciones extends JPanel
 
         // Creación y adición del botón calcular
         btCalcular = new JButton("Calcular");
-        btCalcular.setBounds(56, 40, 120, 25); // Posición y tamaño
-        btCalcular.setForeground(Color.WHITE); // Color de la letra
         btCalcular.setBackground(new Color(59,59,59));
-        this.add(btCalcular);
+        btCalcular.setForeground(Color.WHITE); // Color de la letra
         btCalcular.setActionCommand("calcular");
+        btCalcular.setBounds(56, 40, 120, 25); // Posición y tamaño
+        this.add(btCalcular);
 
         // Creación y adición del botón borrar
         btBorrar = new JButton("Borrar");
-        btBorrar.setBounds(224, 40, 120, 25);
-        btBorrar.setForeground(Color.WHITE);
         btBorrar.setBackground(new Color(59,59,59));
-        this.add(btBorrar);
+        btBorrar.setForeground(Color.WHITE);
         btBorrar.setActionCommand("borrar");
+        btBorrar.setBounds(224, 40, 120, 25);
+        this.add(btBorrar);
 
         // Creación y adición del botón salir
         btSalir = new JButton("Salir");
-        btSalir.setBounds(392, 40, 120, 25);
         btSalir.setForeground(Color.WHITE);
         btSalir.setBackground(new Color(59,59,59));
-        this.add(btSalir);
         btSalir.setActionCommand("salir");
+        btSalir.setBounds(392, 40, 120, 25);
+        this.add(btSalir);
     }
 }
