@@ -30,7 +30,7 @@ public class PanelEntradaDatos extends JPanel
     public PanelEntradaDatos()
     {
         this.setLayout(null); // Desactivar el diseño por defecto
-        this.setBackground(new Color(31,31,31)); // Color de fondo
+        this.setBackground(new Color(31,31,31)); // Color de fondorgba(99,130,191,255)
 
         // Creación y adición de la imagen al panel
         iImagen = new ImageIcon(getClass().getResource("/vista/circulo.png"));
@@ -41,7 +41,7 @@ public class PanelEntradaDatos extends JPanel
         // Creación y adición de etiqueta lbRadio
         lbRadio = new JLabel("Radio:");
         lbRadio.setFont(fontLabel); // Tipo de letra
-        lbRadio.setForeground(Color.WHITE); // Color de la letra
+        lbRadio.setForeground(new Color(186, 203, 225));
         lbRadio.setBounds(190, 105, 70, 20);
         this.add(lbRadio);
 

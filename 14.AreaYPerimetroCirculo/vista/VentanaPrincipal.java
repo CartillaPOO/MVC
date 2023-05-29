@@ -32,17 +32,19 @@ public class VentanaPrincipal extends JFrame
 
         // Creación y adición del PanelOperaciones
         miPanelOperaciones = new PanelOperaciones();
-        miPanelOperaciones.setBounds(10,250,560,100);
+        miPanelOperaciones.setBounds(10,250,570,110);
         this.add(miPanelOperaciones);
 
         // Creación y adición del PanelResultados
         miPanelResultados = new PanelResultados();
-        miPanelResultados.setBounds(360,10,210,230);
+        miPanelResultados.setBounds(360,10,220,230);
         this.add(miPanelResultados);
 
         
         // Características de la ventana
-        this.setTitle("Area y perímetro del circulo"); // Título de la ventana
+        this.setUndecorated(true); // Elimina la barra de título predeterminada
+        this.getRootPane().setWindowDecorationStyle(2); // Estilo de la barra de título
+        this.setTitle("Área y perímetro del circulo"); // Título de la ventana
         this.setSize(600, 400);
         //this.setLocation(500, 500); // Posicion respecto a la pantalla
         this.setLocationRelativeTo(null);// Posiciona en el centro la ventana

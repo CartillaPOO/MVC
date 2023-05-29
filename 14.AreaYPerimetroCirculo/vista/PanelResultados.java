@@ -34,7 +34,7 @@ public class PanelResultados extends JPanel
         taResultado.setEditable(false); // No se puede editar el area de texto
         spResultado = new JScrollPane(taResultado);
         spResultado.setBorder(null); // Eliminar el borde
-        spResultado.setBounds(10,10,190,210); // Posición y tamaño
+        spResultado.setBounds(10,10,200,210); // Posición y tamaño
         this.add(spResultado);
     }
 
