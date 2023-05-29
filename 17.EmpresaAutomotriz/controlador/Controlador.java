@@ -35,20 +35,20 @@ public class Controlador implements ActionListener
     {
         String comando = ae.getActionCommand();
 
-        if(comando.equals("agregarVendedor"))
+        if(comando.equals("AgregarEmpleado"))
         {
-            venPrin.crearDialogoAgregarVendedor();
-            this.venPrin.miDialogoAgregarVendedor.agregarOyenteBoton(this);
+            venPrin.crearDialogoAgregarEmpleado();
+            this.venPrin.miDialogoAgregarEmpleado.agregarOyenteBoton(this);
         }
 
         if(comando.equals("agregar"))
         {
-            String nombre = venPrin.miDialogoAgregarVendedor.getNombreVendedor();
-            String cedula = venPrin.miDialogoAgregarVendedor.getCedulaVendedor();
+            String nombre = venPrin.miDialogoAgregarEmpleado.getNombreVendedor();
+            String cedula = venPrin.miDialogoAgregarEmpleado.getCedulaVendedor();
             empresa.agregarEmpleado(new Empleado(nombre, cedula));
             venPrin.miPanelEntradaDatos.setEmpleado(nombre);
             venPrin.miPanelResultados.mostrarResultado("Se ha agreado un nuevo empleado. \nNombre: " + nombre + "\nCédula: " + cedula);
-            venPrin.miDialogoAgregarVendedor.cerrarDialogoAgregarVendedor();
+            venPrin.miDialogoAgregarEmpleado.cerrarDialogoAgregarEmpleado();
         }
 
         if(comando.equals("venderCarro"))

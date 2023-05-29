@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 
-public class DialogoAgregarVendedor extends JDialog
+public class DialogoAgregarEmpleado extends JDialog
 {
     //
     // Atributos
@@ -31,7 +31,7 @@ public class DialogoAgregarVendedor extends JDialog
     //
 
     // Método constructor
-    public DialogoAgregarVendedor()
+    public DialogoAgregarEmpleado()
     {
         // Definición del contenedor de la ventana
         this.setLayout(null);
@@ -84,7 +84,7 @@ public class DialogoAgregarVendedor extends JDialog
         btAgregar.addActionListener(pAL);
     }
 
-    public void cerrarDialogoAgregarVendedor()
+    public void cerrarDialogoAgregarEmpleado()
     {
         this.dispose();
     }

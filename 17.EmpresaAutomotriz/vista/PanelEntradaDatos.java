@@ -1,6 +1,8 @@
 package vista;
 
 import java.awt.Color;
+import java.awt.Font;
+
 import javax.swing.BorderFactory;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -16,6 +18,8 @@ public class PanelEntradaDatos extends JPanel
     private JLabel lbEmpleados;
     private JComboBox cbEmpleados;
 
+    private Font fontLabel = new Font("Arial", Font.BOLD, 20);
+
     //
     // Metodos
     //
@@ -25,16 +29,18 @@ public class PanelEntradaDatos extends JPanel
     {
         // Definición del contenedor del panel
         this.setLayout(null);
-        this.setBackground(Color.WHITE);
+        this.setBackground(new Color(31,31,31));
 
         // Creación y adición de etiqueta
         lbEmpleados = new JLabel("Empleados: ", JLabel.RIGHT);
-        lbEmpleados.setBounds(0,90,100,20);
+        lbEmpleados.setFont(fontLabel);
+        lbEmpleados.setForeground(Color.WHITE);
+        lbEmpleados.setBounds(0,90,130,20);
         this.add(lbEmpleados);
 
         // Crear y agregar combo box de empleados
         cbEmpleados = new JComboBox();
-        cbEmpleados.setBounds(100,90,260,20);
+        cbEmpleados.setBounds(130,90,200,20);
         this.add(cbEmpleados);
     }
 

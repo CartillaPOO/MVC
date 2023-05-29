@@ -25,7 +25,7 @@ public class PanelResultados extends JPanel
         this.setLayout(null);
         this.setBackground(new Color(31,31,31));
         
-        // Creación y adición del area de texto
+        // Creación y adición del área de texto
         taResultado = new JTextArea();
         taResultado.setBackground(new Color(59,59,59));
         taResultado.setForeground(Color.WHITE);

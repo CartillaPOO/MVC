@@ -1,6 +1,8 @@
 package vista;
 
+import java.awt.Color;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class VentanaPrincipal extends JFrame
 {
@@ -8,10 +10,11 @@ public class VentanaPrincipal extends JFrame
     // Atributos
     //
 
+    private JPanel colorFondo;
     public PanelEntradaDatos miPanelEntradaDatos;
     public PanelOperaciones miPanelOperaciones;
     public PanelResultados miPanelResultados;
-    public DialogoAgregarVendedor miDialogoAgregarVendedor = null;
+    public DialogoAgregarEmpleado miDialogoAgregarEmpleado = null;
     public DialogoVenderCarro miDialogoVenderCarro = null;
     
     //
@@ -40,22 +43,34 @@ public class VentanaPrincipal extends JFrame
         this.add(miPanelResultados);
         miDialogoVenderCarro = null;
         
-        // Características de la ventana
-        this.setTitle("Carro");
+        // Cambiar el color de la barra de título de la ventana
+        this.getRootPane().setWindowDecorationStyle(2);
+
+        // Quitar barra de título de la ventana
+        this.setUndecorated(true);
+
+        // Definición de las características de la ventana
+        this.setTitle("Empresa Automotriz");
         this.setSize(600,400);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setResizable(false);
         this.setVisible(true);
+
+        colorFondo = new JPanel();
+        colorFondo.setBackground(new Color(24, 24, 24));
+        colorFondo.setBounds(0,0,600,400);
+        this.add(colorFondo);
+
+
     }
 
-    // Crear diálogo AgregarVendedor
-    public void crearDialogoAgregarVendedor()
+    // Creación de diálogos
+    public void crearDialogoAgregarEmpleado()
     {
-        miDialogoAgregarVendedor = new DialogoAgregarVendedor();
+        miDialogoAgregarEmpleado = new DialogoAgregarEmpleado();
     }
 
-    // Crear diálogo VenderCarro
     public void crearDialogoVenderCarro()
     {
         miDialogoVenderCarro = new DialogoVenderCarro(miPanelEntradaDatos.getEmpleado());
