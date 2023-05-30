@@ -47,7 +47,9 @@ public class VentanaPrincipal extends JFrame
         colorFondo.setBounds(0,0,600,400);
         this.add(colorFondo);
         
+        this.getRootPane().setWindowDecorationStyle(2);
         // Características de la ventana
+        this.setUndecorated(true);
         this.setTitle("Area y perímetro del circulo"); // Título de la ventana
         this.setSize(600, 400);
         //this.setLocation(500, 500); // Posicion respecto a la pantalla
