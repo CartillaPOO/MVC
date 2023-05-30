@@ -49,7 +49,7 @@ public class DialogoExplicacion extends JDialog{
         
     }
 
-    public DialogoExplicacion(String imagen, boolean esGif){
+    public DialogoExplicacion(String imagen, boolean esGif, int tiempo){
         //Layout
         this.setLayout(null);
 
@@ -64,7 +64,7 @@ public class DialogoExplicacion extends JDialog{
         label.setBounds(0, 0, ancho, alto);
         this.add(label);
 
-        desactivarGif(rutaImagen);
+        desactivarGif(rutaImagen, tiempo);
         
         // Caracteristicas del diálogo 
         this.setUndecorated(true);
@@ -74,7 +74,7 @@ public class DialogoExplicacion extends JDialog{
         this.setVisible(true);
     }
 
-    private void desactivarGif(String rutaImagen){
+    private void desactivarGif(String rutaImagen, int tiempo){
         icon = new ImageIcon(rutaImagen);
 
         Timer timer = new Timer();
@@ -84,7 +84,7 @@ public class DialogoExplicacion extends JDialog{
             public void run() {
                 label.setIcon(icon);
             }
-        }, 15000);
+        }, tiempo * 1000);
     }
 
     

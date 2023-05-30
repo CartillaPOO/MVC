@@ -50,7 +50,7 @@ public class EventosMouse implements MouseListener{
         }
 
         if(Evento.equals("miVentana = ")){
-            DialogoExplicacion miDialogoExplicacion = new DialogoExplicacion("miVentana", true);
+            DialogoExplicacion miDialogoExplicacion = new DialogoExplicacion("miVentana", true, 22);
             setWindowPosition(miDialogoExplicacion);
         }
 
@@ -70,7 +70,10 @@ public class EventosMouse implements MouseListener{
         }
 
         if(Evento.equals("mi" + nombreModelo + " = ")){
+            DialogoExplicacion miDialogoMiModelo = new DialogoExplicacion("miCirculo", true, 9);
+            setWindowPosition(miDialogoMiModelo);
         }
+
 
         if(Evento.equals("new " + nombreModelo + "();")){
         }
@@ -84,6 +87,8 @@ public class EventosMouse implements MouseListener{
         }
 
         if(Evento.equals("miControlador = ")){
+            DialogoExplicacion miDialogoMiControlador = new DialogoExplicacion("miControlador", true, 9);
+            setWindowPosition(miDialogoMiControlador);
         }
 
         if(Evento.equals("new Controlador(miVentana, miEmpresa);")){
