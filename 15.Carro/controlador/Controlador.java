@@ -90,5 +90,10 @@ public class Controlador implements ActionListener
             model.frenar();
             venPrin.miPanelResultados.mostrarResultado("\nEl carro ha frenado\nSu velocidad actual es " + model.getVelocidad());
         }
+
+        if(comando.equals("salir"))
+        {
+            System.exit(0);
+        }
     }    
 }

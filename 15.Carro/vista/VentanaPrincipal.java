@@ -28,23 +28,25 @@ public class VentanaPrincipal extends JFrame
         
         // Creación y adición del PanelEntradaDatos
         miPanelEntradaDatos = new PanelEntradaDatos();
-        miPanelEntradaDatos.setBounds(10,10,340,230);
+        miPanelEntradaDatos.setBounds(10,10,340,230); // Posición y tamaño
         this.add(miPanelEntradaDatos);
         
         // Creación y adición del PanelOperaciones
         miPanelOperaciones = new PanelOperaciones();
         miPanelOperaciones.setBounds(10,250,560,100);
         this.add(miPanelOperaciones);
-        
+
         // Creación y adición del PanelResultados
         miPanelResultados = new PanelResultados();
         miPanelResultados.setBounds(360,10,210,230);
         this.add(miPanelResultados);
-        miDialogoMoverCarro = null; // Se crea cuando se presiona el botón mover
+
+        // Creación del diálogo
+        miDialogoMoverCarro = null; // Inicialmente no existe
         
         // Características de la ventana
-        this.setTitle("Carro");
-        this.setSize(600,400);
+        this.setSize(580,360);
+        this.setUndecorated(true);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setResizable(false);

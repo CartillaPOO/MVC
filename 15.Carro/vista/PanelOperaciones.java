@@ -15,6 +15,7 @@ public class PanelOperaciones extends JPanel
     public JButton btMover;
     public JButton btAcelerar;
     public JButton btFrenar;
+    public JButton btSalir;
     
     //
     // Métodos
@@ -32,14 +33,14 @@ public class PanelOperaciones extends JPanel
         btCrear.setBackground(new Color(59,59,59));
         btCrear.setForeground(Color.WHITE);
         btCrear.setActionCommand("crear");
-        btCrear.setBounds(67,40,90,20);
+        btCrear.setBounds(11,40,90,20);
         this.add(btCrear);
         
         btMover = new JButton("Mover");
         btMover.setBackground(new Color(59,59,59));
         btMover.setForeground(Color.WHITE);
         btMover.setActionCommand("mover");
-        btMover.setBounds(179,40,90,20);
+        btMover.setBounds(123,40,90,20);
         btMover.setEnabled(false); // Permanece desactivado hasta que se cree un carro
         this.add(btMover);
         
@@ -47,7 +48,7 @@ public class PanelOperaciones extends JPanel
         btAcelerar.setBackground(new Color(59,59,59));
         btAcelerar.setForeground(Color.WHITE);
         btAcelerar.setActionCommand("acelerar");
-        btAcelerar.setBounds(291,40,90,20);
+        btAcelerar.setBounds(235,40,90,20);
         btAcelerar.setEnabled(false);
         this.add(btAcelerar);
         
@@ -55,9 +56,16 @@ public class PanelOperaciones extends JPanel
         btFrenar.setBackground(new Color(59,59,59));
         btFrenar.setForeground(Color.WHITE);
         btFrenar.setActionCommand("frenar");
-        btFrenar.setBounds(403,40,80,20);
+        btFrenar.setBounds(347,40,90,20);
         btFrenar.setEnabled(false);
         this.add(btFrenar);
+
+        btSalir = new JButton("Salir");
+        btSalir.setForeground(Color.WHITE);
+        btSalir.setBackground(new Color(59,59,59));
+        btSalir.setActionCommand("salir");
+        btSalir.setBounds(459, 40, 90, 20);
+        this.add(btSalir);
     }
 
     public void agregarOyentesBotones(ActionListener pAL) // Los eventos de los botones se manejan en la clase Controlador
@@ -66,6 +74,7 @@ public class PanelOperaciones extends JPanel
         btMover.addActionListener(pAL);
         btAcelerar.addActionListener(pAL);
         btFrenar.addActionListener(pAL);
+        btSalir.addActionListener(pAL);
     }
     
     public void desactivarBotonCrear()
