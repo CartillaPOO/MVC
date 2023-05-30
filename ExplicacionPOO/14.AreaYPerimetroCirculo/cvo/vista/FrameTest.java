@@ -37,10 +37,6 @@ public class FrameTest extends JFrame {
 
         System.out.println("Ancho: " + ANCHO + " Alto: " + ALTO);
 
-        // Caracteristicas del diálogo 
-        
-        // Cambiar el color de la barra de título de la ventana
-        this.getRootPane().setWindowDecorationStyle(2);
 
         // Quitar barra de título de la ventana
         this.setUndecorated(true);

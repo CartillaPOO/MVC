@@ -4,6 +4,7 @@ import java.util.Timer;
 
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import java.util.Timer;
@@ -37,7 +38,8 @@ public class DialogoExplicacion extends JDialog{
         label.setBounds(0, 0, ancho, alto);
         this.add(label);
         
-        //Caracteristicas de la ventana
+        // Caracteristicas del diálogo 
+        this.setUndecorated(true);
         this.setTitle("Objetos en RAM");
         this.setSize(ancho, alto);
         this.setResizable(false);
@@ -64,11 +66,11 @@ public class DialogoExplicacion extends JDialog{
 
         desactivarGif(rutaImagen);
         
-        //Caracteristicas de la ventana
+        // Caracteristicas del diálogo 
+        this.setUndecorated(true);
         this.setTitle("Objetos en RAM");
         this.setSize(ancho, alto);
         this.setResizable(false);
-        this.setBackground(Color.WHITE);
         this.setVisible(true);
     }
 

@@ -104,6 +104,7 @@ public class EventosMouse implements MouseListener{
 
     public void setWindowPosition(JDialog dialogo){
         dialogo.setLocation(0, miFrameTest.getHeightPOSX());
+        System.out.println("Posicionando ventana en: " + miFrameTest.getHeightPOSX());
     }
 
     @Override

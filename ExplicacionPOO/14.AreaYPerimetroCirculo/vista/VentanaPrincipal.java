@@ -48,6 +48,13 @@ public class VentanaPrincipal extends JFrame
         this.add(colorFondo);
         
         // Características de la ventana
+        // Caracteristicas del diálogo 
+        
+        // Cambiar el color de la barra de título de la ventana
+        this.getRootPane().setWindowDecorationStyle(2);
+
+        // Quitar barra de título de la ventana
+        this.setUndecorated(true);
         this.setTitle("Area y perímetro del circulo"); // Título de la ventana
         this.setSize(600, 400);
         //this.setLocation(500, 500); // Posicion respecto a la pantalla
