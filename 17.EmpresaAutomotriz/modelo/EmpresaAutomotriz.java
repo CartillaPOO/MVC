@@ -19,7 +19,7 @@ public class EmpresaAutomotriz
     // Método constructor
     public EmpresaAutomotriz()
     {
-        empleados = new ArrayList();
+        empleados = new ArrayList<>();
     }
     
     public void agregarEmpleado(Empleado emp)

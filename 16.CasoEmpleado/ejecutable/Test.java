@@ -14,9 +14,9 @@ public class Test
         int añoNacimiento;
         int añoIngreso;
         Empresa miEmpresa = new Empresa();
-        
-        JOptionPane.showMessageDialog(null, "Bienvenido al sistema de registro de empleados");
 
+        JOptionPane.showMessageDialog(null, "Bienvenido al sistema de registro de empleados");
+        
         do
         {
         nombre = JOptionPane.showInputDialog("Nombre: ");

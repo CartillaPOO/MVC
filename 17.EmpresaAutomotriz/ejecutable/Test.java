@@ -8,8 +8,8 @@ public class Test
 {
     public static void main(String[] args) 
     {
-        VentanaPrincipal miVentana = new VentanaPrincipal();
-        EmpresaAutomotriz miEmpresa = new EmpresaAutomotriz();
-        Controlador miControlador = new Controlador(miVentana, miEmpresa);
-    }    
+        EmpresaAutomotriz empresa = new EmpresaAutomotriz();
+        VentanaPrincipal venPrin = new VentanaPrincipal();
+        Controlador controlador = new Controlador(venPrin, empresa);
+    }
 }

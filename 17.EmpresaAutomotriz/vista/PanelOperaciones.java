@@ -17,6 +17,7 @@ public class PanelOperaciones extends JPanel
     private JButton btVerVentas;
     private JButton btEmpleadoDelMes;
     private JButton btEmpleadosSinVentas;
+    private JButton btSalir;
 
     //
     // Metodos
@@ -28,13 +29,13 @@ public class PanelOperaciones extends JPanel
         //Definición del contenedor del panel
         this.setLayout(null);
         this.setBackground(new Color(31,31,31));
-
+        
         // Creación y adición de los botones
         btAgregarEmpleado = new JButton("Agregar Empleado");
         btAgregarEmpleado.setBackground(new Color(59,59,59));
         btAgregarEmpleado.setForeground(Color.WHITE);
         btAgregarEmpleado.setActionCommand("AgregarEmpleado");
-        btAgregarEmpleado.setBounds(15,10,170,80);
+        btAgregarEmpleado.setBounds(15,10,170,50);
         this.add(btAgregarEmpleado);
         
         btVenderCarro = new JButton("Vender Carro");
@@ -44,12 +45,33 @@ public class PanelOperaciones extends JPanel
         btVenderCarro.setBounds(195,10,170,20); 
         this.add(btVenderCarro);
 
+        btVerVentas = new JButton("Ver ventas");
+        btVerVentas.setBackground(new Color(59,59,59));
+        btVerVentas.setForeground(Color.WHITE);
+        btVerVentas.setActionCommand("verVentas");
+        btVerVentas.setBounds(195, 40, 170, 20);
+        this.add(btVerVentas);
+
         btCalcularSueldo = new JButton("Calcular Sueldo");
         btCalcularSueldo.setBackground(new Color(59,59,59));
         btCalcularSueldo.setForeground(Color.WHITE);
         btCalcularSueldo.setActionCommand("calcularSueldo");
         btCalcularSueldo.setBounds(195,70,170,20);
         this.add(btCalcularSueldo);
+
+        btEmpleadosSinVentas = new JButton("Empleados sin ventas");
+        btEmpleadosSinVentas.setBackground(new Color(59,59,59));
+        btEmpleadosSinVentas.setForeground(Color.WHITE);
+        btEmpleadosSinVentas.setActionCommand("empleadosSinVentas");
+        btEmpleadosSinVentas.setBounds(375, 10, 170, 20);
+        this.add(btEmpleadosSinVentas);
+        
+        btEmpleadoDelMes = new JButton("Empleado del mes");
+        btEmpleadoDelMes.setBackground(new Color(59,59,59));
+        btEmpleadoDelMes.setForeground(Color.WHITE);
+        btEmpleadoDelMes.setActionCommand("empleadoDelMes");
+        btEmpleadoDelMes.setBounds(375, 40, 170, 20);
+        this.add(btEmpleadoDelMes);
 
         btLiquidarNomina = new JButton("Liquidar Nómina");
         btLiquidarNomina.setBackground(new Color(59,59,59));
@@ -58,26 +80,12 @@ public class PanelOperaciones extends JPanel
         btLiquidarNomina.setBounds(375,70,170,20); 
         this.add(btLiquidarNomina);
 
-        btVerVentas = new JButton("Ver ventas");
-        btVerVentas.setBackground(new Color(59,59,59));
-        btVerVentas.setForeground(Color.WHITE);
-        btVerVentas.setActionCommand("verVentas");
-        btVerVentas.setBounds(195, 40, 170, 20);
-        this.add(btVerVentas);
-
-        btEmpleadoDelMes = new JButton("Empleado del mes");
-        btEmpleadoDelMes.setBackground(new Color(59,59,59));
-        btEmpleadoDelMes.setForeground(Color.WHITE);
-        btEmpleadoDelMes.setActionCommand("empleadoDelMes");
-        btEmpleadoDelMes.setBounds(375, 40, 170, 20);
-        this.add(btEmpleadoDelMes);
-
-        btEmpleadosSinVentas = new JButton("Empleados sin ventas");
-        btEmpleadosSinVentas.setBackground(new Color(59,59,59));
-        btEmpleadosSinVentas.setForeground(Color.WHITE);
-        btEmpleadosSinVentas.setActionCommand("empleadosSinVentas");
-        btEmpleadosSinVentas.setBounds(375, 10, 170, 20);
-        this.add(btEmpleadosSinVentas);
+        btSalir = new JButton("Salir");
+        btSalir.setBackground(new Color(59,59,59));
+        btSalir.setForeground(Color.WHITE);
+        btSalir.setActionCommand("salir");
+        btSalir.setBounds(15, 70, 170, 20);
+        this.add(btSalir);
     }
 
     public void agregarOyentesBotones(ActionListener pAL)
@@ -89,5 +97,6 @@ public class PanelOperaciones extends JPanel
         btVerVentas.addActionListener(pAL);
         btEmpleadoDelMes.addActionListener(pAL);
         btEmpleadosSinVentas.addActionListener(pAL);
+        btSalir.addActionListener(pAL);
     }
 }

@@ -43,15 +43,9 @@ public class VentanaPrincipal extends JFrame
         this.add(miPanelResultados);
         miDialogoVenderCarro = null;
         
-        // Cambiar el color de la barra de título de la ventana
-        this.getRootPane().setWindowDecorationStyle(2);
-
-        // Quitar barra de título de la ventana
+        // Características de la ventana
+        this.setSize(580,360);
         this.setUndecorated(true);
-
-        // Definición de las características de la ventana
-        this.setTitle("Empresa Automotriz");
-        this.setSize(600,400);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setResizable(false);

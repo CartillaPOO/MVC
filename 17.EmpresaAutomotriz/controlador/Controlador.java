@@ -47,7 +47,12 @@ public class Controlador implements ActionListener
             String cedula = venPrin.miDialogoAgregarEmpleado.getCedulaVendedor();
             empresa.agregarEmpleado(new Empleado(nombre, cedula));
             venPrin.miPanelEntradaDatos.setEmpleado(nombre);
-            venPrin.miPanelResultados.mostrarResultado("Se ha agreado un nuevo empleado. \nNombre: " + nombre + "\nCédula: " + cedula);
+            venPrin.miPanelResultados.mostrarResultado("Se ha agreado un empleado \nNombre: " + nombre + "\nCédula: " + cedula);
+            venPrin.miDialogoAgregarEmpleado.cerrarDialogoAgregarEmpleado();
+        }
+
+        if(comando.equals("cancelarDialogoAgregarEmpleado"))
+        {
             venPrin.miDialogoAgregarEmpleado.cerrarDialogoAgregarEmpleado();
         }
 
@@ -69,7 +74,12 @@ public class Controlador implements ActionListener
             
             emp.venderCarro(new Carro(precio, marca, modelo));
 
-            venPrin.miPanelResultados.mostrarResultado("El empleado: " + emp.getNombre() + " ha vendido un carro\nValor: " + precio + "\nMarca: " + marca + "\nModelo: " + modelo);
+            venPrin.miPanelResultados.mostrarResultado("Se ha realizado una venta" + "\nEmpleado: " + emp.getNombre() + "\nValor: " + precio + "\nMarca: " + marca + "\nModelo: " + modelo);
+            venPrin.miDialogoVenderCarro.cerrarDialogoVenderCarro();
+        }
+
+        if(comando.equals("cancelarDialogoVenderCarro"))
+        {
             venPrin.miDialogoVenderCarro.cerrarDialogoVenderCarro();
         }
 
@@ -114,6 +124,11 @@ public class Controlador implements ActionListener
         if(comando.equals("empleadosSinVentas"))
         {
             venPrin.miPanelResultados.mostrarResultado(empresa.verEmpleadosSinVentas());
+        }
+
+        if(comando.equals("salir"))
+        {
+            System.exit(0);
         }
     }
 }

@@ -42,7 +42,7 @@ public class DialogoMoverCarro extends JDialog
         lbTitulo = new JLabel("Mover Carro", JLabel.CENTER); // JLabel.CENTER: Centra el texto
         lbTitulo.setFont(fontLabel);
         lbTitulo.setForeground(Color.WHITE);
-        lbTitulo.setBounds(0,20,340,20);
+        lbTitulo.setBounds(0,20,340,25);
         this.add(lbTitulo);
         
         lbPosX = new JLabel("X =", JLabel.RIGHT); // JLabel.RIGHT: Alinea el texto a la derecha
@@ -92,7 +92,6 @@ public class DialogoMoverCarro extends JDialog
         this.add(btCancelar);
                
         // Características de la ventana
-        this.setTitle("Carro");
         this.setUndecorated(true);
         this.setSize(340,230);
         this.setLocationRelativeTo(null);
