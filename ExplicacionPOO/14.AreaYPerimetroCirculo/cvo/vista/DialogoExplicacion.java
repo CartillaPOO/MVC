@@ -1,8 +1,10 @@
 package cvo.vista;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Point;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionAdapter;
 import java.util.Timer;
 
@@ -13,6 +15,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 
+import cvo.clases.Colores;
+import cvo.clases.SFX;
+import cvo.clases.Texto;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -20,20 +26,26 @@ public class DialogoExplicacion extends JDialog{
     //----------------------
     // Atributos
     //----------------------
+    //Caracteristicas de la ventana
     private int posX;
     private int posY;
     private int alto;
     private int ancho;
     private JLayeredPane capa;
     
+    //Imagen
     private String rutaImagen = "cvo/Recursos/Diagramas/";
     private String rutaGif;
     private ImageIcon icon; 
     private JLabel label;
-        
+    
+    //Movimiento de la ventana
     private Point initialClick;
 
-    private JLabel lbCerrar;
+    //Label Cerrar
+    public Texto lbCerrar;
+    private Mouse escuchador;
+
 
 
 
@@ -82,13 +94,15 @@ public class DialogoExplicacion extends JDialog{
         label.setBounds(0, 0, ancho, alto);
         capa.add(label, JLayeredPane.DEFAULT_LAYER);
 
-        lbCerrar = new JLabel("Cerrar");
-        lbCerrar.setBounds(0, 0, 100, 30);
-        lbCerrar.setForeground(Color.WHITE);
+        lbCerrar = new Texto("Cerrar");
+        lbCerrar.setBounds(5, alto - 30, 50, 30);
+        lbCerrar.setForeground(Colores.CERRAR);
         capa.add(lbCerrar, JLayeredPane.PALETTE_LAYER);
 
         this.add(capa);
         
+        escuchador = new Mouse(lbCerrar);
+
         desactivarGif(rutaImagen, tiempo);
         
         // Caracteristicas del diálogo 
@@ -99,6 +113,8 @@ public class DialogoExplicacion extends JDialog{
         this.setResizable(false);
         this.setVisible(true);
     }
+
+
 
     private void desactivarGif(String rutaImagen, int tiempo){
         icon = new ImageIcon(rutaImagen);
@@ -130,6 +146,56 @@ public class DialogoExplicacion extends JDialog{
                 setLocation(x, y); // Establece la nueva ubicación de la ventana
             }
         });
+    }
+
+
+    class Mouse implements MouseListener {
+        //---Atributos---
+        //Efectos SFX
+        private SFX sonidos;
+
+        public Mouse(Texto lbCerrar){
+            sonidos = new SFX();
+            lbCerrar.addMouseListener(this);
+        }
+
+        @Override
+        public void mouseClicked(MouseEvent event) {
+            // TODO Auto-generated method stub
+            if(event.getSource() == lbCerrar){
+                sonidos.sonidoLabelClic();
+                dispose();
+            }
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent event) {
+            // TODO Auto-generated method stub
+            lbCerrar.setForeground(Colores.RESALTADO);
+            lbCerrar.setFont(new Font("Consolas", Font.BOLD, 15));
+            sonidos.sonidoLabel();
+        }
+
+        @Override
+        public void mouseExited(MouseEvent event) {
+            //La fuente vuelve a la normalidad
+            lbCerrar.setForeground(Colores.CERRAR);
+            lbCerrar.setFont(new Font("Consolas", Font.BOLD, 12));
+            
+        }
+
+        @Override
+        public void mousePressed(MouseEvent event) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent event) {
+            // TODO Auto-generated method stub
+           
+        }
+
     }
 
     

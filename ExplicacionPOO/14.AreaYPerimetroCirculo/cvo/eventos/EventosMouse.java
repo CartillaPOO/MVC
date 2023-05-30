@@ -23,6 +23,10 @@ public class EventosMouse implements MouseListener{
 
     //---Atributos---
     private FrameTest miFrameTest;
+    private DialogoExplicacion DialogoMiVentana;
+    private DialogoExplicacion DialogoMiModelo;
+    private DialogoExplicacion DialogoMiControlador;
+
     private String nombreModelo;
 
     //Efectos SFX
@@ -50,8 +54,8 @@ public class EventosMouse implements MouseListener{
         }
 
         if(Evento.equals("miVentana = ")){
-            DialogoExplicacion miDialogoExplicacion = new DialogoExplicacion("miVentana", true, 22);
-            setWindowPosition(miDialogoExplicacion);
+            DialogoMiVentana = new DialogoExplicacion("miVentana", true, 22);
+            setWindowPosition(DialogoMiVentana);
         }
 
         if(Evento.equals("new VentanaPrincipal();")){
@@ -70,8 +74,8 @@ public class EventosMouse implements MouseListener{
         }
 
         if(Evento.equals("mi" + nombreModelo + " = ")){
-            DialogoExplicacion miDialogoMiModelo = new DialogoExplicacion("miCirculo", true, 9);
-            setWindowPosition(miDialogoMiModelo);
+            DialogoMiModelo = new DialogoExplicacion("miCirculo", true, 9);
+            setWindowPosition(DialogoMiModelo);
         }
 
 
@@ -87,11 +91,16 @@ public class EventosMouse implements MouseListener{
         }
 
         if(Evento.equals("miControlador = ")){
-            DialogoExplicacion miDialogoMiControlador = new DialogoExplicacion("miControlador", true, 9);
-            setWindowPosition(miDialogoMiControlador);
+            DialogoMiControlador = new DialogoExplicacion("miControlador", true, 9);
+            setWindowPosition(DialogoMiControlador);
         }
 
         if(Evento.equals("new Controlador(miVentana, miEmpresa);")){
+        }
+
+        //Eventos para labels de los dialogos
+        if(event.getSource().equals(DialogoMiVentana.lbCerrar)){
+            DialogoMiVentana.dispose();
         }
         
 
@@ -155,6 +164,11 @@ public class EventosMouse implements MouseListener{
 
         if(Evento.equals("new Controlador(miVentana, miEmpresa);")){
             miFrameTest.panelTest.lbNewControlador.setForeground(Colores.RESALTADO);
+        }
+
+        //Eventos para labels de los dialogos
+        if(Evento.equals("Cerrar")){
+            //miDialogoExplicacion.lbCerrar.setForeground(Col
         }
 
         if(clase.equals("Texto")){

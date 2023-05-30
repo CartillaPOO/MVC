@@ -5,7 +5,7 @@ import java.awt.Color;
 public class Colores {
     //---Atributos---
 
-    //Colores para las lineas
+    //Colores para los objetos
     public static Color ClASE = new Color(229, 56, 38);
     public static Color OBJETO = new Color(235, 219, 178);
     public static Color INSTANCIA = new Color(250, 186, 43);
@@ -16,4 +16,7 @@ public class Colores {
     //Colores para los botones
     public static Color FONDO_BOTON = new Color(31, 32, 41);
     public static Color FUENTE_BOTON = new Color(235, 219, 178);
+
+    //Colores para botones label
+    public static Color CERRAR = new Color(177, 98, 134);
 }
