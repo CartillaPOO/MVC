@@ -49,7 +49,7 @@ public class DialogoAgregarEmpleado extends JDialog
         lbNombreVendedor = new JLabel("Vendedor: ", JLabel.RIGHT);
         lbNombreVendedor.setFont(fontField);
         lbNombreVendedor.setForeground(Color.WHITE);
-        lbNombreVendedor.setBounds(0,60,150,20);
+        lbNombreVendedor.setBounds(0,70,150,20);
         this.add(lbNombreVendedor);
 
         tfNombreVendedor = new JTextField();
@@ -58,7 +58,7 @@ public class DialogoAgregarEmpleado extends JDialog
         tfNombreVendedor.setForeground(Color.WHITE);
         tfNombreVendedor.setCaretColor(Color.WHITE);
         tfNombreVendedor.setBackground(new Color(59, 59, 59));
-        tfNombreVendedor.setBounds(160,60,100, 20);
+        tfNombreVendedor.setBounds(160,70,100, 20);
         this.add(tfNombreVendedor);
 
         lbCedulaVendedor = new JLabel("Cédula: ", JLabel.RIGHT);
@@ -85,7 +85,6 @@ public class DialogoAgregarEmpleado extends JDialog
 
         btCancelar = new JButton("Cancelar");
         btCancelar.setBackground(new Color(59,59,59));
-        btCancelar.setFont(fontField);
         btCancelar.setForeground(Color.WHITE);
         btCancelar.setActionCommand("cancelarDialogoAgregarEmpleado");
         btCancelar.setBounds(40,180,260,20);

@@ -29,13 +29,12 @@ public class Controlador implements ActionListener
         this.venPrin.miPanelResultados.mostrarResultado("App lista para usar\n");
     }
 
-    // Método de atención a eventos
     @Override
     public void actionPerformed(ActionEvent ae) 
     {
         String comando = ae.getActionCommand();
 
-        if(comando.equals("AgregarEmpleado"))
+        if(comando.equals("agregarEmpleado"))
         {
             venPrin.crearDialogoAgregarEmpleado();
             this.venPrin.miDialogoAgregarEmpleado.agregarOyenteBoton(this);
@@ -48,6 +47,7 @@ public class Controlador implements ActionListener
             empresa.agregarEmpleado(new Empleado(nombre, cedula));
             venPrin.miPanelEntradaDatos.setEmpleado(nombre);
             venPrin.miPanelResultados.mostrarResultado("Se ha agreado un empleado \nNombre: " + nombre + "\nCédula: " + cedula);
+            venPrin.miPanelOperaciones.activarBotones();
             venPrin.miDialogoAgregarEmpleado.cerrarDialogoAgregarEmpleado();
         }
 
@@ -82,6 +82,7 @@ public class Controlador implements ActionListener
         {
             venPrin.miDialogoVenderCarro.cerrarDialogoVenderCarro();
         }
+
 
         if(comando.equals("verVentas"))
         {
