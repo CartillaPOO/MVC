@@ -22,9 +22,13 @@ public class EventosBoton implements ActionListener {
         String comando = event.getActionCommand();
         if(comando.equals("diagramaObjetos")){
             DialogoExplicacion miDialogoExplicacion = new DialogoExplicacion("diagramaObjetos", true, 35);
-            miDialogoExplicacion.setLocationRelativeTo(null);
+            miDialogoExplicacion.setLocation(principal.getX() + principal.getWidth(), principal.getY());
             sonidos.sonidoBoton();
             
+        }
+
+        if(comando.equals("salir")){
+            System.exit(0);
         }
     }
 

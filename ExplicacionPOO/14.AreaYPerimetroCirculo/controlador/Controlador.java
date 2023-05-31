@@ -54,12 +54,12 @@ public class Controlador implements ActionListener
         
         if(comando.equals("salir"))
         {
-            System.exit(0);
+            venPrin.dispose(); // Cierra la ventana
         }
 
         if(comando.equals("borrar"))
         {
-            venPrin.miPanelEntradaDatos.borrar(); // Limpiar los campos de texto
+            //venPrin.miPanelEntradaDatos.borrar(); // Limpiar los campos de texto
             venPrin.miPanelResultados.borrar();
         }
     }

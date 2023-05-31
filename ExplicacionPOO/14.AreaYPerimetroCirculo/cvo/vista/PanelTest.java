@@ -34,6 +34,8 @@ public class PanelTest extends JPanel{
 
     //Botones
     public Boton btDiagramaObjetos;
+    public Boton btSalir;
+
     public Color btFondo = Colores.FONDO_BOTON;
     public Color btFuente = Colores.FUENTE_BOTON;
 
@@ -120,15 +122,27 @@ public class PanelTest extends JPanel{
         lbNewControlador.setForeground(colorInstancia);
         this.add(lbNewControlador);
 
+        //Boton para salir
+        btSalir = new Boton("Salir");
+        btSalir.setActionCommand("salir");
+        btSalir.setFont(new Font("Droid Sans Mono", Font.BOLD, tamañoFuente));
+        btSalir.setBounds((getAnchoTotalPanel()/2) + 50, (getAltoTotalPanel()) - 60, getAnchoBoton(btSalir), getAltoBoton(btSalir));
+        btSalir.setBackground(btFondo);
+        btSalir.setForeground(btFuente);
+        btSalir.setFocusable(false);
+        this.add(btSalir);
+
         //Boton para ver el diagrama de objetos
         btDiagramaObjetos = new Boton("Diagrama de objetos");
         btDiagramaObjetos.setActionCommand("diagramaObjetos");
         btDiagramaObjetos.setFont(new Font("Droid Sans Mono", Font.BOLD, tamañoFuente));
-        btDiagramaObjetos.setBounds((getAnchoTotalPanel()/2) - (getAnchoBoton(btDiagramaObjetos)/2), (getAltoTotalPanel()) - 60, getAnchoBoton(btDiagramaObjetos), getAltoBoton(btDiagramaObjetos));
+        btDiagramaObjetos.setBounds((getAnchoTotalPanel()/2) - (getAnchoBoton(btDiagramaObjetos)/2) - (getAnchoBoton(btSalir)), (getAltoTotalPanel()) - 60, getAnchoBoton(btDiagramaObjetos), getAltoBoton(btDiagramaObjetos));
         btDiagramaObjetos.setBackground(btFondo);
         btDiagramaObjetos.setForeground(btFuente);
         btDiagramaObjetos.setFocusable(false);
         this.add(btDiagramaObjetos);
+
+
 
         
         //Caracteristicas del panel
@@ -215,6 +229,7 @@ public class PanelTest extends JPanel{
 
     public void agregarEscuchadores(ActionListener escuchador){
         btDiagramaObjetos.addActionListener(escuchador);
+        btSalir.addActionListener(escuchador);
     }
 
 }
