@@ -14,6 +14,7 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
+import javax.swing.JPanel;
 
 import cvo.clases.Colores;
 import cvo.clases.SFX;
@@ -32,6 +33,7 @@ public class DialogoExplicacion extends JDialog{
     private int alto;
     private int ancho;
     private JLayeredPane capa;
+    private JPanel colorFondo;
     
     //Imagen
     private String rutaImagen = "cvo/Recursos/Diagramas/";
@@ -55,22 +57,46 @@ public class DialogoExplicacion extends JDialog{
         //Layout
         this.setLayout(null);
 
+
+
         rutaImagen += imagen;
         icon = new ImageIcon(rutaImagen);
+
         ancho = icon.getIconWidth();
         alto = icon.getIconHeight();
 
+        
+        this.capa = new JLayeredPane();
+        capa.setBounds(0, 0, ancho, alto);
+ 
+        colorFondo = new JPanel();
+        colorFondo.setBackground(Color.BLACK);
+        colorFondo.setBounds(0, 0, ancho, alto);       
+        capa.add(colorFondo, JLayeredPane.DEFAULT_LAYER);
+        
         label = new JLabel(icon);
         label.setBounds(0, 0, ancho, alto);
-        this.add(label);
+        capa.add(label, JLayeredPane.PALETTE_LAYER);
+
+        lbCerrar = new Texto("Cerrar");
+        lbCerrar.setBounds(5, alto - 30, 50, 30);
+        lbCerrar.setForeground(Colores.CERRAR);
+        capa.add(lbCerrar, JLayeredPane.PALETTE_LAYER);
+        
+
+        this.add(capa);
+        
+        escuchador = new Mouse(lbCerrar);
         
         // Caracteristicas del diálogo
+
+
         moverVentana();
         this.setUndecorated(true);
         this.setTitle("Objetos en RAM");
         this.setSize(ancho, alto);
         this.setResizable(false);
-        this.setBackground(Color.WHITE);
+        
         this.setVisible(true);
 
         

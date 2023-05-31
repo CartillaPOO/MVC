@@ -18,5 +18,6 @@ public class Colores {
     public static Color FUENTE_BOTON = new Color(235, 219, 178);
 
     //Colores para botones label
-    public static Color CERRAR = new Color(177, 98, 134);
+    public static Color CERRAR = new Color(143, 63, 113);
+
 }
