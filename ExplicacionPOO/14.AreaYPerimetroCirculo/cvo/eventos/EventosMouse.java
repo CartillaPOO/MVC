@@ -22,11 +22,13 @@ public class EventosMouse implements MouseListener{
     //TODO: Corregir nombre de la variable Evento a evento
 
     //---Atributos---
+    //Ventanas
     private FrameTest miFrameTest;
     private DialogoExplicacion DialogoMiVentana;
     private DialogoExplicacion DialogoMiModelo;
     private DialogoExplicacion DialogoMiControlador;
 
+    //Nombre del modelo
     private String nombreModelo;
 
     //Efectos SFX
@@ -50,7 +52,6 @@ public class EventosMouse implements MouseListener{
         
             DialogoExplicacion miDialogoVentanaPrincipal = new DialogoExplicacion("ventanaPrincipal-Circulo.png");
             setWindowPosition(miDialogoVentanaPrincipal);
-
         }
 
         if(Evento.equals("miVentana = ")){

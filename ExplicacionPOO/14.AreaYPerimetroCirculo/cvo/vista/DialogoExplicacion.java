@@ -57,8 +57,6 @@ public class DialogoExplicacion extends JDialog{
         //Layout
         this.setLayout(null);
 
-
-
         rutaImagen += imagen;
         icon = new ImageIcon(rutaImagen);
 

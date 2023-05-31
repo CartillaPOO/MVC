@@ -3,6 +3,7 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import cvo.vista.DialogoExplicacion;
 import modelo.Circulo;
 import vista.VentanaPrincipal;
 
@@ -45,6 +46,10 @@ public class Controlador implements ActionListener
             model.calcularPerimetro();
             double perimetro = model.getperimetro();
             venPrin.miPanelResultados.mostrarResultado(area, perimetro); // Se le pasa el área y el perímetro al panel de resultados
+
+            //Que sucede en RAM
+            
+            new DialogoExplicacion("calcular-Circulo", true, 10).setLocation(venPrin.getX(), venPrin.getY() + venPrin.getHeight());
         }
         
         if(comando.equals("salir"))
