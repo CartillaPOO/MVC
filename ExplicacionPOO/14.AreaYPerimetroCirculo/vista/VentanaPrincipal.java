@@ -47,6 +47,7 @@ public class VentanaPrincipal extends JFrame
         colorFondo.setBounds(0,0,600,400);
         this.add(colorFondo);
         
+        this.getRootPane().setWindowDecorationStyle(2);
         // Características de la ventana
         // Caracteristicas del diálogo 
         

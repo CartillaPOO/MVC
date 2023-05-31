@@ -41,7 +41,7 @@ public class PanelEntradaDatos extends JPanel
         // Creación y adición de etiqueta lbRadio
         lbRadio = new JLabel("Radio:");
         lbRadio.setFont(fontLabel); // Tipo de letra
-        lbRadio.setForeground(new Color(186, 203, 225));
+        lbRadio.setForeground(Color.WHITE);
         lbRadio.setBounds(190, 105, 70, 20);
         this.add(lbRadio);
 
