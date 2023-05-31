@@ -49,6 +49,7 @@ public class PanelEntradaDatos extends JPanel
 
         // Creación y adición de caja de texto para el radio
         tfRadio = new JTextField("3");
+        tfRadio.setEditable(false);
         tfRadio.setToolTipText("tfRadio");
         tfRadio.setBackground(new Color(59,59,59));
         tfRadio.setBorder(null); // Eliminar el borde
