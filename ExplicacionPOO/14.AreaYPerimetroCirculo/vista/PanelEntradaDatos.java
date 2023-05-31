@@ -35,11 +35,13 @@ public class PanelEntradaDatos extends JPanel
         // Creación y adición de la imagen al panel
         iImagen = new ImageIcon(getClass().getResource("/vista/circulo.png"));
         lbImagen = new JLabel(iImagen);
+        lbImagen.setToolTipText("lbImagen");
         lbImagen.setBounds(10,35,160,160); // Posición y tamaño
         this.add(lbImagen);
 
         // Creación y adición de etiqueta lbRadio
         lbRadio = new JLabel("Radio:");
+        lbRadio.setToolTipText("lbRadio");
         lbRadio.setFont(fontLabel); // Tipo de letra
         lbRadio.setForeground(Color.WHITE);
         lbRadio.setBounds(190, 105, 70, 20);
@@ -47,6 +49,7 @@ public class PanelEntradaDatos extends JPanel
 
         // Creación y adición de caja de texto para el radio
         tfRadio = new JTextField();
+        tfRadio.setToolTipText("tfRadio");
         tfRadio.setBackground(new Color(59,59,59));
         tfRadio.setBorder(null); // Eliminar el borde
         tfRadio.setFont(fontField);

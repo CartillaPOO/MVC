@@ -98,12 +98,6 @@ public class EventosMouse implements MouseListener{
         if(Evento.equals("new Controlador(miVentana, miEmpresa);")){
         }
 
-        //Eventos para labels de los dialogos
-        if(event.getSource().equals(DialogoMiVentana.lbCerrar)){
-            DialogoMiVentana.dispose();
-        }
-        
-
         if(clase.equals("Texto")){
             sonidos.sonidoLabelClic();
         }
