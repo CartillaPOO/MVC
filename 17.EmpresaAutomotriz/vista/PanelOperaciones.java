@@ -34,7 +34,7 @@ public class PanelOperaciones extends JPanel
         btAgregarEmpleado = new JButton("Agregar Empleado");
         btAgregarEmpleado.setBackground(new Color(59,59,59));
         btAgregarEmpleado.setForeground(Color.WHITE);
-        btAgregarEmpleado.setActionCommand("AgregarEmpleado");
+        btAgregarEmpleado.setActionCommand("agregarEmpleado");
         btAgregarEmpleado.setBounds(15,10,170,50);
         this.add(btAgregarEmpleado);
         
@@ -42,7 +42,8 @@ public class PanelOperaciones extends JPanel
         btVenderCarro.setBackground(new Color(59,59,59));
         btVenderCarro.setForeground(Color.WHITE);
         btVenderCarro.setActionCommand("venderCarro");
-        btVenderCarro.setBounds(195,10,170,20); 
+        btVenderCarro.setBounds(195,10,170,20);
+        btVenderCarro.setEnabled(false);
         this.add(btVenderCarro);
 
         btVerVentas = new JButton("Ver ventas");
@@ -50,6 +51,7 @@ public class PanelOperaciones extends JPanel
         btVerVentas.setForeground(Color.WHITE);
         btVerVentas.setActionCommand("verVentas");
         btVerVentas.setBounds(195, 40, 170, 20);
+        btVerVentas.setEnabled(false);
         this.add(btVerVentas);
 
         btCalcularSueldo = new JButton("Calcular Sueldo");
@@ -57,6 +59,7 @@ public class PanelOperaciones extends JPanel
         btCalcularSueldo.setForeground(Color.WHITE);
         btCalcularSueldo.setActionCommand("calcularSueldo");
         btCalcularSueldo.setBounds(195,70,170,20);
+        btCalcularSueldo.setEnabled(false);
         this.add(btCalcularSueldo);
 
         btEmpleadosSinVentas = new JButton("Empleados sin ventas");
@@ -64,6 +67,7 @@ public class PanelOperaciones extends JPanel
         btEmpleadosSinVentas.setForeground(Color.WHITE);
         btEmpleadosSinVentas.setActionCommand("empleadosSinVentas");
         btEmpleadosSinVentas.setBounds(375, 10, 170, 20);
+        btEmpleadosSinVentas.setEnabled(false);
         this.add(btEmpleadosSinVentas);
         
         btEmpleadoDelMes = new JButton("Empleado del mes");
@@ -71,13 +75,15 @@ public class PanelOperaciones extends JPanel
         btEmpleadoDelMes.setForeground(Color.WHITE);
         btEmpleadoDelMes.setActionCommand("empleadoDelMes");
         btEmpleadoDelMes.setBounds(375, 40, 170, 20);
+        btEmpleadoDelMes.setEnabled(false);
         this.add(btEmpleadoDelMes);
 
         btLiquidarNomina = new JButton("Liquidar Nómina");
         btLiquidarNomina.setBackground(new Color(59,59,59));
         btLiquidarNomina.setForeground(Color.WHITE);
         btLiquidarNomina.setActionCommand("liquidarNomina");
-        btLiquidarNomina.setBounds(375,70,170,20); 
+        btLiquidarNomina.setBounds(375,70,170,20);
+        btLiquidarNomina.setEnabled(false);
         this.add(btLiquidarNomina);
 
         btSalir = new JButton("Salir");
@@ -98,5 +104,16 @@ public class PanelOperaciones extends JPanel
         btEmpleadoDelMes.addActionListener(pAL);
         btEmpleadosSinVentas.addActionListener(pAL);
         btSalir.addActionListener(pAL);
+    }
+
+    public void activarBotones()
+    {
+        btAgregarEmpleado.setEnabled(true);
+        btVenderCarro.setEnabled(true);
+        btVerVentas.setEnabled(true);
+        btCalcularSueldo.setEnabled(true);
+        btEmpleadosSinVentas.setEnabled(true);
+        btEmpleadoDelMes.setEnabled(true);
+        btLiquidarNomina.setEnabled(true);
     }
 }
