@@ -25,7 +25,6 @@ public class DialogoAgregarEmpleado extends JDialog
     private JTextField tfCedulaVendedor;
     private JButton btAgregar;
     private JButton btCancelar;
-
     private Font fontLabel = new Font("Arial", Font.BOLD, 20);
     private Font fontField = new Font("Arial", Font.BOLD, 15);
 

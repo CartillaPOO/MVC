@@ -44,6 +44,7 @@ public class Controlador implements ActionListener
         {
             String nombre = venPrin.miDialogoAgregarEmpleado.getNombreVendedor();
             String cedula = venPrin.miDialogoAgregarEmpleado.getCedulaVendedor();
+
             empresa.agregarEmpleado(new Empleado(nombre, cedula));
             venPrin.miPanelEntradaDatos.setEmpleado(nombre);
             venPrin.miPanelResultados.mostrarResultado("Se ha agreado un empleado \nNombre: " + nombre + "\nCédula: " + cedula);
@@ -64,13 +65,12 @@ public class Controlador implements ActionListener
 
         if(comando.equals("vender"))
         {
-            int indexVendedor = venPrin.miPanelEntradaDatos.getIndexEmpleado();
-
+            int indexEmpleado = venPrin.miPanelEntradaDatos.getIndexEmpleado();
             double precio = Double.parseDouble(venPrin.miDialogoVenderCarro.getPrecioCarro());
             String marca = venPrin.miDialogoVenderCarro.getMarcaCarro();
             int modelo = Integer.parseInt(venPrin.miDialogoVenderCarro.getModeloCarro());
 
-            Empleado emp = empresa.getEmpleado(indexVendedor);
+            Empleado emp = empresa.getEmpleado(indexEmpleado);
             
             emp.venderCarro(new Carro(precio, marca, modelo));
 
