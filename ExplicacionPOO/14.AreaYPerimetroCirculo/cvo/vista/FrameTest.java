@@ -41,7 +41,7 @@ public class FrameTest extends JFrame {
         // Quitar barra de título de la ventana
         this.setUndecorated(true);
         this.setTitle("Test.java");
-        this.setSize(ANCHO, ALTO);
+        this.setSize(ANCHO + 11, ALTO);
         this.setLocation(POSX, POSY);
         this.setResizable(false);
         this.setBackground(new Color(29, 32, 33));
@@ -58,11 +58,11 @@ public class FrameTest extends JFrame {
     }
 
     public int getWidthPOSX(){
-        return POSX + ANCHO;
+        return POSX + this.getWidth();
     }
     
     public int getHeightPOSX(){
-        return POSY + ALTO;
+        return POSY + this.getHeight();
     }
     
 }

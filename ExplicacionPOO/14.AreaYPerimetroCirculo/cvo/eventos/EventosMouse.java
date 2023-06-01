@@ -81,6 +81,8 @@ public class EventosMouse implements MouseListener{
 
 
         if(Evento.equals("new " + nombreModelo + "();")){
+            DialogoMiModelo = new DialogoExplicacion("miCirculo", true, 9);
+            setWindowPosition(DialogoMiModelo);
         }
 
 
@@ -96,7 +98,9 @@ public class EventosMouse implements MouseListener{
             setWindowPosition(DialogoMiControlador);
         }
 
-        if(Evento.equals("new Controlador(miVentana, miEmpresa);")){
+        if(Evento.equals("new Controlador(miVentana, " + "mi" + nombreModelo + ");")){
+            DialogoMiControlador = new DialogoExplicacion("miControlador", true, 9);
+            setWindowPosition(DialogoMiControlador);
         }
 
         if(clase.equals("Texto")){
@@ -142,10 +146,12 @@ public class EventosMouse implements MouseListener{
 
         if(Evento.equals("mi" + nombreModelo + " = ")){
             miFrameTest.panelTest.lbMiModelo.setForeground(Colores.RESALTADO);
+            miFrameTest.panelTest.lbNewModelo.setForeground(Colores.RESALTADO);
         }
 
         if(Evento.equals("new " + nombreModelo + "();")){
             miFrameTest.panelTest.lbNewModelo.setForeground(Colores.RESALTADO);
+            miFrameTest.panelTest.lbMiModelo.setForeground(Colores.RESALTADO);
         }
 
         //Resaltado para la tercera linea
@@ -155,10 +161,12 @@ public class EventosMouse implements MouseListener{
 
         if(Evento.equals("miControlador = ")){
             miFrameTest.panelTest.lbMiControlador.setForeground(Colores.RESALTADO);
+            miFrameTest.panelTest.lbNewControlador.setForeground(Colores.RESALTADO);
         }
 
-        if(Evento.equals("new Controlador(miVentana, miEmpresa);")){
+        if(Evento.equals("new Controlador(miVentana, " + "mi" + nombreModelo + ");")){
             miFrameTest.panelTest.lbNewControlador.setForeground(Colores.RESALTADO);
+            miFrameTest.panelTest.lbMiControlador.setForeground(Colores.RESALTADO);
         }
 
         //Eventos para labels de los dialogos
@@ -206,10 +214,12 @@ public class EventosMouse implements MouseListener{
 
         if(Evento.equals("mi" + nombreModelo + " = ")){
             miFrameTest.panelTest.lbMiModelo.setForeground(Colores.OBJETO);
+            miFrameTest.panelTest.lbNewModelo.setForeground(Colores.INSTANCIA);
         }
 
         if(Evento.equals("new " + nombreModelo + "();")){
             miFrameTest.panelTest.lbNewModelo.setForeground(Colores.INSTANCIA);
+            miFrameTest.panelTest.lbMiModelo.setForeground(Colores.OBJETO);
         }
 
         //Color original tercera linea
@@ -220,10 +230,12 @@ public class EventosMouse implements MouseListener{
 
         if(Evento.equals("miControlador = ")){
             miFrameTest.panelTest.lbMiControlador.setForeground(Colores.OBJETO);
+            miFrameTest.panelTest.lbNewControlador.setForeground(Colores.INSTANCIA);
         }
 
-        if(Evento.equals("new Controlador(miVentana, miEmpresa);")){
+        if(Evento.equals("new Controlador(miVentana, " + "mi" + nombreModelo + ");")){
             miFrameTest.panelTest.lbNewControlador.setForeground(Colores.INSTANCIA);
+            miFrameTest.panelTest.lbMiControlador.setForeground(Colores.OBJETO);
         }
 
         //Color original boton

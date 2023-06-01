@@ -57,7 +57,7 @@ public class PanelTest extends JPanel{
 
         //Labels para la primera linea
         lbVentanaPrincipal = new Texto("VentanaPrincipal ");
-        lbVentanaPrincipal.setToolTipText("Ir al codigo");
+        lbVentanaPrincipal.setToolTipText("Ver Clase");
         lbVentanaPrincipal.setFont(new Font("Droid Sans Mono", Font.BOLD, tamañoFuente));
         lbVentanaPrincipal.setBounds(10, 100, getAnchoTexto(lbVentanaPrincipal), getAltoTexto(lbVentanaPrincipal));
         lbVentanaPrincipal.setForeground(colorClase);
@@ -80,7 +80,7 @@ public class PanelTest extends JPanel{
 
         //Labels para la segunda linea
         lbModelo = new Texto(nombreModelo + " ");
-        lbModelo.setToolTipText("Ir al codigo");
+        lbModelo.setToolTipText("Ver modelo");
         lbModelo.setFont(new Font("Droid Sans Mono", Font.BOLD, tamañoFuente));
         lbModelo.setBounds(10,getPosY(lbNewVentanaPrincipal), getAnchoTexto(lbModelo), getAltoTexto(lbModelo));
         lbModelo.setForeground(colorClase);
@@ -94,7 +94,7 @@ public class PanelTest extends JPanel{
         this.add(lbMiModelo);
 
         lbNewModelo = new Texto("new " + nombreModelo + "();");
-        lbNewModelo.setToolTipText("Vista");
+        lbNewModelo.setToolTipText("Ver objeto en RAM");
         lbNewModelo.setFont(new Font("Droid Sans Mono", Font.BOLD, tamañoFuente));
         lbNewModelo.setBounds(getPosX(lbMiModelo), getPosY(lbNewVentanaPrincipal), getAnchoTexto(lbNewModelo), getAltoTexto(lbNewModelo));
         lbNewModelo.setForeground(colorInstancia);
@@ -102,7 +102,7 @@ public class PanelTest extends JPanel{
 
         //Labels para la tercera linea
         lbControlador = new Texto("Controlador ");
-        lbControlador.setToolTipText("Ir al codigo");
+        lbControlador.setToolTipText("Ver Clase");
         lbControlador.setFont(new Font("Droid Sans Mono", Font.BOLD, tamañoFuente));
         lbControlador.setBounds(10, getPosY(lbNewModelo), getAnchoTexto(lbControlador), getAltoTexto(lbControlador));
         lbControlador.setForeground(colorClase);
@@ -115,8 +115,8 @@ public class PanelTest extends JPanel{
         lbMiControlador.setForeground(colorObjeto);
         this.add(lbMiControlador);
 
-        lbNewControlador = new Texto("new Controlador(miVentana, miEmpresa);");
-        lbNewControlador.setToolTipText("Vista");
+        lbNewControlador = new Texto("new Controlador(miVentana, " + "mi" + nombreModelo + ");");
+        lbNewControlador.setToolTipText("Ver objeto en RAM");
         lbNewControlador.setFont(new Font("Droid Sans Mono", Font.BOLD, tamañoFuente));
         lbNewControlador.setBounds(getPosX(lbMiControlador), getPosY(lbNewModelo), getAnchoTexto(lbNewControlador), getAltoTexto(lbNewControlador));
         lbNewControlador.setForeground(colorInstancia);
