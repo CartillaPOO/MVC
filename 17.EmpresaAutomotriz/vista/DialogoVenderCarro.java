@@ -63,7 +63,7 @@ public class DialogoVenderCarro extends JDialog
         tfPrecioCarro.setFont(fontField);
         tfPrecioCarro.setForeground(Color.WHITE);
         tfPrecioCarro.setCaretColor(Color.WHITE);
-        tfPrecioCarro.setBounds(170,80,60,20);
+        tfPrecioCarro.setBounds(170,80,80,20);
         this.add(tfPrecioCarro);
 
         lbMarcaCarro = new JLabel("Marca:", JLabel.RIGHT);
@@ -78,7 +78,7 @@ public class DialogoVenderCarro extends JDialog
         tfMarcaCarro.setFont(fontField);
         tfMarcaCarro.setForeground(Color.WHITE);
         tfMarcaCarro.setCaretColor(Color.WHITE);
-        tfMarcaCarro.setBounds(170,110,60,20);
+        tfMarcaCarro.setBounds(170,110,80,20);
         this.add(tfMarcaCarro);
 
         lbModeloCarro = new JLabel("Modelo:", JLabel.RIGHT);
@@ -93,7 +93,7 @@ public class DialogoVenderCarro extends JDialog
         tfModeloCarro.setFont(fontField);
         tfModeloCarro.setForeground(Color.WHITE);
         tfModeloCarro.setCaretColor(Color.WHITE);
-        tfModeloCarro.setBounds(170,140,60,20);
+        tfModeloCarro.setBounds(170,140,30,20);
         this.add(tfModeloCarro);
 
         btVenderCarro = new JButton("Vender");
@@ -106,7 +106,7 @@ public class DialogoVenderCarro extends JDialog
         btCancelar = new JButton("Cancelar");
         btCancelar.setBackground(new Color(59,59,59));
         btCancelar.setForeground(Color.WHITE);
-        btCancelar.setActionCommand("cancelarDialogoVenderCarro");
+        btCancelar.setActionCommand("cerrarDialogoVenderCarro");
         btCancelar.setBounds(185,180,120,20);
         this.add(btCancelar);
 
