@@ -40,7 +40,7 @@ public class DialogoAgregarEmpleado extends JDialog
         this.setLayout(null);
 
         // Creación y adición de elementos
-        lbTitulo = new JLabel("Agregar empleado", JLabel.CENTER); // JLabel.CENTER: Centra el texto
+        lbTitulo = new JLabel("Agregar empleado", JLabel.CENTER);
         lbTitulo.setFont(fontLabel);
         lbTitulo.setForeground(Color.WHITE);
         lbTitulo.setBounds(0,20,340,25);
@@ -86,12 +86,11 @@ public class DialogoAgregarEmpleado extends JDialog
         btCancelar = new JButton("Cancelar");
         btCancelar.setBackground(new Color(59,59,59));
         btCancelar.setForeground(Color.WHITE);
-        btCancelar.setActionCommand("cancelarDialogoAgregarEmpleado");
+        btCancelar.setActionCommand("cerrarDialogoAgregarEmpleado");
         btCancelar.setBounds(40,180,260,20);
         this.add(btCancelar);
 
         // Características de la ventana
-        this.setTitle("Carro");
         this.setUndecorated(true);
         this.setSize(340,230);
         this.setLocationRelativeTo(null);
@@ -109,7 +108,7 @@ public class DialogoAgregarEmpleado extends JDialog
         this.add(colorFondo2);
     }
 
-    //Metodos de acceso
+    // Métodos de acceso
     public String getNombreVendedor()
     {
         return tfNombreVendedor.getText();

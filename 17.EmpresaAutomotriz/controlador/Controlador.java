@@ -51,7 +51,7 @@ public class Controlador implements ActionListener
             venPrin.miDialogoAgregarEmpleado.cerrarDialogoAgregarEmpleado();
         }
 
-        if(comando.equals("cancelarDialogoAgregarEmpleado"))
+        if(comando.equals("cerrarDialogoAgregarEmpleado"))
         {
             venPrin.miDialogoAgregarEmpleado.cerrarDialogoAgregarEmpleado();
         }
@@ -78,11 +78,10 @@ public class Controlador implements ActionListener
             venPrin.miDialogoVenderCarro.cerrarDialogoVenderCarro();
         }
 
-        if(comando.equals("cancelarDialogoVenderCarro"))
+        if(comando.equals("cerrarDialogoVenderCarro"))
         {
             venPrin.miDialogoVenderCarro.cerrarDialogoVenderCarro();
         }
-
 
         if(comando.equals("verVentas"))
         {

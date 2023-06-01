@@ -14,11 +14,10 @@ public class PanelEntradaDatos extends JPanel
 
     private JLabel lbEmpleados;
     private JComboBox<String> cbEmpleados;
-
     private Font fontLabel = new Font("Arial", Font.BOLD, 20);
 
     //
-    // Metodos
+    // Métodos
     //
 
     // Método constructor
