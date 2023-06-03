@@ -14,6 +14,7 @@ public class DialogoVenderCarro extends JDialog
     //
     // Atributos
     //
+
     private JLabel lbTitulo;
     private JPanel colorFondo1;
     private JPanel colorFondo2;
@@ -26,19 +27,19 @@ public class DialogoVenderCarro extends JDialog
     private JTextField tfModeloCarro;
     private JButton btVenderCarro;
     private JButton btCancelar;
-
     private Font fontLabel = new Font("Arial", Font.BOLD, 20);
     private Font fontField = new Font("Arial", Font.BOLD, 15);
 
     //
-    // Metodos
+    // Métodos
     //
+
     public DialogoVenderCarro(String nom)
     {
-        //Definición del layout del Dialogo
+        // Definición del layout del Dialogo
         this.setLayout(null);
 
-        //Crear y agregar elementos
+        // Crear y agregar elementos
         lbTitulo = new JLabel("Venta de Carro", JLabel.CENTER); // JLabel.CENTER: Centra el texto
         lbTitulo.setFont(fontLabel);
         lbTitulo.setForeground(Color.WHITE);

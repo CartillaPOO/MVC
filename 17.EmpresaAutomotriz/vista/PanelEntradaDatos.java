@@ -13,7 +13,7 @@ public class PanelEntradaDatos extends JPanel
     //
 
     private JLabel lbEmpleados;
-    private JComboBox<String> cbEmpleados;
+    private JComboBox<String> cbEmpleados; // Combo box de empleados
     private Font fontLabel = new Font("Arial", Font.BOLD, 20);
 
     //
@@ -48,7 +48,7 @@ public class PanelEntradaDatos extends JPanel
 
     public int getIndexEmpleado()
     {
-        return cbEmpleados.getSelectedIndex();
+        return cbEmpleados.getSelectedIndex(); // Obtener índice del empleado seleccionado
     }
 
     public void setEmpleado(String emp)
