@@ -10,6 +10,6 @@ public class Test
     {
         VentanaPrincipal miVentana = new VentanaPrincipal();
         EmpresaAutomotriz miEmpresa = new EmpresaAutomotriz();
-        Controlador controlador = new Controlador(miVentana, miEmpresa);
+        Controlador miControlador = new Controlador(miVentana, miEmpresa);
     }
 }
