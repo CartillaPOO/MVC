@@ -20,6 +20,7 @@ public class EmpresaAutomotriz
     public EmpresaAutomotriz()
     {
         empleados = new ArrayList<>();
+        nomina = 0;
     }
     
     public void agregarEmpleado(Empleado emp)
