@@ -72,6 +72,7 @@ public class Controlador implements ActionListener
         {   
             venPrin.crearDialogoMover();
             venPrin.miDialogoMoverCarro.agregarOyentesBotones(this);
+            new DialogoExplicacion("mover-Carro", 11).setLocation(541, venPrin.getY() + venPrin.getHeight());
         }
         
         if(comando.equals("aceptar"))
