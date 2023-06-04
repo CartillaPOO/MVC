@@ -74,6 +74,7 @@ public class PanelEntradaDatos extends JPanel
         this.add(tfColor);
         
         tfPosX = new JTextField("10");
+        tfPosX.setEditable(false);
         tfPosX.setBackground(new Color(59,59,59));
         tfPosX.setBorder(null);
         tfPosX.setFont(fontField);
@@ -83,6 +84,7 @@ public class PanelEntradaDatos extends JPanel
         this.add(tfPosX);
         
         tfPosY = new JTextField("10");
+        tfPosY.setEditable(false);
         tfPosY.setBackground(new Color(59,59,59));
         tfPosY.setBorder(null);
         tfPosY.setFont(fontField);

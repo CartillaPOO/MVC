@@ -57,7 +57,8 @@ public class DialogoMoverCarro extends JDialog
         lbPosY.setBounds(0,100,150,20);
         this.add(lbPosY);
         
-        tfPosX = new JTextField();
+        tfPosX = new JTextField("5");
+        tfPosX.setEditable(false);
         tfPosX.setBackground(new Color(59,59,59));
         tfPosX.setBorder(null);
         tfPosX.setFont(fontField);
@@ -66,7 +67,8 @@ public class DialogoMoverCarro extends JDialog
         tfPosX.setBounds(160,60,60,20);
         this.add(tfPosX);
         
-        tfPosY = new JTextField();
+        tfPosY = new JTextField("1");
+        tfPosY.setEditable(false);
         tfPosY.setBackground(new Color(59,59,59));
         tfPosY.setBorder(null);
         tfPosY.setFont(fontField);
