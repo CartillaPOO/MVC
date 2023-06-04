@@ -93,6 +93,7 @@ public class Controlador implements ActionListener
         {
             model.acelerar();
             venPrin.miPanelResultados.mostrarResultado("\nEl carro ha acelerado\nSu velocidad actual es " + model.getVelocidad());
+            new DialogoExplicacion("acelerar-Carro", 11).setLocation(541, venPrin.getY() + venPrin.getHeight());
         }
         
         if(comando.equals("frenar"))
