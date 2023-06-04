@@ -82,6 +82,8 @@ public class Controlador implements ActionListener
             model.mover(x, y);
             venPrin.miPanelResultados.mostrarResultado("\nSe ha movido el carro\nSu posición actual es (" + model.getPosX()+", " + model.getPosY()+")"); // Se le pasa el mensaje al panel de resultados
             venPrin.miDialogoMoverCarro.cerrarDialogo();
+
+            new DialogoExplicacion("posicionCarro-Carro", 13).setLocation(541, venPrin.getY() + venPrin.getHeight());
         }
 
         if(comando.equals("cancelar"))
@@ -100,6 +102,7 @@ public class Controlador implements ActionListener
         {
             model.frenar();
             venPrin.miPanelResultados.mostrarResultado("\nEl carro ha frenado\nSu velocidad actual es " + model.getVelocidad());
+            new DialogoExplicacion("frenar-Carro", 13).setLocation(541, venPrin.getY() + venPrin.getHeight());
         }
 
         if(comando.equals("salir"))
