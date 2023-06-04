@@ -62,5 +62,6 @@ public class VentanaPrincipal extends JFrame
     public void crearDialogoMover()
     {
         miDialogoMoverCarro = new DialogoMoverCarro();
+        miDialogoMoverCarro.setLocationRelativeTo(this);
     }
 }

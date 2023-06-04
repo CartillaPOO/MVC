@@ -94,7 +94,6 @@ public class DialogoMoverCarro extends JDialog
         // Características de la ventana
         this.setUndecorated(true);
         this.setSize(340,230);
-        this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
 
