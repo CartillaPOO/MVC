@@ -3,6 +3,8 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+
+import cvo.vista.DialogoExplicacion;
 import modelo.Carro;
 import vista.VentanaPrincipal;
 
@@ -61,7 +63,9 @@ public class Controlador implements ActionListener
             
             {
                 JOptionPane.showMessageDialog(null, "Error en datos de entrada", "Error", JOptionPane.ERROR_MESSAGE);
-            }   
+            }
+            
+            new DialogoExplicacion("crear-Carro", 23).setLocation(541, venPrin.getY() + venPrin.getHeight());
         }
         
         if(comando.equals("mover"))

@@ -43,6 +43,8 @@ public class FrameTest extends JFrame {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setBackground(new Color(29, 32, 33));
         this.setVisible(true);
+
+        System.out.println("Ancho: " + ANCHO + " Alto: " + ALTO);
     }
 
     public int getScreenPOSX(){

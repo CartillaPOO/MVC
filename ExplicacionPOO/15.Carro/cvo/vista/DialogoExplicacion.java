@@ -46,17 +46,20 @@ public class DialogoExplicacion extends JDialog{
         //Layout
         this.setLayout(null);
 
+        
         rutaImagen += imagen;
         icon = new ImageIcon(rutaImagen);
         
         ancho = icon.getIconWidth();
         alto = icon.getIconHeight();
-
+        
         label = new JLabel(icon);
         label.setBounds(0, 0, ancho, alto);
         this.add(label);
         
-        // Caracteristicas del diálogo 
+        // Caracteristicas del diálogo
+
+        moverVentana();
         this.setUndecorated(true);
         this.setTitle("Objetos en RAM");
         this.setSize(ancho, alto);
@@ -66,37 +69,39 @@ public class DialogoExplicacion extends JDialog{
         
     }
 
-    public DialogoExplicacion(String imagen, boolean esGif, int tiempo){
+    public DialogoExplicacion(String imagen, int tiempo){
         //Layout
         this.setLayout(null);
 
+        
         rutaGif = "cvo/Recursos/Gifs/" + imagen + ".gif";
         rutaImagen = "cvo/Recursos/Gifs/" + imagen + ".png";
         icon = new ImageIcon(rutaGif);
         
         ancho = icon.getIconWidth();
         alto = icon.getIconHeight();
-
+        
         capa = new JLayeredPane();
         capa.setBounds(0, 0, ancho, alto);
-
-
+        
+        
         label = new JLabel(icon);
         label.setBounds(0, 0, ancho, alto);
         capa.add(label, JLayeredPane.DEFAULT_LAYER);
-
+        
         lbCerrar = new Texto("Cerrar");
         lbCerrar.setBounds(5, alto -30, 100, 30);
         lbCerrar.setForeground(Colores.CERRAR);
-        capa.add(lbCerrar, JLayeredPane.PALETTE_LAYER);
-
+        //capa.add(lbCerrar, JLayeredPane.PALETTE_LAYER);
+        
         this.add(capa);
-
+        
         escuchador = new Mouse(lbCerrar);
-
+        
         desactivarGif(rutaImagen, tiempo);
         
         // Caracteristicas del diálogo 
+        moverVentana();
         this.setUndecorated(true);
         this.setTitle("Objetos en RAM");
         this.setSize(ancho, alto);

@@ -6,7 +6,7 @@ import cvo.vista.FrameTest;
 
 public class test {
     public static void main(String[] args) {
-       FrameTest miTest = new FrameTest("Circulo", 15);
+       FrameTest miTest = new FrameTest("Carro", 15);
        EventosMouse eventosMouse = new EventosMouse(miTest);
        EventosBoton eventosBoton = new EventosBoton(miTest);
     }

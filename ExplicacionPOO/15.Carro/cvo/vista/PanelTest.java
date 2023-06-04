@@ -34,6 +34,7 @@ public class PanelTest extends JPanel{
 
     //Botones
     public Boton btDiagramaObjetos;
+    public Boton btSalir;
     public Color btFondo = Colores.FONDO_BOTON;
     public Color btFuente = Colores.FUENTE_BOTON;
 
@@ -91,8 +92,8 @@ public class PanelTest extends JPanel{
         lbMiModelo.setForeground(colorObjeto);
         this.add(lbMiModelo);
 
-        lbNewModelo = new Texto("new " + nombreModelo + "();");
-        lbNewModelo.setToolTipText("Vista");
+        lbNewModelo = new Texto("null;");
+        lbNewModelo.setToolTipText("Ver objeto en RAM");
         lbNewModelo.setFont(new Font("Droid Sans Mono", Font.BOLD, tamañoFuente));
         lbNewModelo.setBounds(getPosX(lbMiModelo), getPosY(lbNewVentanaPrincipal), getAnchoTexto(lbNewModelo), getAltoTexto(lbNewModelo));
         lbNewModelo.setForeground(colorInstancia);
@@ -113,18 +114,28 @@ public class PanelTest extends JPanel{
         lbMiControlador.setForeground(colorObjeto);
         this.add(lbMiControlador);
 
-        lbNewControlador = new Texto("new Controlador(miVentana, miEmpresa);");
-        lbNewControlador.setToolTipText("Vista");
+        lbNewControlador = new Texto("new Controlador(miVentana, " + "mi" + nombreModelo + ");");
+        lbNewControlador.setToolTipText("Ver objeto en RAM");
         lbNewControlador.setFont(new Font("Droid Sans Mono", Font.BOLD, tamañoFuente));
         lbNewControlador.setBounds(getPosX(lbMiControlador), getPosY(lbNewModelo), getAnchoTexto(lbNewControlador), getAltoTexto(lbNewControlador));
         lbNewControlador.setForeground(colorInstancia);
         this.add(lbNewControlador);
 
+        //Boton para salir
+        btSalir = new Boton("Salir");
+        btSalir.setActionCommand("salir");
+        btSalir.setFont(new Font("Droid Sans Mono", Font.BOLD, tamañoFuente));
+        btSalir.setBounds((getAnchoTotalPanel()/2) + 50, (getAltoTotalPanel()) - 60, getAnchoBoton(btSalir), getAltoBoton(btSalir));
+        btSalir.setBackground(btFondo);
+        btSalir.setForeground(btFuente);
+        btSalir.setFocusable(false);
+        this.add(btSalir);
+
         //Boton para ver el diagrama de objetos
         btDiagramaObjetos = new Boton("Diagrama de objetos");
         btDiagramaObjetos.setActionCommand("diagramaObjetos");
         btDiagramaObjetos.setFont(new Font("Droid Sans Mono", Font.BOLD, tamañoFuente));
-        btDiagramaObjetos.setBounds((getAnchoTotalPanel()/2) - (getAnchoBoton(btDiagramaObjetos)/2), (getAltoTotalPanel()) - 60, getAnchoBoton(btDiagramaObjetos), getAltoBoton(btDiagramaObjetos));
+        btDiagramaObjetos.setBounds((getAnchoTotalPanel()/2) - (getAnchoBoton(btDiagramaObjetos)/2) - (getAnchoBoton(btSalir)), (getAltoTotalPanel()) - 60, getAnchoBoton(btDiagramaObjetos), getAltoBoton(btDiagramaObjetos));
         btDiagramaObjetos.setBackground(btFondo);
         btDiagramaObjetos.setForeground(btFuente);
         btDiagramaObjetos.setFocusable(false);
@@ -211,10 +222,12 @@ public class PanelTest extends JPanel{
 
         //Escuchadores para los botones
         btDiagramaObjetos.addMouseListener(escuchador);
+        btSalir.addMouseListener(escuchador);
     }
 
     public void agregarEscuchadores(ActionListener escuchador){
         btDiagramaObjetos.addActionListener(escuchador);
+        btSalir.addActionListener(escuchador);
     }
 
 }

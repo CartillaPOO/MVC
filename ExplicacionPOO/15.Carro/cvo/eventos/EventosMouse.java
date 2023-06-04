@@ -9,9 +9,13 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import controlador.Controlador;
 import cvo.clases.Colores;
 import cvo.clases.SFX;
+import cvo.vista.DialogoExplicacion;
 import cvo.vista.FrameTest;
+import modelo.Carro;
+import vista.VentanaPrincipal;
 
 public class EventosMouse implements MouseListener{
 
@@ -43,32 +47,39 @@ public class EventosMouse implements MouseListener{
 
         if(Evento.equals("miVentana = ")){
             System.out.println("miVentana");
+            new DialogoExplicacion("miVentana", 33).setLocation(miFrameTest.getWidthPOSX(), miFrameTest.getScreenPOSY());
         }
 
         if(Evento.equals("new VentanaPrincipal();")){
             //Aqui se colocan las instancias del sistema MVC
+            VentanaPrincipal miVentana = new VentanaPrincipal();
+            setWindowPosition(miVentana);
+            Carro miCarro = null;
+            Controlador miControlador = new Controlador(miVentana, miCarro);
         }
 
         //Eventos segunda linea
         if(Evento.equals(nombreModelo + " ")){
         }
 
-        if(Evento.equals("mi" + nombreModelo + " = ")){
+        if(Evento.equals("mi" + nombreModelo + " = ") || Evento.equals("null;")){
+            setWindowPosition(new DialogoExplicacion("miCarro", 3));
         }
 
-        if(Evento.equals("new " + nombreModelo + "();")){
-        }
+        /*if(Evento.equals("new " + nombreModelo + "();")){
+        }*/
 
 
         //Eventos tercera linea
         if(Evento.equals("Controlador ")){
         }
 
-        if(Evento.equals("miControlador = ")){
+        if(Evento.equals("miControlador = ") || Evento.equals("new Controlador(miVentana, " + "mi" + nombreModelo + ");")){
+            setWindowPosition(new DialogoExplicacion("miControlador", 10));
         }
 
-        if(Evento.equals("new Controlador(miVentana, miEmpresa);")){
-        }
+        /*if(Evento.equals("new Controlador(miVentana, " + "mi" + nombreModelo + ");")){
+        }*/
         
 
         if(clase.equals("Texto")){
@@ -112,26 +123,27 @@ public class EventosMouse implements MouseListener{
             miFrameTest.panelTest.lbModelo.setForeground(Colores.RESALTADO);
         }
 
-        if(Evento.equals("mi" + nombreModelo + " = ")){
+        if(Evento.equals("mi" + nombreModelo + " = ") || Evento.equals("null;")){
             miFrameTest.panelTest.lbMiModelo.setForeground(Colores.RESALTADO);
-        }
-
-        if(Evento.equals("new " + nombreModelo + "();")){
             miFrameTest.panelTest.lbNewModelo.setForeground(Colores.RESALTADO);
         }
+
+        /*if(Evento.equals("new " + nombreModelo + "();")){
+        }*/
 
         //Resaltado para la tercera linea
         if(Evento.equals("Controlador ")){
             miFrameTest.panelTest.lbControlador.setForeground(Colores.RESALTADO);
         }
 
-        if(Evento.equals("miControlador = ")){
+        if(Evento.equals("miControlador = ") || Evento.equals("new Controlador(miVentana, " + "mi" + nombreModelo + ");")){
             miFrameTest.panelTest.lbMiControlador.setForeground(Colores.RESALTADO);
-        }
-
-        if(Evento.equals("new Controlador(miVentana, miEmpresa);")){
             miFrameTest.panelTest.lbNewControlador.setForeground(Colores.RESALTADO);
         }
+
+        /*if(Evento.equals("new Controlador(miVentana, miEmpresa);")){
+            miFrameTest.panelTest.lbNewControlador.setForeground(Colores.RESALTADO);
+        }*/
 
         if(clase.equals("Texto")){
             sonidos.sonidoLabel();
@@ -171,13 +183,14 @@ public class EventosMouse implements MouseListener{
             miFrameTest.panelTest.lbModelo.setForeground(Colores.ClASE);
         }
 
-        if(Evento.equals("mi" + nombreModelo + " = ")){
+        if(Evento.equals("mi" + nombreModelo + " = ") || Evento.equals("null;")){
             miFrameTest.panelTest.lbMiModelo.setForeground(Colores.OBJETO);
-        }
-
-        if(Evento.equals("new " + nombreModelo + "();")){
             miFrameTest.panelTest.lbNewModelo.setForeground(Colores.INSTANCIA);
         }
+
+        /*if(Evento.equals("new " + nombreModelo + "();")){
+            miFrameTest.panelTest.lbNewModelo.setForeground(Colores.INSTANCIA);
+        }*/
 
         //Color original tercera linea
 
@@ -185,13 +198,14 @@ public class EventosMouse implements MouseListener{
             miFrameTest.panelTest.lbControlador.setForeground(Colores.ClASE);
         }
 
-        if(Evento.equals("miControlador = ")){
+        if(Evento.equals("miControlador = ") || Evento.equals("new Controlador(miVentana, " + "mi" + nombreModelo + ");")){
             miFrameTest.panelTest.lbMiControlador.setForeground(Colores.OBJETO);
-        }
-
-        if(Evento.equals("new Controlador(miVentana, miEmpresa);")){
             miFrameTest.panelTest.lbNewControlador.setForeground(Colores.INSTANCIA);
         }
+
+        /*if(Evento.equals("new Controlador(miVentana, miEmpresa);")){
+            miFrameTest.panelTest.lbNewControlador.setForeground(Colores.INSTANCIA);
+        }*/
 
         //Color original boton
         if(Evento.equals("Diagrama de objetos")){

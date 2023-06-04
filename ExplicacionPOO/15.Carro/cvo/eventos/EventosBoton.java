@@ -23,6 +23,10 @@ public class EventosBoton implements ActionListener {
             sonidos.sonidoBoton();
             
         }
+        if(comando.equals("salir")){
+            sonidos.sonidoBoton();
+            System.exit(0);
+        }
     }
 
     
