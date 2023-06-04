@@ -64,6 +64,7 @@ public class PanelEntradaDatos extends JPanel
         
         // Creación y adición de campos de texto
         tfColor = new JTextField("Rojo");
+        tfColor.setEditable(false);
         tfColor.setBackground(new Color(59,59,59));
         tfColor.setBorder(null);
         tfColor.setFont(fontField);
