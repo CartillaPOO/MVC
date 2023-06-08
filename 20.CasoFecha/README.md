@@ -10,5 +10,4 @@
 - Todas las clases, al menos, un constructor.
 - Podemos programar nuestro constructor o utilizar el constructor por defecto.
 - Al programar explícitamente un constructor, perdemos el constructor nulo o por defecto.
-
 - Un método está sobrecargado cuando admite más de una combinación de tipos y/o cantidades de argumentos o parametros
