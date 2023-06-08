@@ -2,75 +2,38 @@ package modelo;
 
 public class PlanTelefonia
 {
+    //
     // Atributos
+    //
 
     private String numeroCelular;
     private String operador;
     private int cantidadMinutos;
-    private int valorMinuto;
-    private int costoPlan;
+    private double valorMinuto;
+    private double costoPlan;
 
-    // Metodos
+    //
+    // Métodos
+    //
 
-    public PlanTelefonia()
-    {
-
-    }
-
-    public PlanTelefonia(String pNumeroCelular, String pOperador, int pCantidadMinutos)
+    public PlanTelefonia(String pNumeroCelular, String pOperador, int pCantidadMinutos, double pValorMinuto)
     {
         this.numeroCelular = pNumeroCelular;
         this.operador = pOperador;
         this.cantidadMinutos = pCantidadMinutos;
+        this.valorMinuto = pValorMinuto;
     }
 
-    public void setNumeroCelular(String numeroCelular)
+    public PlanTelefonia(String pNumeroCelular, int pCantidadMinutos, double pValorMinuto)
     {
-        this.numeroCelular = numeroCelular;
-    }
-    
-    public void setOperador(String operador)
-    {
-        this.operador = operador;
-    }
-    
-    public void setCantidadMinutos(int cantidadMinutos)
-    {
-        this.cantidadMinutos = cantidadMinutos;
-    }
-    
-    public void setCostoPlan(int costoPlan)
-    {
-        this.costoPlan = costoPlan;
+        this.numeroCelular = pNumeroCelular;
+        this.operador = "Otro";
+        this.cantidadMinutos = pCantidadMinutos;
+        this.valorMinuto = pValorMinuto;
     }
 
-
-
-    public String getNumeroCelular() 
+    public double calcularCostoPlan()
     {
-        return numeroCelular;
-    }
-
-    public String getOperador() 
-    {
-        return operador;
-    }
-
-    public int getCantidadMinutos() 
-    {
-        return cantidadMinutos;
-    }
-
-    public double getCostoPlan() 
-    {
-        calcularCostoPlan();
-        return costoPlan;
-    }
-
-
-    public int calcularCostoPlan()
-    {
-        valorMinuto = 250;
         costoPlan = cantidadMinutos * valorMinuto;
 
         if(operador.equals("Wom"))
@@ -79,5 +42,10 @@ public class PlanTelefonia
         }
 
         return costoPlan;
+    }
+
+    public String getNumeroCelular()
+    {
+        return numeroCelular;
     }
 }

@@ -1,16 +1,15 @@
 package vista;
 
 import java.awt.Color;
-import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.border.TitledBorder;
 import java.awt.event.ActionListener;
 
 public class PanelOperaciones extends JPanel
 {
     // Atributos
     private JButton btCalcularPlan;
+    private JButton btBorrar;
     private JButton btSalir;
 
     // Metodos
@@ -18,32 +17,37 @@ public class PanelOperaciones extends JPanel
     // Constructor
     public PanelOperaciones()
     {
-        //Definición del contenedor del panel
+        // Definición del contenedor del panel
         this.setLayout(null);
-        this.setBackground(Color.WHITE);
+        this.setBackground(new Color(31,31,31));
 
-        //Crear y agregar boton CalcularPlan
+        // Creación y adición de los botones
         btCalcularPlan = new JButton("Calcular Plan");
-        btCalcularPlan.setBounds(10,30,170,20);
+        btCalcularPlan.setBackground(new Color(59,59,59));
+        btCalcularPlan.setForeground(Color.WHITE);
         btCalcularPlan.setActionCommand("calcularPlan");
+        btCalcularPlan.setBounds(18,40,150,20);
         this.add(btCalcularPlan);
 
-        //Crear y agregar boton Salir
+        btBorrar = new JButton("Borrar");
+        btBorrar.setBackground(new Color(59,59,59));
+        btBorrar.setForeground(Color.WHITE);
+        btBorrar.setActionCommand("borrar");
+        btBorrar.setBounds(205,40,150,20);
+        this.add(btBorrar);
+
         btSalir = new JButton("Salir");
-        btSalir.setBounds(10,60,170,20); 
+        btSalir.setBackground(new Color(59,59,59));
+        btSalir.setForeground(Color.WHITE);
         btSalir.setActionCommand("salir");
+        btSalir.setBounds(392,40,150,20); 
         this.add(btSalir);
-
-        //Borde y titulo del panel
-        TitledBorder borde = BorderFactory.createTitledBorder("Operaciones");
-        borde.setTitleColor(Color.BLUE);
-        this.setBorder(borde);
-
     }
 
     public void agregarOyentesBotones(ActionListener pAL)
     {
         btCalcularPlan.addActionListener(pAL);
+        btBorrar.addActionListener(pAL);
         btSalir.addActionListener(pAL);
     }
 }
