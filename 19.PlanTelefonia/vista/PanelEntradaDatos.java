@@ -5,8 +5,8 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.ButtonGroup;
 import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
 
 public class PanelEntradaDatos extends JPanel
 {
@@ -16,7 +16,7 @@ public class PanelEntradaDatos extends JPanel
 
     private JRadioButton rbWom; // RadioButton es un botón de selección
     private JRadioButton rbOtro; // Este y el anterior serán las opciones de operador
-    private ButtonGroup grupo; // Grupo de botones de selección
+    private ButtonGroup bgOperadores; // Grupo de botones de selección
     private JLabel lbOperadores;
     private JLabel lbNumeroCelular;
     private JLabel lbCantidadMinutos;
@@ -31,6 +31,7 @@ public class PanelEntradaDatos extends JPanel
     // Métodos
     //
 
+    // Método constructor
     public PanelEntradaDatos()
     {
         // Definición del contenedor del panel
@@ -59,23 +60,23 @@ public class PanelEntradaDatos extends JPanel
         rbOtro.setBounds(190,60,60,20);
         this.add(rbOtro);
 
-        grupo = new ButtonGroup(); // Se crea el grupo de botones de selección y se agregan los botones para que solo se pueda seleccionar uno a la vez
-        this.grupo.add(rbWom);
-        this.grupo.add(rbOtro);
+        bgOperadores = new ButtonGroup(); // Se crea el grupo de botones de selección y se agregan los botones para que solo se pueda seleccionar uno a la vez
+        this.bgOperadores.add(rbWom);
+        this.bgOperadores.add(rbOtro);
         
-        lbNumeroCelular = new JLabel("Número de celular: ", JLabel.RIGHT);
+        lbNumeroCelular = new JLabel("Número de celular:", JLabel.RIGHT);
         lbNumeroCelular.setFont(fontLabel);
         lbNumeroCelular.setForeground(Color.WHITE);
         lbNumeroCelular.setBounds(0,110,220,20);
         this.add(lbNumeroCelular);
 
-        lbCantidadMinutos = new JLabel("Cantidad de minutos: ", JLabel.RIGHT);
+        lbCantidadMinutos = new JLabel("Cantidad de minutos:", JLabel.RIGHT);
         lbCantidadMinutos.setFont(fontLabel);
         lbCantidadMinutos.setForeground(Color.WHITE);
         lbCantidadMinutos.setBounds(0,140,220,20);
         this.add(lbCantidadMinutos);
 
-        lbValorMinuto = new JLabel("Valor del minuto: ", JLabel.RIGHT);
+        lbValorMinuto = new JLabel("Valor del minuto:", JLabel.RIGHT);
         lbValorMinuto.setFont(fontLabel);
         lbValorMinuto.setForeground(Color.WHITE);
         lbValorMinuto.setBounds(0,170,220,20);
@@ -87,7 +88,7 @@ public class PanelEntradaDatos extends JPanel
         tfNumeroCelular.setFont(fontField);
         tfNumeroCelular.setForeground(Color.WHITE);
         tfNumeroCelular.setCaretColor(Color.WHITE);
-        tfNumeroCelular.setBounds(220, 110, 90, 20);
+        tfNumeroCelular.setBounds(230, 110, 90, 20);
         this.add(tfNumeroCelular);
 
         tfCantidadMinutos = new JTextField();
@@ -96,7 +97,7 @@ public class PanelEntradaDatos extends JPanel
         tfCantidadMinutos.setFont(fontField);
         tfCantidadMinutos.setForeground(Color.WHITE);
         tfCantidadMinutos.setCaretColor(Color.WHITE);
-        tfCantidadMinutos.setBounds(220, 140, 40, 20);
+        tfCantidadMinutos.setBounds(230, 140, 40, 20);
         this.add(tfCantidadMinutos);
 
         tfValorMinuto = new JTextField();
@@ -105,7 +106,7 @@ public class PanelEntradaDatos extends JPanel
         tfValorMinuto.setFont(fontField);
         tfValorMinuto.setForeground(Color.WHITE);
         tfValorMinuto.setCaretColor(Color.WHITE);
-        tfValorMinuto.setBounds(220, 170, 40, 20);
+        tfValorMinuto.setBounds(230, 170, 40, 20);
         this.add(tfValorMinuto);
     }
 
@@ -142,7 +143,6 @@ public class PanelEntradaDatos extends JPanel
         tfNumeroCelular.setText("");
         tfCantidadMinutos.setText("");
         tfValorMinuto.setText("");
-        rbOtro.setSelected(false);
-        rbWom.setSelected(false);
+        rbOtro.setSelected(true);
     }
 }
