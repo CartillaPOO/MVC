@@ -52,13 +52,13 @@ public class Controlador implements ActionListener
                 venPrin.miPanelResultados.mostrarResultado("Su posición actual es (" + model.getPosX()+", " + model.getPosY()+")" );
                 venPrin.miPanelResultados.mostrarResultado("Su velocidad actual es " + model.getVelocidad());
                 
-                // Desactivar boton crear
+                // Desactivar botón crear
                 venPrin.miPanelOperaciones.desactivarBotonCrear();
+
                 // Activar botones
                 venPrin.miPanelOperaciones.activarBotones();
             }
             catch(Exception e) // Error en datos de entrada
-            
             {
                 JOptionPane.showMessageDialog(null, "Error en datos de entrada", "Error", JOptionPane.ERROR_MESSAGE);
             }   

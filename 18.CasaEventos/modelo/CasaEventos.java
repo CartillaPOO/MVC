@@ -4,12 +4,16 @@ import java.util.ArrayList;
 
 public class CasaEventos
 {
+    //
     // Atributos
+    //
 
     private ArrayList<Salon> salones;
 
+    //
     // Métodos
-
+    //
+    
     public CasaEventos()
     {
         salones = new ArrayList<>();
@@ -18,6 +22,16 @@ public class CasaEventos
     public void agregarSalon(Salon sal)
     {
         salones.add(sal);
+    }
+
+    public int getNumSalones()
+    {
+        return salones.size();
+    }
+
+    public Salon getSalon(int i)
+    {
+        return salones.get(i);
     }
 
     public double calcularCostoTotal()

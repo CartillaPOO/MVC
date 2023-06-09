@@ -54,7 +54,7 @@ public class Controlador implements ActionListener
         {
             venPrin.miPanelEntradaDatos.borrar();
             venPrin.miPanelResultados.borrar();
-            venPrin.miPanelResultados.mostrarResultado("Siga con el cálculo de su plan\n¿Qué tal si prueba con Wom?\n¡Wom sólo cuesta la mitad!");
+            venPrin.miPanelResultados.mostrarResultado("Siga con el cálculo de su plan\n¿Qué tal si prueba con Wom?");
         }
 
         if(comando.equals("salir"))

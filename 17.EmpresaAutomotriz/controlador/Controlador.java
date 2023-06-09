@@ -108,10 +108,12 @@ public class Controlador implements ActionListener
         {
             double valorNomina = empresa.getNomina();
             String listaEmpleados = "";
+
             for(int i=0; i<empresa.getNumeroEmpleados(); i++)
             {
-                listaEmpleados = listaEmpleados + empresa.getEmpleado(i).getNombre() + ": " + empresa.getEmpleado(i).getSueldo() + "\n";
+                listaEmpleados += empresa.getEmpleado(i).getNombre() + ": " + empresa.getEmpleado(i).getSueldo() + "\n";
             }
+            
             venPrin.miPanelResultados.mostrarResultado("El valor total de la nómina es." + valorNomina + "\n" + listaEmpleados);
         }
 

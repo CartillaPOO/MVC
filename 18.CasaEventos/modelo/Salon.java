@@ -2,73 +2,98 @@ package modelo;
 
 public class Salon
 {
-
-    // Constante
+    //
+    // Atributos
+    //
 
     public final static int COSTO_BASE = 150000;
-
-    // Atributos
-
-    private int capacidadSalon;
+    private String nombre;
+    private int capacidad;
     private int numPersonas;
+    private int horasReserva;
     private int numMeseros;
-    private double costoSalon;
-    private int cantidadHoras;
-
+    private double costo;
+    private String estado;
+    
+    //
     // Métodos
+    //
+    
+    // Método constructor
+    public Salon(String pnombre, int pcapacidad)
+    {
+        this.nombre = pnombre;
+        this.capacidad = pcapacidad;
+        this.estado = "Disponible";
+    }
 
-    public Salon(int pNumPersonas, int pCapacidadSalon, int pCantidadHoras)
+    public void setNumPersonas(int pNumPersonas)
     {
         this.numPersonas = pNumPersonas;
-        this.capacidadSalon = pCapacidadSalon;
-        this.cantidadHoras = pCantidadHoras;
     }
 
-    public int getNumPersonas()
+    public void setHorasReserva(int pHorasReserva)
     {
-        return numPersonas;
+        this.horasReserva = pHorasReserva;
     }
+    
 
+    
+    public String getNombreSalon()
+    {
+        return nombre;
+    }
+    
     public int getCapacidadSalon()
     {
-        return capacidadSalon;
+        return capacidad;
     }
-
-    public int getMeserosNecesarios()
+    
+    public int getNumMeseros()
     {
         if(numPersonas < 50)
         {
             numMeseros = 1;
         }
-
+        
         else if(numPersonas < 100)
         {
             numMeseros = 2;
         }
-
+        
         else
         {
             numMeseros = 3;
         }
-
+        
         return numMeseros;
     }
-
+    
     public double getCostoSalon()
     { 
-        costoSalon = COSTO_BASE * cantidadHoras;
+        costo = COSTO_BASE * horasReserva;
         
-        if(capacidadSalon <= 50)
+        if(capacidad <= 50)
         {
-
-            costoSalon += costoSalon * 0.2;
+            
+            costo += costo * 0.2;
         }
-
+        
         else
         {
-            costoSalon += costoSalon * 0.4;
+            costo += costo * 0.4;
+        }
+        
+        return costo;
+    }
+
+    public String estadoSalon()
+    {
+        if(numPersonas != 0 && horasReserva != 0)
+        {
+            estado = "Reservado\nNúmero de personas: " + numPersonas + "\nHoras de reserva: " + horasReserva + "\nNúmero de meseros: " + getNumMeseros() + "\nCosto: " + getCostoSalon();
         }
 
-        return costoSalon;
+        return estado;
     }
 }

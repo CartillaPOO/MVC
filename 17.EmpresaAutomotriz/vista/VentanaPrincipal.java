@@ -41,7 +41,6 @@ public class VentanaPrincipal extends JFrame
         miPanelResultados = new PanelResultados();
         miPanelResultados.setBounds(360,10,210,230);
         this.add(miPanelResultados);
-        miDialogoVenderCarro = null;
         
         // Características de la ventana
         this.setSize(580,360);
@@ -55,8 +54,6 @@ public class VentanaPrincipal extends JFrame
         colorFondo.setBackground(new Color(24, 24, 24));
         colorFondo.setBounds(0,0,600,400);
         this.add(colorFondo);
-
-
     }
 
     // Creación de diálogos
