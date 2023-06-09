@@ -22,7 +22,7 @@ public class DialogoReservarSalon extends JDialog
     private JLabel lbSalones;
     private JComboBox<String> cbSalones;
     private JLabel lbNumpersonas;
-    private JTextField tfNumpersonas;
+    private JTextField tfNumPersonas;
     private JLabel lbHorasReserva;
     private JTextField tfHorasReserva;
     private JButton btAceptar;
@@ -63,14 +63,14 @@ public class DialogoReservarSalon extends JDialog
         lbNumpersonas.setBounds(0,100,150,20);
         this.add(lbNumpersonas);
 
-        tfNumpersonas = new JTextField();
-        tfNumpersonas.setBorder(null);
-        tfNumpersonas.setFont(fontField);
-        tfNumpersonas.setForeground(Color.WHITE);
-        tfNumpersonas.setCaretColor(Color.WHITE);
-        tfNumpersonas.setBackground(new Color(59,59,59));
-        tfNumpersonas.setBounds(150,100,50,20);
-        this.add(tfNumpersonas);
+        tfNumPersonas = new JTextField();
+        tfNumPersonas.setBorder(null);
+        tfNumPersonas.setFont(fontField);
+        tfNumPersonas.setForeground(Color.WHITE);
+        tfNumPersonas.setCaretColor(Color.WHITE);
+        tfNumPersonas.setBackground(new Color(59,59,59));
+        tfNumPersonas.setBounds(150,100,50,20);
+        this.add(tfNumPersonas);
 
         lbHorasReserva = new JLabel("Horas: ", JLabel.RIGHT);
         lbHorasReserva.setFont(fontField);
@@ -122,7 +122,7 @@ public class DialogoReservarSalon extends JDialog
     // Métodos de acceso
     public int getNumPersonas()
     {
-        return Integer.parseInt(tfNumpersonas.getText());
+        return Integer.parseInt(tfNumPersonas.getText());
     }
 
     public int getHorasReserva()
@@ -142,7 +142,7 @@ public class DialogoReservarSalon extends JDialog
 
     public void borrar()
     {
-        tfNumpersonas.setText("");
+        tfNumPersonas.setText("");
         tfHorasReserva.setText("");
     }
     
