@@ -34,6 +34,7 @@ public class DialogoVenderCarro extends JDialog
     // Métodos
     //
 
+    // Método constructor
     public DialogoVenderCarro(String nom)
     {
         // Definición del layout del Dialogo

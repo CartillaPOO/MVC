@@ -1,73 +1,88 @@
 package vista;
 
 import java.awt.Color;
-
-import javax.swing.BorderFactory;
+import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.border.TitledBorder;
-import javax.swing.plaf.synth.ColorType;
 
 public class PanelEntradaDatos extends JPanel
 {
-    private JLabel capaSalon;
-    private JLabel numPersonas;
-    private JTextField tbCapaSalon;
-    private JTextField tbnumPersonas;
+    //
+    // Atributos
+    //
 
+    private JLabel lbTitulo;
+    private JLabel lbNombreSalon;
+    private JLabel lbCapacidadSalon;
+    private JTextField tfNombreSalon;
+    private JTextField tfCapacidadSalon;
+    private Font fontLabel = new Font("Arial", Font.BOLD, 20);
+    private Font fontField = new Font("Arial", Font.BOLD, 15);
 
-   public PanelEntradaDatos()
-   {
+    //
+    // Métodos
+    //
 
-      //Definición del contenedor del panel
+    // Método constructor
+    public PanelEntradaDatos()
+    {
+        // Definición del contenedor del panel
+        this.setLayout(null);
+        this.setBackground(new Color(31,31,31));
 
-      this.setLayout(null);
-      this.setBackground(Color.WHITE);
+        // Creación y adición de elementos
+        lbTitulo = new JLabel("Registro de salón", JLabel.CENTER);
+        lbTitulo.setFont(fontLabel);
+        lbTitulo.setForeground(Color.WHITE);
+        lbTitulo.setBounds(0,20,340,25);
+        this.add(lbTitulo);
 
-      //Crear y agregar etiqueta Capacidad Salon
+        lbNombreSalon = new JLabel("Salón: ", JLabel.RIGHT);
+        lbNombreSalon.setFont(fontLabel);
+        lbNombreSalon.setForeground(Color.WHITE);
+        lbNombreSalon.setBounds(0,90,155,20);
+        this.add(lbNombreSalon);
 
-      capaSalon = new JLabel("Capacidad del  Salon: ", JLabel.RIGHT);
-      capaSalon.setBounds(0,35,140,20);
-      this.add(capaSalon);
+        lbCapacidadSalon = new JLabel("Capacidad: ", JLabel.RIGHT);
+        lbCapacidadSalon.setFont(fontLabel);
+        lbCapacidadSalon.setForeground(Color.WHITE);
+        lbCapacidadSalon.setBounds(0,140,200,20);
+        this.add(lbCapacidadSalon);
 
-      // Creación caja de texto para Capacidad Salon
-      tbCapaSalon= new JTextField();
-      tbCapaSalon.setBounds(170,35,100,20);
-      this.add(tbCapaSalon);
-      //Crear y agregar etiqueta Numero Personas
-      capaSalon = new JLabel("Numero de Personas: ", JLabel.RIGHT);
-      capaSalon.setBounds(15,75,140,20);
-      this.add(capaSalon);
-      // Creación caja de Numero de Personas
-      tbCapaSalon= new JTextField();
-      tbCapaSalon.setBounds(170,75,100,20);
-      this.add(tbCapaSalon);
+        tfNombreSalon = new JTextField();
+        tfNombreSalon.setBackground(new Color(59,59,59));
+        tfNombreSalon.setBorder(null);
+        tfNombreSalon.setFont(fontField);
+        tfNombreSalon.setForeground(Color.WHITE);
+        tfNombreSalon.setCaretColor(Color.WHITE);
+        tfNombreSalon.setBounds(155,90,95,20);
+        this.add(tfNombreSalon);
 
-      //Borde y titulo del panel
-      TitledBorder borde = BorderFactory.createTitledBorder("Entradas");
-      borde.setTitleColor(Color.BLUE);
-      this.setBorder(borde);
-   }
+        tfCapacidadSalon = new JTextField();
+        tfCapacidadSalon.setBackground(new Color(59,59,59));
+        tfCapacidadSalon.setBorder(null);
+        tfCapacidadSalon.setFont(fontField);
+        tfCapacidadSalon.setForeground(Color.WHITE);
+        tfCapacidadSalon.setCaretColor(Color.WHITE);
+        tfCapacidadSalon.setBounds(200,140,50,20);
+        this.add(tfCapacidadSalon);
+    }
 
-   public String getNumPersonas()
-   {
-      return tbnumPersonas.getText();
-   }
-   public String getCapacidadSalon()
-   {
-      return tbCapaSalon.getText();
+    // Métodos de acceso
+    public String getNombreSalon()
+    {
+        return tfNombreSalon.getText();
+    }
 
-   }
-     
+    public int getCapacidadSalon()
+    {
+        return Integer.parseInt(tfCapacidadSalon.getText());
+    }
 
+    public void borrar()
+    {
+        tfNombreSalon.setText("");
+        tfCapacidadSalon.setText("");
+    }
 }
-    
-    
-
-
- 
-   
-
-    
- 

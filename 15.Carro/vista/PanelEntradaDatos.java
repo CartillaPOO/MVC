@@ -59,8 +59,7 @@ public class PanelEntradaDatos extends JPanel
         lbPosY.setFont(fontLabel);
         lbPosY.setForeground(Color.WHITE);
         lbPosY.setBounds(190,145,60,20);
-        this.add(lbPosY);
-        
+        this.add(lbPosY); 
         
         // Creación y adición de campos de texto
         tfColor = new JTextField("Rojo");
