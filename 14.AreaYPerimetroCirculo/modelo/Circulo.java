@@ -34,7 +34,7 @@ public class Circulo
         return area;
     }
 
-    public double getperimetro()
+    public double getPerimetro()
     {
         return perimetro;
     }
