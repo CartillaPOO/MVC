@@ -26,6 +26,7 @@ public class PanelResultados extends JPanel
 
         // Creación y adición del área de texto
         taResultado = new JTextArea();
+        taResultado.setToolTipText("taResultado");
         taResultado.setBackground(new Color(59,59,59));
         taResultado.setForeground(Color.WHITE);
         taResultado.setCaretColor(taResultado.getBackground());

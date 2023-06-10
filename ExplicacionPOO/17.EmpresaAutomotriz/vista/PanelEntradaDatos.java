@@ -29,6 +29,7 @@ public class PanelEntradaDatos extends JPanel
 
         // Creación y adición de etiqueta
         lbEmpleados = new JLabel("Empleados: ", JLabel.RIGHT);
+        lbEmpleados.setToolTipText("lbEmpleados");
         lbEmpleados.setFont(fontLabel);
         lbEmpleados.setForeground(Color.WHITE);
         lbEmpleados.setBounds(0,90,130,20);
@@ -36,6 +37,7 @@ public class PanelEntradaDatos extends JPanel
 
         // Crear y agregar combo box de empleados
         cbEmpleados = new JComboBox<>();
+        cbEmpleados.setToolTipText("cbEmpleados");
         cbEmpleados.setBounds(130,90,200,20);
         this.add(cbEmpleados);
     }

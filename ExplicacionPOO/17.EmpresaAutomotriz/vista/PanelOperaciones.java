@@ -32,6 +32,7 @@ public class PanelOperaciones extends JPanel
         
         // Creación y adición de los botones
         btAgregarEmpleado = new JButton("Agregar Empleado");
+        btAgregarEmpleado.setToolTipText("btAgregarEmpleado");
         btAgregarEmpleado.setBackground(new Color(59,59,59));
         btAgregarEmpleado.setForeground(Color.WHITE);
         btAgregarEmpleado.setActionCommand("agregarEmpleado");
@@ -39,6 +40,7 @@ public class PanelOperaciones extends JPanel
         this.add(btAgregarEmpleado);
         
         btVenderCarro = new JButton("Vender Carro");
+        btVenderCarro.setToolTipText("btVenderCarro");
         btVenderCarro.setBackground(new Color(59,59,59));
         btVenderCarro.setForeground(Color.WHITE);
         btVenderCarro.setActionCommand("venderCarro");
@@ -47,6 +49,7 @@ public class PanelOperaciones extends JPanel
         this.add(btVenderCarro);
 
         btVerVentas = new JButton("Ver ventas");
+        btVerVentas.setToolTipText("btVerVentas");
         btVerVentas.setBackground(new Color(59,59,59));
         btVerVentas.setForeground(Color.WHITE);
         btVerVentas.setActionCommand("verVentas");
@@ -55,6 +58,7 @@ public class PanelOperaciones extends JPanel
         this.add(btVerVentas);
 
         btCalcularSueldo = new JButton("Calcular Sueldo");
+        btCalcularSueldo.setToolTipText("btCalcularSueldo");
         btCalcularSueldo.setBackground(new Color(59,59,59));
         btCalcularSueldo.setForeground(Color.WHITE);
         btCalcularSueldo.setActionCommand("calcularSueldo");
@@ -63,6 +67,7 @@ public class PanelOperaciones extends JPanel
         this.add(btCalcularSueldo);
 
         btEmpleadosSinVentas = new JButton("Empleados sin ventas");
+        btEmpleadosSinVentas.setToolTipText("btEmpleadosSinVentas");
         btEmpleadosSinVentas.setBackground(new Color(59,59,59));
         btEmpleadosSinVentas.setForeground(Color.WHITE);
         btEmpleadosSinVentas.setActionCommand("empleadosSinVentas");
@@ -71,6 +76,7 @@ public class PanelOperaciones extends JPanel
         this.add(btEmpleadosSinVentas);
         
         btEmpleadoDelMes = new JButton("Empleado del mes");
+        btEmpleadoDelMes.setToolTipText("btEmpleadoDelMes");
         btEmpleadoDelMes.setBackground(new Color(59,59,59));
         btEmpleadoDelMes.setForeground(Color.WHITE);
         btEmpleadoDelMes.setActionCommand("empleadoDelMes");
@@ -79,6 +85,7 @@ public class PanelOperaciones extends JPanel
         this.add(btEmpleadoDelMes);
 
         btLiquidarNomina = new JButton("Liquidar Nómina");
+        btLiquidarNomina.setToolTipText("btLiquidarNomina");
         btLiquidarNomina.setBackground(new Color(59,59,59));
         btLiquidarNomina.setForeground(Color.WHITE);
         btLiquidarNomina.setActionCommand("liquidarNomina");
@@ -87,6 +94,7 @@ public class PanelOperaciones extends JPanel
         this.add(btLiquidarNomina);
 
         btSalir = new JButton("Salir");
+        btSalir.setToolTipText("btSalir");
         btSalir.setBackground(new Color(59,59,59));
         btSalir.setForeground(Color.WHITE);
         btSalir.setActionCommand("salir");
