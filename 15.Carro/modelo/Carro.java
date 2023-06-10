@@ -17,11 +17,11 @@ public class Carro
     //
     
     // Método constructor
-    public Carro(String pColor, int pPosx, int pPosy)
+    public Carro(String pColor, int pPosX, int pPosY)
     {
         this.color = pColor;
-        this.posX = pPosx;
-        this.posY = pPosy;
+        this.posX = pPosX;
+        this.posY = pPosY;
         this.velocidad = 0;
     }
     
