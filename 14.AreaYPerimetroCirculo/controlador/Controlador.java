@@ -43,7 +43,7 @@ public class Controlador implements ActionListener
             model.calcularArea();
             double area = model.getArea(); // Guarda el valor del área de model en la variable area
             model.calcularPerimetro();
-            double perimetro = model.getperimetro();
+            double perimetro = model.getPerimetro();
             venPrin.miPanelResultados.mostrarResultado(area, perimetro); // Se le pasa el área y el perímetro al panel de resultados
         }
         
