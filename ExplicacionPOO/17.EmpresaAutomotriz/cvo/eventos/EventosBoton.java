@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import cvo.clases.SFX;
+import cvo.vista.DialogoExplicacion;
 import cvo.vista.FrameTest;
 
 public class EventosBoton implements ActionListener {
@@ -21,6 +22,7 @@ public class EventosBoton implements ActionListener {
         String comando = event.getActionCommand();
         if(comando.equals("diagramaObjetos")){
             sonidos.sonidoBoton();
+            new DialogoExplicacion("diagramaDeObjetos", true, 44).setLocationRelativeTo(null);
             
         }
         if(comando.equals("salir")){

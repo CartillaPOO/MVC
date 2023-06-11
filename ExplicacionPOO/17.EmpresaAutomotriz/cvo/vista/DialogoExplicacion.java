@@ -89,7 +89,7 @@ public class DialogoExplicacion extends JDialog{
         lbCerrar = new Texto("Cerrar");
         lbCerrar.setBounds(5, alto -30, 100, 30);
         lbCerrar.setForeground(Colores.CERRAR);
-        //capa.add(lbCerrar, JLayeredPane.PALETTE_LAYER);
+        capa.add(lbCerrar, JLayeredPane.PALETTE_LAYER);
 
         this.add(capa);
 

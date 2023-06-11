@@ -58,7 +58,7 @@ public class DialogoVenderCarro extends JDialog
         lbPrecioCarro.setBounds(0,80,160,20);
         this.add(lbPrecioCarro);
 
-        tfPrecioCarro = new JTextField();
+        tfPrecioCarro = new JTextField("5000");
         tfPrecioCarro.setBackground(new Color(59,59,59));
         tfPrecioCarro.setBorder(null);
         tfPrecioCarro.setFont(fontField);
@@ -73,7 +73,7 @@ public class DialogoVenderCarro extends JDialog
         lbMarcaCarro.setBounds(0,110,160,20);
         this.add(lbMarcaCarro);
 
-        tfMarcaCarro = new JTextField();
+        tfMarcaCarro = new JTextField("Ford");
         tfMarcaCarro.setBackground(new Color(59, 59, 59));
         tfMarcaCarro.setBorder(null);
         tfMarcaCarro.setFont(fontField);
@@ -88,7 +88,7 @@ public class DialogoVenderCarro extends JDialog
         lbModeloCarro.setBounds(0,140,160,20);
         this.add(lbModeloCarro);
 
-        tfModeloCarro = new JTextField();
+        tfModeloCarro = new JTextField("2013");
         tfModeloCarro.setBackground(new Color(59, 59, 59));
         tfModeloCarro.setBorder(null);
         tfModeloCarro.setFont(fontField);

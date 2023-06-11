@@ -55,7 +55,7 @@ public class Controlador implements ActionListener
             venPrin.miPanelOperaciones.activarBotones();
             venPrin.miDialogoAgregarEmpleado.cerrarDialogoAgregarEmpleado();
 
-            new DialogoExplicacion("añadirEmpleado", true, 35).setLocation(venPrin.getX(), venPrin.getY() + venPrin.getHeight());
+            new DialogoExplicacion("añadirEmpleado", true, 23).setLocation(venPrin.getX(), venPrin.getY() + venPrin.getHeight());
         }
 
         if(comando.equals("cerrarDialogoAgregarEmpleado"))
@@ -68,7 +68,6 @@ public class Controlador implements ActionListener
             venPrin.crearDialogoVenderCarro();
             this.venPrin.miDialogoVenderCarro.agregarOyenteBoton(this);
 
-            new DialogoExplicacion("ventas", false, 35).setLocation(venPrin.getX(), venPrin.getY() + venPrin.getHeight());
         }
 
         if(comando.equals("vender"))
@@ -84,6 +83,9 @@ public class Controlador implements ActionListener
 
             venPrin.miPanelResultados.mostrarResultado("Se ha realizado una venta" + "\nEmpleado: " + emp.getNombre() + "\nValor: " + precio + "\nMarca: " + marca + "\nModelo: " + modelo);
             venPrin.miDialogoVenderCarro.cerrarDialogoVenderCarro();
+
+            new DialogoExplicacion("ventas", false, 32).setLocation(venPrin.getX(), venPrin.getY() + venPrin.getHeight());
+
         }
 
         if(comando.equals("cerrarDialogoVenderCarro"))
@@ -110,6 +112,8 @@ public class Controlador implements ActionListener
             Empleado emple = empresa.getEmpleado(indexVendedor);
             emple.calcularSueldo();
             venPrin.miPanelResultados.mostrarResultado("El sueldo del empleado: " + emple.getNombre() + " es " + emple.getSueldo());
+            
+            new DialogoExplicacion("salario", true, 8).setLocation(venPrin.getX(), venPrin.getY() + venPrin.getHeight());
         }
 
         if(comando.equals("liquidarNomina"))
@@ -136,7 +140,7 @@ public class Controlador implements ActionListener
 
         if(comando.equals("salir"))
         {
-            System.exit(0);
+            venPrin.dispose();
         }
     }
 }
