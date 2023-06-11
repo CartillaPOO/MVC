@@ -7,6 +7,8 @@ import vista.VentanaPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import cvo.vista.DialogoExplicacion;
+
 public class Controlador implements ActionListener
 {
     //
@@ -38,6 +40,8 @@ public class Controlador implements ActionListener
         {
             venPrin.crearDialogoAgregarEmpleado();
             this.venPrin.miDialogoAgregarEmpleado.agregarOyenteBoton(this);
+
+            new DialogoExplicacion("agregarEmpleado", true, 16).setLocation(venPrin.getX(), venPrin.getY() + venPrin.getHeight());
         }
 
         if(comando.equals("agregar"))
@@ -50,6 +54,8 @@ public class Controlador implements ActionListener
             venPrin.miPanelResultados.mostrarResultado("Se ha agreado un empleado \nNombre: " + nombre + "\nCédula: " + cedula);
             venPrin.miPanelOperaciones.activarBotones();
             venPrin.miDialogoAgregarEmpleado.cerrarDialogoAgregarEmpleado();
+
+            new DialogoExplicacion("añadirEmpleado", true, 16).setLocation(venPrin.getX(), venPrin.getY() + venPrin.getHeight());
         }
 
         if(comando.equals("cerrarDialogoAgregarEmpleado"))

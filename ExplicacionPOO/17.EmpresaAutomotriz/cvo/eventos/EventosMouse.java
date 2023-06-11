@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import controlador.Controlador;
 import cvo.clases.Colores;
 import cvo.clases.SFX;
+import cvo.vista.DialogoExplicacion;
 import cvo.vista.FrameTest;
 import modelo.EmpresaAutomotriz;
 import vista.VentanaPrincipal;
@@ -45,7 +46,7 @@ public class EventosMouse implements MouseListener{
         }
 
         if(Evento.equals("miVentana = ")){
-            System.out.println("miVentana");
+            setWindowPosition(new DialogoExplicacion("miVentana", false, 34));
         }
 
         if(Evento.equals("new VentanaPrincipal();")){
@@ -61,10 +62,8 @@ public class EventosMouse implements MouseListener{
         if(Evento.equals(nombreModelo + " ")){
         }
 
-        if(Evento.equals("mi" + nombreModelo + " = ")){
-        }
-
-        if(Evento.equals("new " + nombreModelo + "();")){
+        if(Evento.equals("mi" + nombreModelo + " = ")|| Evento.equals("new " + nombreModelo + "();")){
+            setWindowPosition(new DialogoExplicacion("miEmpresa", false, 10));
         }
 
 
@@ -72,13 +71,9 @@ public class EventosMouse implements MouseListener{
         if(Evento.equals("Controlador ")){
         }
 
-        if(Evento.equals("miControlador = ")){
+        if(Evento.equals("miControlador = ") || Evento.equals("new Controlador(miVentana, " + "mi" + nombreModelo + ");")){
+            setWindowPosition(new DialogoExplicacion("miControlador", false, 10));
         }
-
-        if(Evento.equals("new Controlador(miVentana, " + "mi" + nombreModelo + ");")){
-            
-        }
-        
 
         if(clase.equals("Texto")){
             sonidos.sonidoLabelClic();
