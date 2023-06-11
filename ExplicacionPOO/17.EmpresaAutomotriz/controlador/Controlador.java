@@ -55,7 +55,7 @@ public class Controlador implements ActionListener
             venPrin.miPanelOperaciones.activarBotones();
             venPrin.miDialogoAgregarEmpleado.cerrarDialogoAgregarEmpleado();
 
-            new DialogoExplicacion("añadirEmpleado", true, 40).setLocation(venPrin.getX(), venPrin.getY() + venPrin.getHeight());
+            new DialogoExplicacion("añadirEmpleado", true, 35).setLocation(venPrin.getX(), venPrin.getY() + venPrin.getHeight());
         }
 
         if(comando.equals("cerrarDialogoAgregarEmpleado"))
@@ -67,6 +67,8 @@ public class Controlador implements ActionListener
         {
             venPrin.crearDialogoVenderCarro();
             this.venPrin.miDialogoVenderCarro.agregarOyenteBoton(this);
+
+            new DialogoExplicacion("ventas", false, 35).setLocation(venPrin.getX(), venPrin.getY() + venPrin.getHeight());
         }
 
         if(comando.equals("vender"))
