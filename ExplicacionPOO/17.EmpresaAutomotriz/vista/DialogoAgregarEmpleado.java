@@ -51,7 +51,8 @@ public class DialogoAgregarEmpleado extends JDialog
         lbNombreVendedor.setBounds(0,70,150,20);
         this.add(lbNombreVendedor);
 
-        tfNombreVendedor = new JTextField();
+        tfNombreVendedor = new JTextField("Manolo");
+        tfNombreVendedor.setEditable(false);
         tfNombreVendedor.setBorder(null);
         tfNombreVendedor.setFont(fontField);
         tfNombreVendedor.setForeground(Color.WHITE);
@@ -66,7 +67,8 @@ public class DialogoAgregarEmpleado extends JDialog
         lbCedulaVendedor.setBounds(0,100,150,20);
         this.add(lbCedulaVendedor);
 
-        tfCedulaVendedor = new JTextField();
+        tfCedulaVendedor = new JTextField("3152113859");
+        tfCedulaVendedor.setEditable(false);
         tfCedulaVendedor.setBorder(null);
         tfCedulaVendedor.setFont(fontField);
         tfCedulaVendedor.setForeground(Color.WHITE);

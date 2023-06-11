@@ -55,7 +55,7 @@ public class Controlador implements ActionListener
             venPrin.miPanelOperaciones.activarBotones();
             venPrin.miDialogoAgregarEmpleado.cerrarDialogoAgregarEmpleado();
 
-            new DialogoExplicacion("añadirEmpleado", true, 16).setLocation(venPrin.getX(), venPrin.getY() + venPrin.getHeight());
+            new DialogoExplicacion("añadirEmpleado", true, 40).setLocation(venPrin.getX(), venPrin.getY() + venPrin.getHeight());
         }
 
         if(comando.equals("cerrarDialogoAgregarEmpleado"))
