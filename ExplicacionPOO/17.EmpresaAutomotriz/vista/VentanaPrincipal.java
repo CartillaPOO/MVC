@@ -63,10 +63,12 @@ public class VentanaPrincipal extends JFrame
     public void crearDialogoAgregarEmpleado()
     {
         miDialogoAgregarEmpleado = new DialogoAgregarEmpleado();
+        miDialogoAgregarEmpleado.setLocationRelativeTo(this);
     }
 
     public void crearDialogoVenderCarro()
     {
         miDialogoVenderCarro = new DialogoVenderCarro(miPanelEntradaDatos.getEmpleado());
+        miDialogoVenderCarro.setLocationRelativeTo(this);
     }
 }
