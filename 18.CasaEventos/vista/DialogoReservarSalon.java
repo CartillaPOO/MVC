@@ -42,7 +42,7 @@ public class DialogoReservarSalon extends JDialog
 
         // Creación y adición de elementos
         cbSalones = new JComboBox<>();
-        cbSalones.setBounds(150,70,150,20);
+        cbSalones.setBounds(140,70,140,20);
         this.add(cbSalones);
 
         lbTitulo = new JLabel("Reservar salón", JLabel.CENTER);
@@ -51,17 +51,23 @@ public class DialogoReservarSalon extends JDialog
         lbTitulo.setBounds(0,20,340,25);
         this.add(lbTitulo);
 
-        lbSalones = new JLabel("Salon: ", JLabel.RIGHT);
-        lbSalones.setFont(fontField);
+        lbSalones = new JLabel("Salon:", JLabel.RIGHT);
+        lbSalones.setFont(fontLabel);
         lbSalones.setForeground(Color.WHITE);
-        lbSalones.setBounds(0,70,150,20);
+        lbSalones.setBounds(0,70,130,20);
         this.add(lbSalones);
 
-        lbNumpersonas = new JLabel("Personas: ", JLabel.RIGHT);
-        lbNumpersonas.setFont(fontField);
+        lbNumpersonas = new JLabel("Personas:", JLabel.RIGHT);
+        lbNumpersonas.setFont(fontLabel);
         lbNumpersonas.setForeground(Color.WHITE);
-        lbNumpersonas.setBounds(0,100,150,20);
+        lbNumpersonas.setBounds(0,100,180,20);
         this.add(lbNumpersonas);
+
+        lbHorasReserva = new JLabel("Horas:", JLabel.RIGHT);
+        lbHorasReserva.setFont(fontLabel);
+        lbHorasReserva.setForeground(Color.WHITE);
+        lbHorasReserva.setBounds(0,130,180,20);
+        this.add(lbHorasReserva);
 
         tfNumPersonas = new JTextField();
         tfNumPersonas.setBorder(null);
@@ -69,14 +75,8 @@ public class DialogoReservarSalon extends JDialog
         tfNumPersonas.setForeground(Color.WHITE);
         tfNumPersonas.setCaretColor(Color.WHITE);
         tfNumPersonas.setBackground(new Color(59,59,59));
-        tfNumPersonas.setBounds(150,100,50,20);
+        tfNumPersonas.setBounds(190,100,50,20);
         this.add(tfNumPersonas);
-
-        lbHorasReserva = new JLabel("Horas: ", JLabel.RIGHT);
-        lbHorasReserva.setFont(fontField);
-        lbHorasReserva.setForeground(Color.WHITE);
-        lbHorasReserva.setBounds(0,130,150,20);
-        this.add(lbHorasReserva);
 
         tfHorasReserva = new JTextField();
         tfHorasReserva.setBorder(null);
@@ -84,7 +84,7 @@ public class DialogoReservarSalon extends JDialog
         tfHorasReserva.setForeground(Color.WHITE);
         tfHorasReserva.setCaretColor(Color.WHITE);
         tfHorasReserva.setBackground(new Color(59,59,59));
-        tfHorasReserva.setBounds(150,130,50,20);
+        tfHorasReserva.setBounds(190,130,50,20);
         this.add(tfHorasReserva);
 
         btAceptar = new JButton("Aceptar");
