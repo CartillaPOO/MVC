@@ -40,7 +40,7 @@ public class DialogoVenderCarro extends JDialog
         // Definición del layout del Dialogo
         this.setLayout(null);
 
-        // Crear y agregar elementos
+        // Creación y adición de elementos
         lbTitulo = new JLabel("Venta de Carro", JLabel.CENTER); // JLabel.CENTER: Centra el texto
         lbTitulo.setFont(fontLabel);
         lbTitulo.setForeground(Color.WHITE);

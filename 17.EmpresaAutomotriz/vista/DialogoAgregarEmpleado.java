@@ -46,7 +46,7 @@ public class DialogoAgregarEmpleado extends JDialog
         this.add(lbTitulo);
 
         lbNombreVendedor = new JLabel("Vendedor: ", JLabel.RIGHT);
-        lbNombreVendedor.setFont(fontField);
+        lbNombreVendedor.setFont(fontLabel);
         lbNombreVendedor.setForeground(Color.WHITE);
         lbNombreVendedor.setBounds(0,70,150,20);
         this.add(lbNombreVendedor);
@@ -61,7 +61,7 @@ public class DialogoAgregarEmpleado extends JDialog
         this.add(tfNombreVendedor);
 
         lbCedulaVendedor = new JLabel("Cédula: ", JLabel.RIGHT);
-        lbCedulaVendedor.setFont(fontField);
+        lbCedulaVendedor.setFont(fontLabel);
         lbCedulaVendedor.setForeground(Color.WHITE);
         lbCedulaVendedor.setBounds(0,100,150,20);
         this.add(lbCedulaVendedor);
